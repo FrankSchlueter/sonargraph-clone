@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Test-XML mit Kommentaren und auskommentierten Elementen
+-->
+<system version="2">
+  <layers>
+    <layer name="A" cycles="false">
+      <bundle name="visible.bundle" classification="A" />
+      <!--
+        <bundle name="commented.bundle" classification="A" />
+      -->
+    </layer>
+    <!--
+    <layer name="COMMENTED_LAYER">
+      <bundle name="also.commented" />
+    </layer>
+    -->
+  </layers>
+</system>

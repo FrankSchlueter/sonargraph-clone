@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Minimal Test-XML:
+  - Layer A mit zwei Bundles
+  - Layer B mit einem Bundle, das ein Filter vorausgeht, der Layer A exkludiert
+-->
+<system version="2">
+  <layers>
+    <layer name="A" cycles="false">
+      <bundle name="a.bundle1" classification="A/X" />
+      <bundle name="a.bundle2" classification="A/Y" />
+    </layer>
+    <layer name="B" cycles="false">
+      <filter>
+        <exclude layer="A" />
+      </filter>
+      <bundle name="b.bundle1" classification="B/Z" />
+    </layer>
+  </layers>
+</system>

@@ -1,0 +1,27 @@
+Die Datei bundles.csv enthält eine gemordnete Liste von Bundles mit folgenden Columns:
+bundleName: Name des Bundles
+bundleClassification: Hierarchischer Classification Path des Bundles gentennt mit '/'
+bundleOrdinal: Sortierordnung des Bundles in der Hierarchie von unten (1) nach oben 2...
+bundleDepartment: Name der zuständigen Abteilung
+bundleProduct: Name des Produktes
+
+Die Datei bundmedependencies enthält die gewichteten Abhängigkeiten zwischen den Bundles mit folgenden Columns:
+fromBundle: Name des Quell-Bundles
+cardinality: Anzahl der Code Abhängigkeiten des fromBundle zum toBundle
+toBundle: Das Ziel-Bundles
+
+Erstelle eine zweite Rap Application mit dem Namen BundleDependencyApplication mit der Url: 'bundleGraph' die diese beiden csv Dateien einliest und diese äquivalent zu DependencyGraphApplication visualisiert. Die Reihenfolge der Bundles wird durch das bundleOrdinal bestimmt, ein kleineres Ordinal ist weiter unten in der dargestellten Hierarchie.
+
+Die bundleClassification bildet einen hierarchischen Baum der visuell expandiert und geschlossen werden kann. Der Baum soll nach jedem Trennzeichen '/' eine neue Hierarchiestufe bilden. Die Parent Knoten aggregieren die Dependencies ihrer Child Knoten.
+
+Die Selektion eines Bundles oder eines Parent Folders hat eine Toggle Funktion:
+Beim ersten Click werden die genutzen Bundle dependencies angezeigt die von diesm Bundle ausgehen zu allen toBundles.
+Beim zweiten Click derden alle nutzenden Bundle Dependencies dargstellt die dieses Bundle als toBundle referenzieren.
+Beim dritten Click auf ein Bundle werden keine Dependencies mehr dargstellt.
+Die Darstellung der Dependencies erfolgt durch Bezierkurven mit der cardinality als Label und einem Tooltip der Form:
+fromBundle -[cardinality]-> toBundle
+An der rechten Seite der Bundledarstellung wird die cardinality nochmal dargestellt.
+
+Im Header eine intelligente Filterbox zum Suchen eines Bundles mit Autocompletion und eine Checkbox 'Hide Unused Dependencies' so das bei Anzeige der genutzen oder nutzenden Bundles alle Bundle ohne Abhängigkeiten aus der Ansicht verschwinden.
+
+Erstelle eine weitere Launcherklasse LaunchBundleGraph.

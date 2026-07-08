@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Test-XML mit geschachtelten Layern (Sub-Layer)
+-->
+<system version="2">
+  <layers>
+    <layer name="EXTERNAL" cycles="true">
+      <layer name="BASE">
+        <bundle name="ext.base1" classification="EXTERNAL/BASE" />
+        <bundle name="ext.base2" classification="EXTERNAL/BASE" />
+      </layer>
+    </layer>
+    <layer name="DEV" cycles="false">
+      <layer name="API">
+        <bundle name="dev.api1" classification="DEV/API" />
+      </layer>
+      <layer name="CORE">
+        <filter>
+          <exclude layer="DEV/API" />
+        </filter>
+        <bundle name="dev.core1" classification="DEV/CORE" />
+      </layer>
+    </layer>
+  </layers>
+</system>

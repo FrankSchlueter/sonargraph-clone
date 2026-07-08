@@ -1,0 +1,1933 @@
+﻿bundleName,bundleClassification,bundleOrdinal,bundleDepartment,bundleProduct
+pflegeperson.ui.impl,DEV-APP/UI/APPLICATION,1334,IT.TA.PV,Pflegeperson
+prozessereignismanager.proc.qs,QS-APP/BIZ-TOP,1727,IT.AF.PEP,Geschaeftsprozess
+kostenerstattungswahl-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,795,IT.TA.LEBQ,Wahl der Kostenerstattung
+zahnersatz.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,949,IT.TA.ZED,Zahnersatz
+com.ibm.ega.encryption-engine-library,EXTERNAL,213,Unbekannt,Unbekannt
+tk.sys.eai.qs,QS-FRAMEWORK/QS,496,IT.AF.FRW,Framework EAI
+verordnung-util.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,894,IT.TA.ZED,Digitale Gesundheitsanwendung
+einstufungsverlauf.biz.qs,QS-APP/BIZ,1495,IT.TA.KEGK,Einstufungsverlauf
+kassenwechsel-leistungsdaten.biz.impl,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,773,IT.TA.LEVE,Kassenwechsel-Leistungsdaten
+da-aerzte-hybrid-drg.biz.qs,QS-APP/BIZ,1676,IT.TA.LEVE,DA Ärzte Hybrid-DRG
+leistungen-pruefungen.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,989,IT.TA.LEBQ,Leistungen-Basis
+selvteilnahme.ui.qs,QS-APP/UI,1855,IT.TA.WAVE,Versorgungsangebot
+tim.biz.qs,QS-APP/BIZ,1655,IT.AF.PIM,TI-Messenger-Adapter
+tk.bpm.engine.api,DEV-FRAMEWORK/PROCESS,415,IT.AF.PEP,Framework Process
+ext-tools.ext.inbound.qs,QS-APP/EXTERN,1936,IT.AF.FRW,Ext-Tools
+mitgliederbeitrag.biz,DEV-APP/BIZ/PROZESSDATEN/BEITRAG,842,IT.TA.BCRM,Mitgliederbeitrag
+einstufungsverlauf.ext.outbound,DEV-APP/EXT-OUTBOUND,603,IT.TA.KEGK,Einstufungsverlauf
+crm-kontaktauswahl.ui,DEV-APP/UI/COMPONENT,1110,IT.TA.BCRM,CRM
+vertriebspartner.ui.qs,QS-APP/UI,1793,IT.TA.BCRM,Vertriebsmanagement
+sozv-meldungen.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,776,IT.TA.KMEL,SozV-Meldungen
+tim.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1417,IT.AF.PIM,TI-Messenger-Adapter
+micrometer-registry-influx,EXTERNAL,197,Unbekannt,Unbekannt
+korrespondenz-basis.biz,DEV-APP/BIZ/BASIS/INTERAKTION,665,IT.BA.DOC,Kiss24-TKeasy
+organisationsverwaltung-components.ui.qs,QS-APP/UI,1767,IT.AF.PIM,Organisations-Verwaltung
+testdatenmanagement.biz.qs,QS-APP/BIZ,1526,IT.BA.DOC,Testdatenmanagement
+widerspruch.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1421,IT.TA.WAVE,Widerspruchsbearbeitung
+testdaten-versicherter.biz,DEV-APP/BIZ/TESTDATEN,1064,IT.TA.KEGK,Versichertenbestandsfuehrung
+rechnungswesen.biz.qs.api,QS-APP/BIZ,1571,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+versichertenbestandsfuehrung-basis.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,719,IT.TA.KEGK,Versichertenbestandsfuehrung
+crm.ui.qs,QS-APP/UI,1800,IT.TA.BCRM,CRM
+tk.instrumentation.agent,EXTERNAL,18,Unbekannt,Unbekannt
+testdaten-korrespondenz.ui,DEV-APP/UI/TESTDATEN,1387,IT.BA.DOC,Kiss24-TKeasy
+mitteilungsmanagement.ui,DEV-APP/UI/APPLICATION,1194,IT.TA.GL,Mitteilungsmanagement
+ik-inhaber-verzeichnis.biz.api,DEV-APP/BIZ/BASIS/BASISROLLEN,683,IT.TA.KEGK,Geschaeftspartner
+studienverlauf.type,DEV-TYPE,566,IT.TA.KMEL,Studienverlauf
+tk.sys.gui.infoframe,DEV-FRAMEWORK/GUI-APPLICATION,447,IT.AF.FRW,Framework GUI
+tkeasy.architecture,EXTERNAL,-1,Unbekannt,Unbekannt
+leistung-services.sl.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,805,IT.TA.LEBQ,Leistung-Services
+vorgang.ui.api,DEV-APP/UI/COMPONENT,1104,IT.AF.PIM,Vorgangssystem
+proko-schriftgut-beispiel.biz.qs,QS-APP/BIZ,1712,IT.PM.PJ,Prozesskomponente-Schriftgut-Beispiel
+pzr.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,816,IT.TA.ZED,Professionelle Zahnreinigung
+org.apache.felix.gogo.runtime,EXTERNAL,4,Unbekannt,Unbekannt
+datenaustausch-finanzverwaltung.ext.inbound.qs,QS-APP/EXTERN,1932,IT.TA.BCRM,Steuerdaten
+mitgliederbeitrag.ui.qs,QS-APP/UI,1808,IT.TA.BCRM,Mitgliederbeitrag
+praevention.proc.qs,QS-APP/BIZ-TOP,1726,IT.TA.LEBQ,Praevention
+versichertenbestandsfuehrung.proc.qs,QS-APP/BIZ-TOP,1731,IT.TA.KEGK,Versichertenbestandsfuehrung
+tk.db.generictransaction,DEV-FRAMEWORK/DB,337,IT.AF.FRW,Framework Persistenz
+org.eclipse.core.runtime,EXTERNAL,141,Unbekannt,Unbekannt
+crm.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,637,IT.TA.BCRM,CRM
+junit-platform-runner,EXTERNAL/JUNIT-JUPITER,274,Unbekannt,Unbekannt
+personalisierte-secpruefung.biz,DEV-APP/BIZ/VERZEICHNIS,611,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+tk.de.web,DEV-APP/WEB/TK.DE,1072,IT.ON.OGP2,tk.de
+stoppuhr.biz.qs,QS-APP/BIZ,1456,IT.AF.PEP,Geschaeftsprozess
+entsendung.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,788,IT.TA.KMEL,Entsendung
+asm-util,EXTERNAL,27,Unbekannt,Unbekannt
+abr-sonst-leistungserbringer.ext.inbound.qs,QS-APP/EXTERN,1930,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+da-sonstigeleistungserbringer.ui,DEV-APP/UI/APPLICATION,1192,IT.TA.LEVE,DA Sonstige Leistungserbringer
+org.eclipse.osgi,EXTERNAL,0,Unbekannt,Unbekannt
+tk.sys.gui.process,DEV-FRAMEWORK/GUI-CORE,437,IT.AF.FRW,Framework GUI
+tk.sys.gui.mainframe.qs,QS-FRAMEWORK/QS,530,IT.AF.FRW,Framework GUI
+org.eclipse.jdt.junit5.runtime,EXTERNAL,181,Unbekannt,Unbekannt
+distance-matrix.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1424,IT.TA.LEBQ,Fahrkosten
+schnellerfassung.ui.qs,QS-APP/UI,1786,IT.AF.PEP,Geschaeftsprozess
+gebuehrenordnung.ui,DEV-APP/UI/APPLICATION,1212,IT.TA.LEBQ,Kostenerstattung
+kurverzeichnis.ui,DEV-APP/UI/APPLICATION,1247,IT.TA.LEVE,Kur
+tracking-prozesse.biz,DEV-APP/BIZ/UEBERGREIFEND,1019,IT.TA.BCRM,Vorgangstracking
+vorgang-crm.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,649,IT.AF.PIM,Vorgangssystem
+jcl-over-slf4j,EXTERNAL,85,Unbekannt,Unbekannt
+tk.sys.web,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,373,IT.AF.FRW,Framework Server
+com.sun.xml.bind.jaxb-core,EXTERNAL,99,Unbekannt,Unbekannt
+haftpflichtversicherer.biz.api,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,689,IT.TA.LEBQ,Unfall
+kv-verzeichnis.ui,DEV-APP/UI/APPLICATION,1373,IT.TA.WAVE,Behandler-Verzeichnis
+rvtraeger.ui,DEV-APP/UI/APPLICATION,1261,IT.TA.KMEL,Rente
+psychotherapie.ui,DEV-APP/UI/APPLICATION,1321,IT.TA.LEBQ,Psychotherapie
+tim.ext.inbound,DEV-APP/EXTERN/INBOUND,1096,IT.AF.PIM,TI-Messenger-Adapter
+datenschutzcockpit.ui.api,DEV-APP/UI/APPLICATION,1213,IT.TA.KMEL,Datenschutzcockpit
+da-sonstigeleistungserbringer.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,963,IT.TA.LEVE,DA Sonstige Leistungserbringer
+leistungssystem.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,810,IT.TA.LEBQ,Leistungssystem
+asv-basis.biz.qs,QS-APP/BIZ,1638,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+ik-inhaber-verzeichnis.biz.impl,DEV-APP/BIZ/BASIS/BASISROLLEN,685,IT.TA.KEGK,Geschaeftspartner
+eel.biz.qs,QS-APP/BIZ,1610,IT.TA.GL,Entgeltersatzleistungen
+dokumentenarchiv.biz,DEV-APP/BIZ/BASIS/INTERAKTION,648,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+da-isd.biz.impl,DEV-APP/BIZ/VERZEICHNIS,609,IT.TA.WAVE,DA Infrastrukturdaten (ISD)
+fahrkosten.biz.qs,QS-APP/BIZ,1538,IT.TA.LEBQ,Fahrkosten
+korrespondenz-adapter.biz.qs,QS-APP/BIZ,1522,IT.BA.DOC,Kiss24-TKeasy
+tk.sys.eai.adapter.rest,DEV-FRAMEWORK/EAI,391,IT.AF.FRW,Framework EAI
+entsendung.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,790,IT.TA.KMEL,Entsendung
+fusionsarchiv-allgemein.ui,DEV-APP/UI/APPLICATION,1254,IT.TA.KEGK,Fusionsarchiv
+prozessereignismanager.biz.qs.api,QS-APP/BIZ,1488,IT.AF.PEP,Geschaeftsprozess
+datenaustausch-geldleistungen-basis.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,928,IT.TA.GL,DA Entgeltersatzleistungen
+kur.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1429,IT.TA.LEVE,Kur
+hilfsmittelversorgung.biz.qs,QS-APP/BIZ,1663,IT.TA.LEBQ,Hilfsmittel
+prozess-tutorial.proc.qs,QS-MISC/SCHULUNG/PIF,1951,IT.AF.PEP,Prozess-Tutorial
+rechnungswesen.biz,DEV-APP/BIZ/PROZESSDATEN/FINANZEN,747,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+kassenwechselmeldungen.ui.impl,DEV-APP/UI/APPLICATION,1296,IT.TA.KMEL,Kassenwechselmeldungen
+rente.biz.qs,QS-APP/BIZ,1523,IT.TA.KMEL,Rente
+jetty-server,EXTERNAL,150,Unbekannt,Unbekannt
+basis.biz,DEV-APP/BIZ/BASIS/STRUKTUR,622,IT.AF.ARC,Anwendungs Infrastruktur
+junit-platform-reporting,EXTERNAL/JUNIT-JUPITER,278,Unbekannt,Unbekannt
+ems.web,DEV-APP/WEB,1077,IT.ON.ONG,E-Mail Marketing System
+ext-eprocurement.ext.forward,DEV-APP/EXT-FORWARD,572,IT.AF.FRW,E-Procurement
+tk.sys.eai.adapter.controlm,DEV-FRAMEWORK/EAI,401,IT.AF.FRW,Framework EAI
+pflegeunterstuetzungsgeld.ui,DEV-APP/UI/APPLICATION,1313,IT.TA.PV,Pflegeunterstuetzungsgeld
+fusionsarchiv-pflegeperson.ui,DEV-APP/UI/APPLICATION,1202,IT.TA.PV,Pflegeversicherung
+tk.sys.gui.editpattern.test,QS-INTEGRATIONTEST/GUI,1965,IT.AF.FRW,Integrationstests
+org.eclipse.equinox.console,EXTERNAL,3,Unbekannt,Unbekannt
+zusatzvertrag.ui,DEV-APP/UI/APPLICATION,1207,IT.TA.WAVE,Wahltarife
+de.tk.txfs.core,EXTERNAL,57,Unbekannt,Unbekannt
+leistungsuebersicht.ui,DEV-APP/UI/APPLICATION,1301,IT.TA.LEBQ,Leistungsuebersicht
+sozialausgleich-meldungen.biz.qs.api,QS-APP/BIZ,1594,IT.TA.KMEL,BBG-Meldungen
+einstufungsverlauf.proc.qs,QS-APP/BIZ-TOP,1732,IT.TA.KEGK,Einstufungsverlauf
+eu-datenschutzgrundverordnung.ui.qs,QS-APP/UI,1904,IT.TA.KEGK,Versichertenbestandsfuehrung
+sonstige-leistung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,900,IT.TA.LEBQ,Sonstige Leistungen
+type.impl.qs,QS-TYPE,1409,IT.AF.DD,Übergreifende fachliche Typen (biz-type)
+haertefall.ui,DEV-APP/UI/APPLICATION,1352,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+identitaetsdatenabruf.ext.outbound,DEV-APP/EXT-OUTBOUND,576,IT.TA.KMEL,Identitaetsdatenabruf
+vertrieb.ui,DEV-APP/UI/APPLICATION,1241,IT.TA.BCRM,Vertriebsmanagement
+crm-vorgang.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,640,IT.TA.BCRM,CRM
+junit-platform-launcher,EXTERNAL/JUNIT-JUPITER,273,Unbekannt,Unbekannt
+leistungsrueckforderung.ui.qs,QS-APP/UI,1759,IT.TA.WAVE,Pruefung der Leistungspflicht - PLP
+tk.bpm.engine.qs.api,QS-FRAMEWORK/QS,549,IT.AF.PEP,Framework Process
+org.apache.felix.log,EXTERNAL,131,Unbekannt,Unbekannt
+asv-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,828,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+au-steuerung.ext.inbound,DEV-APP/EXTERN/INBOUND,1080,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+hamcrest-all,EXTERNAL,164,Unbekannt,Unbekannt
+crm-type.biz,DEV-APP/BIZ/BASIS/INTERAKTION,635,IT.TA.BCRM,CRM
+haeusliche-krankenpflege.ui.qs,QS-APP/UI,1781,IT.TA.LEBQ,Haeusliche Krankenpflege
+meinetk.biz.qs,QS-APP/BIZ,1681,IT.ON.ONB1,MeineTK
+dokumentenarchiv.ui.qs,QS-APP/UI,1809,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+haushaltshilfe.ui.qs,QS-APP/UI,1774,IT.TA.GL,Haushaltshilfe
+versorgungsamtsbescheid.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,882,IT.TA.WAVE,Versorgungsamtsbescheid
+tk.sys.gui.component.imageviewer.qs,QS-FRAMEWORK/QS,539,IT.AF.FRW,Framework GUI
+secon-tool,EXTERNAL,231,Unbekannt,Unbekannt
+dividende.biz,DEV-APP/BIZ/PROZESSDATEN/BEITRAG,835,IT.TA.BCRM,Dividendenverlauf
+tracking.ui.qs,QS-APP/UI,1865,IT.TA.BCRM,Vorgangstracking
+eu-datenschutzgrundverordnung.ui,DEV-APP/UI/APPLICATION,1372,IT.TA.KEGK,Versichertenbestandsfuehrung
+medizinproduktregress.ui.qs,QS-APP/UI,1894,IT.TA.LEBQ,Medizinproduktregress
+rechtsakte.biz,DEV-APP/BIZ/BASIS/FINANZEN,676,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+fusionsarchiv-stammdaten.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,758,IT.TA.KEGK,Fusionsarchiv
+fv-meldungen.ui.qs,QS-APP/UI,1805,IT.TA.KMEL,FV-Meldungen
+tk.tool.passwordmanager,DEV-FRAMEWORK/TOOL,466,IT.AF.FRW,Framework Server
+jaxfront-swing,EXTERNAL/JAXFRONT,258,Unbekannt,Unbekannt
+mitgliederbeitrag.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,768,IT.TA.BCRM,Mitgliederbeitrag
+tk.sys.services.ecsarchive.qs,QS-FRAMEWORK/QS,512,IT.AF.FRW,Framework EAI
+studienverlauf.ui.qs,QS-APP/UI,1880,IT.TA.KMEL,Studienverlauf
+stax2-api,EXTERNAL,109,Unbekannt,Unbekannt
+da-isd.biz.qs,QS-APP/BIZ,1457,IT.TA.WAVE,DA Infrastrukturdaten (ISD)
+korrespondenz.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1430,IT.BA.DOC,Kiss24-TKeasy
+leistungen-basis.ui.impl,DEV-APP/UI/COMPONENT,1171,IT.TA.LEBQ,Leistungen-Basis
+tk-vorsorge-planer.ui.qs,QS-APP/UI,1848,IT.TA.LEVE,TK-Vorsorgeplaner
+leistung-services.kfo.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,802,IT.TA.LEBQ,Leistung-Services
+chroniker.biz.qs,QS-APP/BIZ,1624,IT.TA.LEBQ,Chronikerdaten
+kinderkrankengeld.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,930,IT.TA.GL,Kinderkrankengeld (KKG)
+com.sun.mail.jakarta.mail,EXTERNAL,184,Unbekannt,Unbekannt
+arzneimittelverzeichnis.biz.api,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,706,IT.TA.WAVE,Arzneimittelverzeichnis
+leistung-uebergreifend.biz.qs,QS-APP/BIZ,1608,IT.TA.LEBQ,Leistungen-Basis
+meinetk.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1440,IT.ON.ONB1,MeineTK
+geschaeftspartner-application.ui,DEV-APP/UI/APPLICATION,1199,IT.TA.KEGK,Geschaeftspartner
+diga.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,896,IT.TA.ZED,Digitale Gesundheitsanwendung
+com.twelvemonkeys.common.common-lang,EXTERNAL,72,Unbekannt,Unbekannt
+tk.sys.biz,DEV-FRAMEWORK/SERVER,367,IT.AF.FRW,Framework Server
+betriebsnummernverzeichnis-components.ui,DEV-APP/UI/COMPONENT,1130,IT.TA.WAVE,Betriebsnummern-Verzeichnis
+hibernate-validator,EXTERNAL,160,Unbekannt,Unbekannt
+mitteilungsmanagement.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,992,IT.TA.GL,Mitteilungsmanagement
+uicomponents.ui,DEV-APP/UI/COMPONENT,1101,IT.AF.FRW,UI-Components
+viewagent.imageviewer,DEV-FRAMEWORK/TOOL,472,IT.AF.FRW,Framework GUI
+arbeitgeberbestandsfuehrung.biz.api,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,698,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+de.kwsoft.mtext.api,EXTERNAL,202,Unbekannt,Unbekannt
+gutachterverzeichnis.biz.qs,QS-APP/BIZ,1542,IT.TA.WAVE,Gutachter-Verzeichnis
+melderegisterabgleich.biz.api,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,716,IT.TA.KEGK,Melderegisterabgleich
+com.twelvemonkeys.imageio.imageio-jpeg,EXTERNAL,74,Unbekannt,Unbekannt
+tk.sys.server.jmx,DEV-FRAMEWORK/SERVER,352,IT.AF.FRW,Framework Server
+da-md-au.biz.qs,QS-APP/BIZ,1612,IT.TA.GL,Datenaustausch MD AU
+zahnersatz.biz.qs,QS-APP/BIZ,1626,IT.TA.ZED,Zahnersatz
+kassenwechselmeldungen.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,774,IT.TA.KMEL,Kassenwechselmeldungen
+commons-net-ftp,EXTERNAL,79,Unbekannt,Unbekannt
+kinderkrankengeld.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1054,IT.TA.GL,Kinderkrankengeld (KKG)
+api-management-beispiel.ext.inbound,DEV-APP/EXTERN/INBOUND/BSPL,1098,IT.AF.PEP,API-Management-Beispiel
+gesundheitskarte.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1426,IT.TA.KEGK,Gesundheitskarte (eGK)
+da-aerzte-asv.biz.qs,QS-APP/BIZ,1640,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+geschaeftspartner.biz.qs,QS-APP/BIZ-TOP,1747,IT.TA.KEGK,Geschaeftspartner
+haertefall.proc.qs,QS-APP/BIZ-TOP,1750,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+ik-inhaber-verzeichnis.ui,DEV-APP/UI/APPLICATION,1267,IT.TA.KEGK,Geschaeftspartner
+rechnungswesen.ui.qs,QS-APP/UI,1798,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+crmbasis.biz.qs,QS-APP/BIZ,1622,IT.TA.BCRM,CRM
+eel.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1049,IT.TA.GL,Entgeltersatzleistungen
+psychotherapie.ui.qs,QS-APP/UI,1893,IT.TA.LEBQ,Psychotherapie
+tracking-components.ui,DEV-APP/UI/COMPONENT,1179,IT.TA.BCRM,Vorgangstracking
+rente.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,777,IT.TA.KMEL,Rente
+tk.sys.eai.adapter.base.webservice.qs,QS-FRAMEWORK/QS,501,IT.AF.FRW,Framework EAI
+api-management-beispiel.biz.impl,DEV-APP/BIZ/BSPL,1022,IT.AF.PEP,API-Management-Beispiel
+tk.sys.eai.adapter.base.webservice,DEV-FRAMEWORK/EAI,389,IT.AF.FRW,Framework EAI
+diga.ui.qs,QS-APP/UI,1772,IT.TA.ZED,Digitale Gesundheitsanwendung
+vorgang-querschnittssysteme.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,641,IT.AF.PIM,Vorgangssystem
+tk.sys.eai.transport.aq,DEV-FRAMEWORK/EAI,387,IT.AF.FRW,Framework EAI
+beitrag.biz,DEV-APP/BIZ/BASIS/FINANZEN,681,IT.TA.BCRM,"Beitragssaetze, Rechengroessen"
+uvtraeger.biz.qs,QS-APP/BIZ,1558,IT.TA.LEBQ,Unfall
+kassenwechselmeldungen.biz.impl,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,779,IT.TA.KMEL,Kassenwechselmeldungen
+com.twelvemonkeys.imageio.imageio-core,EXTERNAL,73,Unbekannt,Unbekannt
+konfigurierbare-leistung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,885,IT.TA.LEBQ,Konfigurierbare Leistung
+organisationsverwaltung.ui.qs,QS-APP/UI,1768,IT.AF.PIM,Organisations-Verwaltung
+net.sf.ucanaccess,EXTERNAL,127,Unbekannt,Unbekannt
+eessi-institution.ui,DEV-APP/UI/APPLICATION,1227,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+tk.sys.gui.charts,DEV-FRAMEWORK/GUI-CORE,432,IT.AF.FRW,Framework GUI
+org.glassfish.hk2.osgi-resource-locator,EXTERNAL/RUNTIME,298,Unbekannt,Unbekannt
+arbeitsunfaehigkeit.proc.qs,QS-APP/BIZ-TOP,1737,IT.TA.GL,Arbeitsunfaehigkeit
+kassenwechsel-leistungsdaten.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,772,IT.TA.LEVE,Kassenwechsel-Leistungsdaten
+krebsregister-abrechnung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,974,IT.TA.LEVE,Krebsregister
+ca.uhn.hapi.fhir.hapi-fhir-structures-r4,EXTERNAL/HAPI-FHIR,238,Unbekannt,Unbekannt
+ca.uhn.hapi.fhir.hapi-fhir-structures-r5,EXTERNAL/HAPI-FHIR,239,Unbekannt,Unbekannt
+microservice-pilot.ui.impl,DEV-APP/UI/APPLICATION,1378,IT.AF.FRW,Microservice Pilot
+au-steuerung.ui.impl,DEV-APP/UI/APPLICATION,1348,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+tk.sys.eai.transport.db,DEV-FRAMEWORK/EAI,386,IT.AF.FRW,Framework EAI
+da-aerzte-asv.ui,DEV-APP/UI/APPLICATION,1359,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+arbeitsagentur.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,692,IT.TA.WAVE,Betriebsnummern-Verzeichnis
+slf4j-api,EXTERNAL,173,Unbekannt,Unbekannt
+gerichtsverzeichnis.biz.impl,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,695,IT.TA.WAVE,Gerichtsverzeichnis
+tk.sys.error,DEV-FRAMEWORK/CORE,317,IT.AF.FRW,Framework Server
+tim.biz.impl,DEV-APP/BIZ/PROZESSDATEN/SERVICE,999,IT.AF.PIM,TI-Messenger-Adapter
+tk.sys.eai.adapter.exchange.qs,QS-FRAMEWORK/BASE,488,IT.AF.FRW,Framework EAI
+oracle-schema-reader,EXTERNAL,61,Unbekannt,Unbekannt
+tk.sys.persistence,DEV-FRAMEWORK/SERVER,362,IT.AF.FRW,Framework Persistenz
+fileimportexport.util.impl.qs,QS-TYPE,1413,IT.TA.LEBQ,Leistungen-Basis
+kostenerstattungswahl.biz.qs,QS-APP/BIZ,1504,IT.TA.LEBQ,Wahl der Kostenerstattung
+duebak-meldungen.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,780,IT.TA.KMEL,Datenuebermittlung BA - DÜBAK
+tk.sys.eai.adapter.queueinbox.qs,QS-FRAMEWORK/BASE,486,IT.AF.FRW,Framework EAI
+melderegisterabgleich.ui.impl,DEV-APP/UI/APPLICATION,1184,IT.TA.KEGK,Melderegisterabgleich
+org.apache.httpcomponents.httpmime,EXTERNAL,136,Unbekannt,Unbekannt
+org.eclipse.core.contenttype,EXTERNAL,139,Unbekannt,Unbekannt
+junit-platform-engine,EXTERNAL/JUNIT-JUPITER,272,Unbekannt,Unbekannt
+leistungsrueckforderung.type,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,822,IT.TA.WAVE,Pruefung der Leistungspflicht - PLP
+com.oracle.database.jdbc.ucp17,EXTERNAL,54,Unbekannt,Unbekannt
+personalisierte-secpruefung.biz.api,DEV-APP/BIZ/VERZEICHNIS,610,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+everordnungmanager.ext.outbound,DEV-APP/EXT-OUTBOUND,596,IT.AF.PIM,eVerordnung Manager
+da-aerzte-hzv.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,969,IT.TA.LEVE,DA Hausarztzentrierte Versorgung
+tk.tool.inspector,DEV-FRAMEWORK/TOOL-INSPECTOR,476,IT.AF.FRW,Framework Persistenz
+gesundheitsdividende.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1061,IT.TA.BCRM,Gesundheitsdividende
+tkkonto.ui,DEV-APP/UI/COMPONENT,1176,IT.TA.BCRM,TK-Konto (TKeasy-GUI  Schriftgut)
+tk.sys.boi,DEV-FRAMEWORK/SERVER,358,IT.AF.FRW,Framework Server
+vorgang-intern.biz,DEV-APP/BIZ/UEBERGREIFEND,1017,IT.AF.PIM,Vorgangssystem
+uvtraeger.ui.qs,QS-APP/UI,1920,IT.TA.LEBQ,Unfall
+abr-sonst-leistungserbringer.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1425,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+pflegeperson.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1055,IT.TA.PV,Pflegeperson
+leistungsrueckforderung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,982,IT.TA.WAVE,Pruefung der Leistungspflicht - PLP
+haushaltshilfe.biz.qs,QS-APP/BIZ,1505,IT.TA.GL,Haushaltshilfe
+sozialausgleich-meldungen.ui,DEV-APP/UI/APPLICATION,1219,IT.TA.KMEL,BBG-Meldungen
+com.oracle.database.ons,EXTERNAL,50,Unbekannt,Unbekannt
+bankverzeichnis.biz,DEV-APP/BIZ/VERZEICHNIS,619,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+prozess-tutorial.biz.api,DEV-MISC/SCHULUNG/PIF,1394,IT.AF.PEP,Prozess-Tutorial
+org.jvnet.mimepull,EXTERNAL,113,Unbekannt,Unbekannt
+korrespondenz-vorlagen.generiert,DEV-APP/BIZ/BASIS/INTERAKTION,666,IT.BA.DOC,Kiss24-TKeasy
+krankenhausaufenthalt.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,921,IT.TA.LEVE,Krankenhausaufenthalt
+ext-intranet.qs,QS-FRAMEWORK/QS,523,IT.AF.FRW,Framework EAI
+tk.de.biz.qs,QS-APP/BIZ,1679,IT.ON.OGP2,tk.de
+ca.uhn.hapi.fhir.org.hl7.fhir.r4,EXTERNAL/HAPI-FHIR,247,Unbekannt,Unbekannt
+asv-verzeichnis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,829,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+da-beitragsdifferenzierung-pv.ui.impl,DEV-APP/UI/APPLICATION,1369,IT.TA.KMEL,DA Beitragsdifferenzierung PV
+haertefall.ui.qs,QS-APP/UI,1799,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+versorgungsamtsbescheid.biz.qs,QS-APP/BIZ,1549,IT.TA.WAVE,Versorgungsamtsbescheid
+ca.uhn.hapi.fhir.org.hl7.fhir.r5,EXTERNAL/HAPI-FHIR,248,Unbekannt,Unbekannt
+diseasemanagement.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,852,IT.TA.WAVE,Diseasemanagement-Programme
+poi,EXTERNAL,204,Unbekannt,Unbekannt
+prozess-tutorial.proc,DEV-MISC/SCHULUNG/PIF,1396,IT.AF.PEP,Prozess-Tutorial
+ant-junit,EXTERNAL,41,Unbekannt,Unbekannt
+gkkmitgliederarchiv.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,755,IT.TA.KEGK,Fusionsarchiv
+ca.uhn.hapi.fhir.org.hl7.fhir.validation,EXTERNAL/HAPI-FHIR,250,Unbekannt,Unbekannt
+tk.sys.value,DEV-FRAMEWORK/SERVER-BASE,349,IT.AF.FRW,Framework Server
+versorgungsamtsbescheid.ui,DEV-APP/UI/APPLICATION,1279,IT.TA.WAVE,Versorgungsamtsbescheid
+vollmacht.biz.qs,QS-APP/BIZ-TOP,1749,IT.TA.KEGK,Geschaeftspartner
+zusatzvertrag-batch.biz.qs,QS-APP/BIZ,1562,IT.TA.WAVE,Wahltarife
+dokumentenarchiv.biz.qs,QS-APP/BIZ,1601,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+geschaeftspartner-vertreterauskunft.ui.qs,QS-APP/UI,1885,IT.TA.KEGK,Geschaeftspartner
+brownies-collections,EXTERNAL/JAXFRONT,252,Unbekannt,Unbekannt
+interessent-pflege.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,870,IT.TA.BCRM,CRM-Akquisemanager
+jetty-websocket-jetty-server,EXTERNAL,153,Unbekannt,Unbekannt
+arbeitsagentur.biz.qs,QS-APP/BIZ,1648,IT.TA.WAVE,Betriebsnummern-Verzeichnis
+tk.db.mongo,DEV-FRAMEWORK/DB,329,IT.AF.FRW,Framework Persistenz
+versorgungsangebot.biz.qs,QS-APP/BIZ,1659,IT.TA.WAVE,Versorgungsangebot
+Saxon-HE,EXTERNAL/RUNTIME,295,Unbekannt,Unbekannt
+mdkverzeichnis.biz.qs,QS-APP/BIZ,1646,IT.TA.WAVE,MDK-Verzeichnis
+verordnung-util.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,893,IT.TA.ZED,Digitale Gesundheitsanwendung
+tk.sys.gui.infoframe.qs,QS-FRAMEWORK/QS,531,IT.AF.FRW,Framework GUI
+meinetk.ext.outbound,DEV-APP/EXT-OUTBOUND,600,IT.ON.ONB1,MeineTK
+tk.sys.gui.client,DEV-FRAMEWORK/GUI-APPLICATION,446,IT.AF.FRW,Framework GUI
+gebietsabgrenzung.type,DEV-APP/BIZ/BASIS/STRUKTUR,625,IT.AF.PIM,Gebietsabgrenzung (GBA)
+gesundheitskarte.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,729,IT.TA.KEGK,Gesundheitskarte (eGK)
+heilmittelverzeichnis.ui.qs,QS-APP/UI,1765,IT.TA.LEBQ,Heilmittelverzeichnis
+haushaltshilfe.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,955,IT.TA.GL,Haushaltshilfe
+sozialhilfetraeger.ui.qs,QS-APP/UI,1922,IT.TA.WAVE,Sozialhilfetraeger
+tk.sys.util.qs,QS-FRAMEWORK/QS,502,IT.AF.FRW,Framework Server
+eingabe-protokoll.biz.qs,QS-APP/BIZ,1631,IT.AF.FRW,Eingabe-Protokoll
+da-abfrage-mitgliedschaft.biz.qs,QS-APP/BIZ,1623,IT.TA.KMEL,DA Abfrage Mitgliedschaft
+rehasport.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,958,IT.PM.PJ,Rehasport und Funktionstraining
+leistung-services.biz.qs,QS-APP/BIZ,1481,IT.TA.LEBQ,Leistung-Services
+asm-commons,EXTERNAL,28,Unbekannt,Unbekannt
+implantattraeger.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,887,IT.TA.LEVE,Implantattraeger
+leistungsmanagement.biz.qs,QS-APP/BIZ,1644,IT.TA.LEVE,LM-Fallfuehrung
+jetty-client,EXTERNAL,142,Unbekannt,Unbekannt
+begleiter.biz,DEV-APP/BIZ/PROZESSDATEN/SERVICE,1000,IT.TA.BCRM,CRM
+versichertenbestandsfuehrung.biz.api,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,718,IT.TA.KEGK,Versichertenbestandsfuehrung
+uicomponents.ui.qs,QS-APP/UI,1806,IT.AF.FRW,UI-Components
+insolvenzmanagement-components.ui,DEV-APP/UI/COMPONENT,1141,IT.TA.BCRM,Insolvenzmanagement
+tk.sys.eai.adapter.intranet,DEV-FRAMEWORK/EAI,404,IT.AF.FRW,Framework EAI
+tk.sys.services.blobstreaming,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,372,IT.AF.FRW,Framework EAI
+proto-kostenerstattungen.ui.impl,DEV-APP/UI/APPLICATION,1181,IT.PM.PJ,Prototyp Kostenerstattungen
+ik-inhaber-verzeichnis-suche.ui.qs,QS-APP/UI,1859,IT.TA.KEGK,Geschaeftspartner
+tk.sys.modeling.annotation,DEV-FRAMEWORK/DB,340,IT.AF.FRW,Framework Persistenz
+tk.sys.validation,DEV-FRAMEWORK/CORE,318,IT.AF.FRW,Framework Server
+heilmittelverzeichnis.biz,DEV-APP/BIZ/VERZEICHNIS,617,IT.TA.LEBQ,Heilmittelverzeichnis
+hilfsmittelverzeichnis.biz,DEV-APP/BIZ/VERZEICHNIS,614,IT.TA.WAVE,Hilfsmittelverzeichnis
+tk.sys.eai.adapter.vinna.qs,QS-FRAMEWORK/QS,493,IT.AF.FRW,Framework EAI
+leistung-services.psycho.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,804,IT.TA.LEBQ,Leistung-Services
+tk.sys.gui.sapgetktolast.test,QS-INTEGRATIONTEST/SERVER,1962,IT.AF.FRW,Integrationstests
+sonstige-leistung.biz.qs,QS-APP/BIZ,1535,IT.TA.LEBQ,Sonstige Leistungen
+crm.ext.inbound,DEV-APP/EXTERN/INBOUND,1089,IT.TA.BCRM,CRM
+arbeitgeberbestandsfuehrung.biz.qs.api,QS-APP/BIZ,1491,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+mdkverzeichnis-components.ui,DEV-APP/UI/COMPONENT,1136,IT.TA.WAVE,MDK-Verzeichnis
+proto-kostenerstattungen.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,875,IT.PM.PJ,Prototyp Kostenerstattungen
+org.eclipse.jdt.junit.runtime,EXTERNAL,179,Unbekannt,Unbekannt
+assertj-core,EXTERNAL/TEST_ONLY,282,Unbekannt,Unbekannt
+pontonxp-adapterapi,EXTERNAL,171,Unbekannt,Unbekannt
+org.apache.httpcomponents.httpclient,EXTERNAL,134,Unbekannt,Unbekannt
+ca.uhn.hapi.fhir.hapi-fhir-validation-resources-r4,EXTERNAL/HAPI-FHIR,241,Unbekannt,Unbekannt
+ca.uhn.hapi.fhir.hapi-fhir-validation-resources-r5,EXTERNAL/HAPI-FHIR,242,Unbekannt,Unbekannt
+fusionsarchiv-beitrag.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,754,IT.TA.BCRM,Arbeitgeberbeitrag
+dhd.ui.impl,DEV-APP/UI/APPLICATION,1375,IT.TA.BCRM,Digital Service Solutions (DSS)
+behandlerverzeichnis-components.ui,DEV-APP/UI/COMPONENT,1132,IT.TA.WAVE,Behandler-Verzeichnis
+kunde-vor-ort.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERWALTUNG,739,IT.TA.BCRM,CRM-Empfangssteuerung
+pflegeunterstuetzungsgeld.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,961,IT.TA.PV,Pflegeunterstuetzungsgeld
+erv.biz.qs,QS-APP/BIZ,1462,IT.AF.PIM,Elektronischer Rechtsverkehr
+widerspruch.biz.qs,QS-APP/BIZ,1498,IT.TA.WAVE,Widerspruchsbearbeitung
+tracking.ui,DEV-APP/UI/APPLICATION,1357,IT.TA.BCRM,Vorgangstracking
+neuaufnahmemanager.biz.qs,QS-APP/BIZ,1684,IT.TA.KEGK,Neuaufnahmemanager
+kostenerstattung.ui.qs,QS-APP/UI,1917,IT.TA.LEBQ,Kostenerstattung
+korrespondenzpartner.ui.qs,QS-APP/UI,1874,IT.TA.KEGK,Geschaeftspartner
+tk.sys.dynamictkenum,DEV-FRAMEWORK/CORE,324,IT.AF.FRW,Framework Server
+haushaltshilfe.ui,DEV-APP/UI/APPLICATION,1318,IT.TA.GL,Haushaltshilfe
+gesundheitskarte.batch,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,732,IT.TA.KEGK,Gesundheitskarte (eGK)
+gutachterverzeichnis-components.ui,DEV-APP/UI/COMPONENT,1134,IT.TA.WAVE,Gutachter-Verzeichnis
+fusionsarchiv-krankenhaus.type,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,757,IT.TA.LEVE,Fusionsarchiv-Krankenhaus
+poi-ooxml,EXTERNAL,205,Unbekannt,Unbekannt
+arbeitgeberbestandsfuehrung.ui.qs,QS-APP/UI,1804,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+ext-tools.ext.inbound,DEV-APP/EXTERN/INBOUND,1086,IT.AF.FRW,Ext-Tools
+kv-verzeichnis.ui.qs,QS-APP/UI,1907,IT.TA.WAVE,Behandler-Verzeichnis
+haeusliche-krankenpflege.ui,DEV-APP/UI/APPLICATION,1332,IT.TA.LEBQ,Haeusliche Krankenpflege
+ext-internet,DEV-FRAMEWORK/EXT-OUTBOUND,453,IT.AF.FRW,Framework EAI
+fv-meldungen.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,782,IT.TA.KMEL,FV-Meldungen
+tk.sys.eai.adapter.webservice,DEV-FRAMEWORK/EAI,406,IT.AF.FRW,Framework EAI
+bonusprogramm.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,847,IT.TA.BCRM,CRM-Bonusprogramm
+proto-kostenerstattungen.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1032,IT.PM.PJ,Prototyp Kostenerstattungen
+tk.tool.erroranalysis,DEV-FRAMEWORK/TOOL,460,IT.AF.FRW,Framework Server
+qdox,EXTERNAL,-1,Unbekannt,Unbekannt
+prozess-beispiel.biz.api,DEV-APP/BIZ/BSPL,1025,IT.AF.PEP,Prozess-Beispiel
+org.slf4j.jul-to-slf4j,EXTERNAL,169,Unbekannt,Unbekannt
+da-md-au.ui.impl,DEV-APP/UI/APPLICATION,1349,IT.TA.GL,Datenaustausch MD AU
+kunde-vor-ort.biz.qs,QS-APP/BIZ,1698,IT.TA.BCRM,CRM-Empfangssteuerung
+personalverzeichnis.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,733,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+korrespondenz.biz.qs.api,QS-APP/BIZ,1448,IT.BA.DOC,Kiss24-TKeasy
+tk.sys.gui.image,DEV-FRAMEWORK/GUI-BASE,418,IT.AF.FRW,Framework GUI
+duebak-meldungen.ui,DEV-APP/UI/APPLICATION,1300,IT.TA.KMEL,Datenuebermittlung BA - DÜBAK
+vorgang-application.ui.qs,QS-APP/UI,1890,IT.AF.PIM,Vorgangssystem
+everordnungmanager.ui.qs,QS-APP/UI,1773,IT.AF.PIM,eVerordnung Manager
+gesundheitsprojekte-suche.ui,DEV-APP/UI/COMPONENT,1174,IT.TA.LEBQ,Gesundheitsprojekte
+leistungsmanagement.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,953,IT.TA.LEVE,LM-Fallfuehrung
+da-za-leistungsantraege.biz.qs.api,QS-APP/BIZ,1534,IT.TA.ZED,DA Zahnaerzte Leistungsantraege (ELAG)
+com.tngtech.archunit.junit5.engine.api,EXTERNAL/TEST_ONLY,286,Unbekannt,Unbekannt
+systemanforderungen.ui,DEV-APP/UI/APPLICATION,1236,IT.TA.BCRM,Listanforderungen (SAF)
+jcifs-ng,EXTERNAL,175,Unbekannt,Unbekannt
+org.apache.commons.commons-text,EXTERNAL,-1,Unbekannt,Unbekannt
+identitaetsdatenabruf.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,763,IT.TA.KMEL,Identitaetsdatenabruf
+testdaten-versicherter.biz.qs,QS-APP/BIZ,1709,IT.TA.KEGK,Versichertenbestandsfuehrung
+kim-log.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,673,IT.AF.PIM,Kommunikation im Medizinwesen Log
+krankenkassenverzeichnis-components.ui,DEV-APP/UI/COMPONENT,1133,IT.TA.WAVE,Krankenkassen-Verzeichnis
+com.twelvemonkeys.imageio.imageio-bmp,EXTERNAL,76,Unbekannt,Unbekannt
+dhd.biz.impl,DEV-APP/BIZ/PROZESSDATEN/SERVICE,1002,IT.TA.BCRM,Digital Service Solutions (DSS)
+tk.sys.core,DEV-FRAMEWORK/SERVER,354,IT.AF.FRW,Framework Server
+gesundheitskarte.ui,DEV-APP/UI/APPLICATION,1260,IT.TA.KEGK,Gesundheitskarte (eGK)
+interessent.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,717,IT.TA.BCRM,CRM-Akquisemanager
+da-md-au.proc.qs,QS-APP/BIZ-TOP,1739,IT.TA.GL,Datenaustausch MD AU
+zusatzvertrag.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,861,IT.TA.WAVE,Wahltarife
+icdverzeichnis.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,713,IT.TA.GL,ICD-Verzeichnis
+tk.batch.security,DEV-FRAMEWORK/SERVER,368,IT.AF.FRW,Framework EAI
+com.oracle.database.simplefan,EXTERNAL,51,Unbekannt,Unbekannt
+tk.sys.eai.adapter.base.rest,DEV-FRAMEWORK/EAI,390,IT.AF.FRW,Framework EAI
+tk.sys.workitem,DEV-FRAMEWORK/GUI-APPLICATION,445,IT.AF.FRW,Framework GUI
+bevap.ui.impl,DEV-APP/UI/COMPONENT,1102,IT.TA.PV,Beschaeftigtenverzeichnis in der ambulanten Pflege
+dokumentenarchiv.ui,DEV-APP/UI/COMPONENT,1119,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+tkkonto.ui.qs,QS-APP/UI,1918,IT.TA.BCRM,TK-Konto (TKeasy-GUI  Schriftgut)
+schulung.qs,QS-MISC/SCHULUNG,1949,Unbekannt,Unbekannt
+com.tngtech.archunit.junit5.engine,EXTERNAL/TEST_ONLY,287,Unbekannt,Unbekannt
+org.eclipse.osgi.services,EXTERNAL,8,Unbekannt,Unbekannt
+vertriebspartner.ui.impl,DEV-APP/UI/APPLICATION,1242,IT.TA.BCRM,Vertriebsmanagement
+systemanforderungen.biz.qs,QS-APP/BIZ,1602,IT.TA.BCRM,Listanforderungen (SAF)
+dynamictkenum-offline-values.qs,QS-TYPE,1406,IT.AF.ARC,Anwendungs Infrastruktur
+tk.tool.eaimessage.qs,QS-FRAMEWORK/QS,554,IT.AF.FRW,Framework EAI
+org.apache.pdfbox.fontbox,EXTERNAL/JAXFRONT,265,Unbekannt,Unbekannt
+au-steuerung.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,938,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+vorgang-querschnittssysteme.ui.api,DEV-APP/UI/COMPONENT,1105,IT.AF.PIM,Vorgangssystem
+zuzahlung.biz.qs,QS-APP/BIZ,1583,IT.TA.WAVE,Einzug von Zuzahlungen
+beitragserstattung-aus-rente.biz,DEV-APP/BIZ/PROZESSDATEN/BEITRAG,843,IT.TA.BCRM,Beitragserstattung aus Rente
+essential-useCase,EXTERNAL,115,Unbekannt,Unbekannt
+kunde-vor-ort.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1441,IT.TA.BCRM,CRM-Empfangssteuerung
+tk.sys.eai.adapter.tkeasy,DEV-FRAMEWORK/EAI,393,IT.AF.FRW,Framework EAI
+integrierteversorgung.biz.qs,QS-APP/BIZ,1618,IT.TA.WAVE,Versorgungsangebot
+poi-ooxml-schemas,EXTERNAL,206,Unbekannt,Unbekannt
+ext-mtext,DEV-FRAMEWORK/EXT-OUTBOUND,455,IT.AF.FRW,Framework Server
+wsdl4j,EXTERNAL,178,Unbekannt,Unbekannt
+mbkarchiv.biz,DEV-APP/BIZ/PROZESSDATEN/FINANZEN,748,IT.TA.BCRM,Mitgliederbeitrag
+krebsregister-abrechnung.biz.qs,QS-APP/BIZ,1675,IT.TA.LEVE,Krebsregister
+pflegeperson.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,903,IT.TA.PV,Pflegeperson
+insolvenzmanagement.biz.qs,QS-APP/BIZ,1555,IT.TA.BCRM,Insolvenzmanagement
+tk.sys.eai.adapter.rest.qs,QS-FRAMEWORK/BASE,487,IT.AF.FRW,Framework EAI
+fileimportexport.util.api,DEV-TYPE,568,IT.TA.LEBQ,Leistungen-Basis
+leistungsuebersicht.biz.qs,QS-APP/BIZ,1719,IT.TA.LEBQ,Leistungsuebersicht
+seminarverwaltung.ui,DEV-APP/UI/APPLICATION,1341,IT.TA.BCRM,Seminarverwaltung
+bevap.biz.impl,DEV-APP/BIZ/VERZEICHNIS,607,IT.TA.PV,Beschaeftigtenverzeichnis in der ambulanten Pflege
+da-zahnaerzte.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,951,IT.TA.LEVE,DA Zahnaerzte / Behandlungsfallnachweis
+neuaufnahmemanager.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,863,IT.TA.KEGK,Neuaufnahmemanager
+datenaustausch-eel.ext.outbound,DEV-APP/EXT-OUTBOUND,593,IT.TA.GL,DA Entgeltersatzleistungen
+proko-schriftgut-beispiel.ui.qs,QS-APP/UI,1914,IT.PM.PJ,Prozesskomponente-Schriftgut-Beispiel
+testdaten-diga.biz.qs,QS-APP/BIZ,1711,IT.TA.ZED,Digitale Gesundheitsanwendung
+beitragserstattung-aus-rente.ui,DEV-APP/UI/APPLICATION,1362,IT.TA.BCRM,Beitragserstattung aus Rente
+tk.sys.security.test,QS-INTEGRATIONTEST/SERVER,1961,IT.AF.FRW,Integrationstests
+schriftgut.ui.qs,QS-APP/UI,1823,IT.BA.DOC,KISG-Java (Altsysteme)
+arbeitgeberbeitrag-systemanforderungen.biz.qs,QS-APP/BIZ,1688,IT.TA.BCRM,Arbeitgeberbeitrag
+dokumentenarchiv.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1431,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+da-aerzte-hybrid-drg.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,975,IT.TA.LEVE,DA Ärzte Hybrid-DRG
+korrespondenz.ui.api,DEV-APP/UI/COMPONENT,1159,IT.BA.DOC,Kiss24-TKeasy
+pcschriftgut-extern.biz,DEV-APP/BIZ/PROZESSDATEN/VERWALTUNG,742,IT.BA.DOC,KISG-Java (Altsysteme)
+tk.sys.communication.web,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,374,IT.AF.FRW,Framework Server
+geschaeftspartner.ui.qs,QS-APP/UI,1832,IT.TA.KEGK,Geschaeftspartner
+arbeitsunfaehigkeit.aust.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,914,IT.TA.GL,Arbeitsunfaehigkeit
+medizinproduktregress.ui.impl,DEV-APP/UI/APPLICATION,1351,IT.TA.LEBQ,Medizinproduktregress
+testdaten-diga.ui,DEV-APP/UI/TESTDATEN,1389,IT.TA.ZED,Digitale Gesundheitsanwendung
+tk.sys.process.bpm.influx.engine,DEV-FRAMEWORK/CORE,314,IT.AF.PEP,Framework Process
+leistungen-basis.proc.qs.api,QS-APP/BIZ-TOP,1721,IT.TA.LEBQ,Leistungen-Basis
+aub-verarbeitung.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,940,IT.TA.GL,Entgeltersatzleistungen
+eel-basis.biz.qs,QS-APP/BIZ,1515,IT.TA.GL,Entgeltersatzleistungen
+erv.ui.api,DEV-APP/UI/APPLICATION,1186,IT.AF.PIM,Elektronischer Rechtsverkehr
+tk.sys.eai.adapter.rest.extern,DEV-FRAMEWORK/EAI,392,IT.AF.FRW,Framework EAI
+fahrkosten.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,962,IT.TA.LEBQ,Fahrkosten
+sonstigerleistungserbringer.ui,DEV-APP/UI/APPLICATION,1355,IT.TA.LEBQ,Heilmittelverzeichnis
+com.twelvemonkeys.imageio.imageio-tiff,EXTERNAL,75,Unbekannt,Unbekannt
+da-mitteilungsverfahren-rv.biz.qs,QS-APP/BIZ,1467,IT.TA.LEVE,DA Mitteilungsverfahren RV
+seminarverwaltung-pin-auskunft.ui,DEV-APP/UI/APPLICATION,1268,IT.TA.BCRM,Seminarverwaltung
+everordnungmanager.biz.qs,QS-APP/BIZ,1541,IT.AF.PIM,eVerordnung Manager
+asm-tree,EXTERNAL,29,Unbekannt,Unbekannt
+seminarverwaltung.ext.inbound.qs,QS-APP/EXTERN,1940,IT.TA.BCRM,Seminarverwaltung
+uvtraeger.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,688,IT.TA.LEBQ,Unfall
+sozialhilfetraeger.biz.qs,QS-APP/BIZ,1460,IT.TA.WAVE,Sozialhilfetraeger
+tk.sys.gui.preference,DEV-FRAMEWORK/GUI-BASE,421,IT.AF.FRW,Framework GUI
+java.desktop.windows,EXTERNAL,199,Unbekannt,Unbekannt
+findbugsAnnotations,EXTERNAL,183,Unbekannt,Unbekannt
+tkeasy-version,EXTERNAL,299,Unbekannt,Unbekannt
+jsr305,EXTERNAL,-1,Unbekannt,Unbekannt
+tk.batch.auskunft.qs,QS-FRAMEWORK/QS,516,IT.AF.FRW,Framework EAI
+mutterschaftsgeld.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,929,IT.TA.GL,Mutterschaftsgeld (MUG)
+akquise.ui.qs,QS-APP/UI,1770,IT.TA.BCRM,CRM-Akquisemanager
+tkone.ext.outbound,DEV-APP/EXT-OUTBOUND,599,IT.TA.BCRM,CRM
+tk.sys.eai.adapter.tkeasy.qs,QS-FRAMEWORK/QS,499,IT.AF.FRW,Framework EAI
+jardiff,EXTERNAL,82,Unbekannt,Unbekannt
+tim.ext.inbound.qs,QS-APP/EXTERN,1947,IT.AF.PIM,TI-Messenger-Adapter
+korrespondenz.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1059,IT.BA.DOC,Kiss24-TKeasy
+vps.biz.qs,QS-APP/BIZ,1687,IT.TA.LEVE,Vorpruefsoftware
+vorgang.ui.qs,QS-APP/UI,1807,IT.AF.PIM,Vorgangssystem
+vorgang-type.biz,DEV-APP/BIZ/BASIS/INTERAKTION,643,IT.AF.PIM,Vorgangssystem
+kunde-vor-ort.ui,DEV-APP/UI/APPLICATION,1195,IT.TA.BCRM,CRM-Empfangssteuerung
+tk.sys.boi.persistence,DEV-FRAMEWORK/SERVER,361,IT.AF.FRW,Framework Persistenz
+arbeitgeberbestandsfuehrung.ui,DEV-APP/UI/APPLICATION,1270,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+tk.sys.application.qs,QS-FRAMEWORK/QS,535,IT.AF.FRW,Framework GUI
+tk.sys.services.security,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,380,IT.AF.FRW,Framework Server
+pflegeperson.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,925,IT.TA.PV,Pflegeperson
+identitaetsdatenabruf.ui.api,DEV-APP/UI/APPLICATION,1215,IT.TA.KMEL,Identitaetsdatenabruf
+tk.tool.pdfforms,DEV-FRAMEWORK/TOOL,469,IT.AF.FRW,Framework GUI
+vertrieb.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,865,IT.TA.BCRM,Vertriebsmanagement
+com.google.inject,EXTERNAL,217,Unbekannt,Unbekannt
+junit-platform-suite-api,EXTERNAL/JUNIT-JUPITER,275,Unbekannt,Unbekannt
+sozv-meldungen.biz.api,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,724,IT.TA.KMEL,SozV-Meldungen
+datenaustausch-eessi.biz.qs,QS-APP/BIZ,1708,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+arzneimittelverzeichnis.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,707,IT.TA.WAVE,Arzneimittelverzeichnis
+da-za-leistungsantraege.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,879,IT.TA.ZED,DA Zahnaerzte Leistungsantraege (ELAG)
+krankenkassenverzeichnis.ui,DEV-APP/UI/APPLICATION,1235,IT.TA.WAVE,Krankenkassen-Verzeichnis
+tk.sys.daemon,DEV-FRAMEWORK/GUI-APPLICATION,448,IT.AF.FRW,Framework GUI
+org.skyscreamer.jsonassert,EXTERNAL,-1,Unbekannt,Unbekannt
+pflegeversicherung.proc.qs,QS-APP/BIZ-TOP,1746,IT.TA.PV,Pflegeversicherung
+krankenkassenverzeichnis.biz.qs,QS-APP/BIZ,1570,IT.TA.WAVE,Krankenkassen-Verzeichnis
+versorgungsbezug-meldungen.biz.qs,QS-APP/BIZ,1605,IT.TA.KMEL,Versorgungsbezug-Meldungen
+leistungen-basis.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1028,IT.TA.LEBQ,Leistungen-Basis
+org.apache.commons.commons-collections4,EXTERNAL/JAXFRONT,260,Unbekannt,Unbekannt
+sapjco3,EXTERNAL,172,Unbekannt,Unbekannt
+tk.sys.gui.base,DEV-FRAMEWORK/GUI-BASE,420,IT.AF.FRW,Framework GUI
+leistungsuebersicht.ui.api,DEV-APP/UI/APPLICATION,1302,IT.TA.LEBQ,Leistungsuebersicht
+diga.ui,DEV-APP/UI/APPLICATION,1329,IT.TA.ZED,Digitale Gesundheitsanwendung
+leistungen-datenaustausch.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,991,IT.TA.LEBQ,Leistungen-Basis
+selvteilnahme.biz.qs,QS-APP/BIZ,1661,IT.TA.WAVE,Versorgungsangebot
+net.sf.jtpl.jtpl,EXTERNAL,126,Unbekannt,Unbekannt
+kostenerstattung.ui,DEV-APP/UI/APPLICATION,1289,IT.TA.LEBQ,Kostenerstattung
+sozv-meldungen.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1420,IT.TA.KMEL,SozV-Meldungen
+unfall.ui,DEV-APP/UI/APPLICATION,1311,IT.TA.LEBQ,Unfall
+org.eclipse.equinox.app,EXTERNAL,11,Unbekannt,Unbekannt
+jcommon,EXTERNAL,84,Unbekannt,Unbekannt
+jackson-core,EXTERNAL/JACKSON,190,Unbekannt,Unbekannt
+bonusprogramm.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,846,IT.TA.BCRM,CRM-Bonusprogramm
+org.eclipse.equinox.cm,EXTERNAL,12,Unbekannt,Unbekannt
+arbeitgeberleistung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,942,IT.TA.LEBQ,Erstattung von AG-Aufwendungen
+vorgang.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,639,IT.AF.PIM,Vorgangssystem
+com.kitfox.svg,EXTERNAL,68,Unbekannt,Unbekannt
+dokumentenklasse.ui,DEV-APP/UI/COMPONENT,1118,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+prozess.ui.api,DEV-APP/UI/COMPONENT,1123,IT.AF.PEP,Geschaeftsprozess
+gesundheitsdividende.biz.qs.api,QS-APP/BIZ,1596,IT.TA.BCRM,Gesundheitsdividende
+rechtsakte.ui,DEV-APP/UI/APPLICATION,1353,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+commons-codec,EXTERNAL,129,Unbekannt,Unbekannt
+ca.uhn.hapi.fhir.hapi-fhir-validation,EXTERNAL/HAPI-FHIR,240,Unbekannt,Unbekannt
+meinetk.ui,DEV-APP/UI/APPLICATION,1367,IT.ON.ONB1,MeineTK
+geschaeftspartner-util.biz.qs,QS-APP/BIZ-BASE,1447,IT.TA.KEGK,Geschaeftspartner
+leistung-services.himi.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,799,IT.TA.LEBQ,Leistung-Services
+dokumentenklasse.biz.qs,QS-APP/BIZ,1619,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+tk.sys.eai.adapter.internet,DEV-FRAMEWORK/EAI,410,IT.AF.FRW,Framework EAI
+widerspruch.ext.outbound,DEV-APP/EXT-OUTBOUND,581,IT.TA.WAVE,Widerspruchsbearbeitung
+da-za-leistungsantraege.biz.qs,QS-APP/BIZ,1586,IT.TA.ZED,DA Zahnaerzte Leistungsantraege (ELAG)
+dividende.ui,DEV-APP/UI/APPLICATION,1285,IT.TA.BCRM,Dividendenverlauf
+testdaten-versorgungsbezug-meldungen.biz,DEV-APP/BIZ/TESTDATEN,1067,IT.TA.KMEL,Versorgungsbezug-Meldungen
+diga.biz.qs,QS-APP/BIZ,1540,IT.TA.ZED,Digitale Gesundheitsanwendung
+microservice-pilot.ui.qs,QS-APP/UI,1916,IT.AF.FRW,Microservice Pilot
+openjnlp-lib,EXTERNAL,128,Unbekannt,Unbekannt
+tk-vorsorge-planer.ui,DEV-APP/UI/APPLICATION,1338,IT.TA.LEVE,TK-Vorsorgeplaner
+jakarta.interceptor-api,EXTERNAL,-1,Unbekannt,Unbekannt
+leistungsmanagement.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,952,IT.TA.LEVE,LM-Fallfuehrung
+korrespondenz.ext.inbound,DEV-APP/EXTERN/INBOUND,1093,IT.BA.DOC,Kiss24-TKeasy
+type.qs,QS-TYPE,1410,IT.AF.DD,Übergreifende fachliche Typen (biz-type)
+de.tk.txfs.atomikos,EXTERNAL,59,Unbekannt,Unbekannt
+hzv.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,855,IT.TA.LEVE,Hausarztzentrierte Versorgung (HzV)
+arbeitsunfaehigkeit.damdau.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,913,IT.TA.GL,Arbeitsunfaehigkeit
+arbeitgeberbestandsfuehrung.ui.api,DEV-APP/UI/APPLICATION,1269,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+krankenkassenverzeichnis.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,703,IT.TA.WAVE,Krankenkassen-Verzeichnis
+abr-sonst-leistungserbringer.proc.qs,QS-APP/BIZ-TOP,1725,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+suchfeldaufbereitung-basis.util.qs,QS-TYPE,1408,IT.AF.ARC,Anwendungs Infrastruktur
+meinetk.web.qs,QS-APP/WEB,1926,IT.ON.ONB1,MeineTK
+arbeitgeberleistung.ui,DEV-APP/UI/APPLICATION,1286,IT.TA.LEBQ,Erstattung von AG-Aufwendungen
+tk.sys.util,DEV-FRAMEWORK/CORE,320,IT.AF.FRW,Framework Server
+betriebsnummernverzeichnis.ui,DEV-APP/UI/APPLICATION,1217,IT.TA.WAVE,Betriebsnummern-Verzeichnis
+apotheke.ui.qs,QS-APP/UI,1838,IT.TA.WAVE,DA Apotheken
+da-uv-traeger-components.ui,DEV-APP/UI/COMPONENT,1143,IT.TA.LEBQ,Durchgangsarztberichte
+schriftgut.biz.qs,QS-APP/BIZ,1470,IT.BA.DOC,KISG-Java (Altsysteme)
+tk.sys.eai.adapter.kim.qs,QS-FRAMEWORK/QS,492,IT.AF.FRW,Framework EAI
+vorgang-components.ui,DEV-APP/UI/COMPONENT,1109,IT.AF.PIM,Vorgangssystem
+apothekenabrechnung.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,889,IT.TA.WAVE,DA Apotheken
+tk.sys.eai,DEV-FRAMEWORK/EAI,384,IT.AF.FRW,Framework EAI
+kur.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1052,IT.TA.LEVE,Kur
+sozv-meldungen.ui,DEV-APP/UI/APPLICATION,1298,IT.TA.KMEL,SozV-Meldungen
+heilmittelverzeichnis.ui,DEV-APP/UI/APPLICATION,1278,IT.TA.LEBQ,Heilmittelverzeichnis
+xmlunit-core,EXTERNAL,-1,Unbekannt,Unbekannt
+crm.biz,DEV-APP/BIZ/PROZESSDATEN/CRM,792,IT.TA.BCRM,CRM
+rente.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,778,IT.TA.KMEL,Rente
+zuzahlung-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,821,IT.TA.WAVE,Einzug von Zuzahlungen
+testdaten-krankenhausaufenthalt.biz.impl,DEV-APP/BIZ/TESTDATEN,1071,IT.TA.LEVE,Krankenhausaufenthalt
+org.eclipse.equinox.ds,EXTERNAL,10,Unbekannt,Unbekannt
+melderegisterabgleich.ui.api,DEV-APP/UI/APPLICATION,1183,IT.TA.KEGK,Melderegisterabgleich
+gesundheitsdividende.biz.qs,QS-APP/BIZ,1597,IT.TA.BCRM,Gesundheitsdividende
+ik-inhaber-verzeichnis.ui.qs,QS-APP/UI,1887,IT.TA.KEGK,Geschaeftspartner
+datenaustausch-eessi.leistung.api.qs,QS-APP/BIZ,1706,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+tkx.showcase,DEV-FRAMEWORK/TOOL,473,IT.AF.FRW,Framework GUI
+apiguardian-api,EXTERNAL/JUNIT-JUPITER,266,Unbekannt,Unbekannt
+abr-sonst-leistungserbringer.biz.qs,QS-APP/BIZ,1677,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+generische-kostenerstattung.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1031,IT.PM.PJ,Generische Kostenerstattung
+testdaten-kur.biz.impl,DEV-APP/BIZ/TESTDATEN,1070,IT.TA.LEVE,Kur
+leistungsuebersicht.ui.qs.api,QS-APP/UI,1881,IT.TA.LEBQ,Leistungsuebersicht
+sonstige-leistung-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,813,IT.TA.LEBQ,Sonstige Leistungen
+seminarverwaltung.biz.qs,QS-APP/BIZ,1660,IT.TA.BCRM,Seminarverwaltung
+com.springsource.org.apache.commons.discovery,EXTERNAL,69,Unbekannt,Unbekannt
+org.eclipse.equinox.preferences,EXTERNAL,14,Unbekannt,Unbekannt
+diga.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,895,IT.TA.ZED,Digitale Gesundheitsanwendung
+leistungen-basis.proc.api,DEV-APP/BIZ/GESCHAEFTSPROZESS,1027,IT.TA.LEBQ,Leistungen-Basis
+behandlerverzeichnis.biz.qs,QS-APP/BIZ,1580,IT.TA.WAVE,Behandler-Verzeichnis
+tk.sys.eai.adapter.controlm.qs,QS-FRAMEWORK/QS,517,IT.AF.FRW,Framework EAI
+pzr.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,901,IT.TA.ZED,Professionelle Zahnreinigung
+tool-sourcegenerator,DEV-MISC/TOOL,1399,Unbekannt,Unbekannt
+ext-intranet,DEV-FRAMEWORK/EXT-OUTBOUND,452,IT.AF.FRW,Framework EAI
+com.sun.xml.ws.jaxws-rt,EXTERNAL,96,Unbekannt,Unbekannt
+tk-patientenquittung.ui.qs,QS-APP/UI,1813,IT.TA.WAVE,TK-Patientenquittung
+melderegisterabgleich.biz.qs.api,QS-APP/BIZ,1485,IT.TA.KEGK,Melderegisterabgleich
+leistungsuebersicht.ui.qs,QS-APP/UI,1882,IT.TA.LEBQ,Leistungsuebersicht
+jetty-io,EXTERNAL,147,Unbekannt,Unbekannt
+generische-kostenerstattung.biz.qs,QS-APP/BIZ,1449,IT.PM.PJ,Generische Kostenerstattung
+akquise.biz.qs,QS-APP/BIZ,1717,IT.TA.BCRM,CRM-Akquisemanager
+datenschutzcockpit.ext.outbound,DEV-APP/EXT-OUTBOUND,573,IT.TA.KMEL,Datenschutzcockpit
+prozess-beispiel.ui.qs,QS-APP/UI,1915,IT.AF.PEP,Prozess-Beispiel
+tk.sys.communication.requestbroker,DEV-FRAMEWORK/SERVER,353,IT.AF.FRW,Framework Server
+tool-sourcegenerator.qs,QS-MISC/TOOL,1954,Unbekannt,Unbekannt
+heilmittelverzeichnis.biz.qs,QS-APP/BIZ,1653,IT.TA.LEBQ,Heilmittelverzeichnis
+sonstiger-geschaeftspartner.ui,DEV-APP/UI/APPLICATION,1284,IT.TA.KEGK,Geschaeftspartner
+mutterschaftsgeld.ui.qs,QS-APP/UI,1905,IT.TA.GL,Mutterschaftsgeld (MUG)
+vertrieb.biz.qs,QS-APP/BIZ,1492,IT.TA.BCRM,Vertriebsmanagement
+vollstreckung.biz.qs,QS-APP/BIZ,1588,IT.TA.BCRM,Vollstreckung
+praeventionskurs.biz.qs,QS-APP/BIZ,1543,IT.TA.LEBQ,Praeventionskurse
+leistungsuebersicht.ui.impl,DEV-APP/UI/APPLICATION,1303,IT.TA.LEBQ,Leistungsuebersicht
+jetty-ee10-servlet,EXTERNAL,143,Unbekannt,Unbekannt
+arbeitgeberbestandsfuehrung-einstieg.ui.api,DEV-APP/UI/COMPONENT,1147,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+crmbasis.biz,DEV-APP/BIZ/BASIS/INTERAKTION,654,IT.TA.BCRM,CRM
+erv.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1432,IT.AF.PIM,Elektronischer Rechtsverkehr
+apothekenabrechnung.biz.qs,QS-APP/BIZ,1557,IT.TA.WAVE,DA Apotheken
+vertrieb.ext.inbound,DEV-APP/EXTERN/INBOUND,1084,IT.TA.BCRM,Vertriebsmanagement
+arbeitsunfaehigkeit.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,912,IT.TA.GL,Arbeitsunfaehigkeit
+pflegeunterstuetzungsgeld.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,960,IT.TA.PV,Pflegeunterstuetzungsgeld
+haeusliche-krankenpflege.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,923,IT.TA.LEBQ,Haeusliche Krankenpflege
+kinderkrankengeld.ui,DEV-APP/UI/APPLICATION,1312,IT.TA.GL,Kinderkrankengeld (KKG)
+mandatsakte.biz,DEV-APP/BIZ/BASIS/FINANZEN,678,IT.TA.KEGK,Geschaeftspartner
+pzr.ui.api,DEV-APP/UI/APPLICATION,1324,IT.TA.ZED,Professionelle Zahnreinigung
+tk.sys.gui.login,DEV-FRAMEWORK/GUI-APPLICATION,441,IT.AF.FRW,Framework GUI
+kinderkrankengeld.proc.qs,QS-APP/BIZ-TOP,1744,IT.TA.GL,Kinderkrankengeld (KKG)
+zahnersatz.ui.qs,QS-APP/UI,1810,IT.TA.ZED,Zahnersatz
+tk.db.result,DEV-FRAMEWORK/DB,331,IT.AF.FRW,Framework Persistenz
+krankenhausaufenthalt.ui.qs,QS-APP/UI,1840,IT.TA.LEVE,Krankenhausaufenthalt
+tk.sys.gui.mail,DEV-FRAMEWORK/TOOL,470,IT.AF.FRW,Framework GUI
+ki-services.ext.outbound,DEV-APP/EXT-OUTBOUND,598,IT.AF.KI,KI-Basis
+crm.ext.inbound.qs,QS-APP/EXTERN,1938,IT.TA.BCRM,CRM
+com.tngtech.archunit.junit5.api,EXTERNAL/TEST_ONLY,285,Unbekannt,Unbekannt
+kassenwechsel-leistungsdaten.ui.impl,DEV-APP/UI/APPLICATION,1297,IT.TA.LEVE,Kassenwechsel-Leistungsdaten
+tk.sys.process.bpm.influx.engine.qs,QS-FRAMEWORK/BASE,482,IT.AF.PEP,Framework Process
+pflegeperson.biz.qs,QS-APP/BIZ,1531,IT.TA.PV,Pflegeperson
+praevention.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1034,IT.TA.LEBQ,Praevention
+tk.tool.checkclass.base,DEV-FRAMEWORK/TOOL,456,IT.AF.FRW,Framework Server
+dhd.biz.api,DEV-APP/BIZ/PROZESSDATEN/SERVICE,1001,IT.TA.BCRM,Digital Service Solutions (DSS)
+kassenwechsel-leistungsdaten.biz.qs.api,QS-APP/BIZ,1502,IT.TA.LEVE,Kassenwechsel-Leistungsdaten
+prozessereignismanager-querschnitt.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,650,IT.AF.PEP,Geschaeftsprozess
+entsendung.biz.qs,QS-APP/BIZ,1700,IT.TA.KMEL,Entsendung
+da-aerzte-hybrid-drg.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,976,IT.TA.LEVE,DA Ärzte Hybrid-DRG
+microservice-pilot.biz.impl,DEV-APP/BIZ/UEBERGREIFEND,1020,IT.AF.FRW,Microservice Pilot
+crm.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1419,IT.TA.BCRM,CRM
+tk.util.function,QS-INTEGRATIONTEST/FUNCTION,1958,IT.AF.FRW,Integrationstests
+TkProjectSelector,EXTERNAL,38,Unbekannt,Unbekannt
+leistungen-basis.ui.qs,QS-APP/UI,1835,IT.TA.LEBQ,Leistungen-Basis
+api-management-beispiel.ext.outbound.qs,QS-APP/EXT-OUTBOUND/BSPL,1444,IT.AF.PEP,API-Management-Beispiel
+leistung-services.khs.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,803,IT.TA.LEBQ,Leistung-Services
+junit-jupiter-engine,EXTERNAL/JUNIT-JUPITER,269,Unbekannt,Unbekannt
+zahnersatz.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1050,IT.TA.ZED,Zahnersatz
+tk.sys.gui.infotree.qs,QS-FRAMEWORK/QS,532,IT.AF.FRW,Framework GUI
+studienverlauf.biz.qs,QS-APP/BIZ,1566,IT.TA.KMEL,Studienverlauf
+fusionsarchiv-pflegeperson.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,752,IT.TA.PV,Pflegeversicherung
+personalverzeichnis.biz.qs,QS-APP/BIZ,1651,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+tk.run,DEV-FRAMEWORK/SERVER,365,IT.AF.FRW,Framework Server
+versorgungsangebot.ext.outbound,DEV-APP/EXT-OUTBOUND,591,IT.TA.WAVE,Versorgungsangebot
+tk.sys.image.test,QS-INTEGRATIONTEST/GUI,1968,IT.AF.FRW,Integrationstests
+jetty-util,EXTERNAL,151,Unbekannt,Unbekannt
+arbeitgeberbeitrag.ui,DEV-APP/UI/APPLICATION,1306,IT.TA.BCRM,Arbeitgeberbeitrag
+Snow,EXTERNAL,37,Unbekannt,Unbekannt
+akquise.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,867,IT.TA.BCRM,CRM-Akquisemanager
+dokumentenaufnahme.biz,DEV-APP/BIZ/BASIS/INTERAKTION,661,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+seminarverwaltung.ext.inbound,DEV-APP/EXTERN/INBOUND,1090,IT.TA.BCRM,Seminarverwaltung
+com.google.guava.failureaccess,EXTERNAL,-1,Unbekannt,Unbekannt
+vollmacht.biz.impl,DEV-APP/BIZ/BASIS/FINANZEN,680,IT.TA.KEGK,Geschaeftspartner
+mx4j,EXTERNAL,125,Unbekannt,Unbekannt
+gebuehrenordnung.biz.qs,QS-APP/BIZ,1666,IT.TA.LEBQ,Kostenerstattung
+derby,EXTERNAL,-1,Unbekannt,Unbekannt
+zusatzvertrag-extern.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,859,IT.TA.WAVE,Zusatztarif / Zusatzversicherung
+io.swagger.annotations,EXTERNAL,198,Unbekannt,Unbekannt
+crmbasis.biz.qs.api,QS-APP/BIZ,1621,IT.TA.BCRM,CRM
+sozialhilfetraeger-abrechnung.biz.qs,QS-APP/BIZ,1641,IT.TA.WAVE,Sozialhilfetraeger
+kinderkrankengeld.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,957,IT.TA.GL,Kinderkrankengeld (KKG)
+junit-platform-suite-engine,EXTERNAL/JUNIT-JUPITER,277,Unbekannt,Unbekannt
+kim-log.biz.qs,QS-APP/BIZ,1514,IT.AF.PIM,Kommunikation im Medizinwesen Log
+da-beitragsdifferenzierung-pv.biz.qs,QS-APP/BIZ,1701,IT.TA.KMEL,DA Beitragsdifferenzierung PV
+selvteilnahme.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,858,IT.TA.WAVE,Versorgungsangebot
+selvteilnahme.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,857,IT.TA.WAVE,Versorgungsangebot
+vollmacht.biz.api,DEV-APP/BIZ/BASIS/FINANZEN,679,IT.TA.KEGK,Geschaeftspartner
+dhd.components.ui,DEV-APP/UI/COMPONENT,1153,IT.TA.BCRM,Digital Service Solutions (DSS)
+au-steuerung.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1047,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+leistungen-basis.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,808,IT.TA.LEBQ,Leistungen-Basis
+tk-vorsorge-planer.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,970,IT.TA.LEVE,TK-Vorsorgeplaner
+failureaccess,EXTERNAL,226,Unbekannt,Unbekannt
+arbeitgeberbeitrag.biz,DEV-APP/BIZ/PROZESSDATEN/BEITRAG,840,IT.TA.BCRM,Arbeitgeberbeitrag
+erv.ui.impl,DEV-APP/UI/APPLICATION,1187,IT.AF.PIM,Elektronischer Rechtsverkehr
+tk.sys.toggle,DEV-FRAMEWORK/SERVER,363,IT.AF.FRW,Framework Server
+zusatzvertrag-extern.biz.qs.api,QS-APP/BIZ,1560,IT.TA.WAVE,Zusatztarif / Zusatzversicherung
+inbound-versicherter.ext.inbound.qs,QS-APP/EXTERN,1933,IT.TA.KEGK,Versichertenbestandsfuehrung
+tk.sys.eai.transport.mem,DEV-FRAMEWORK/EAI,402,IT.AF.FRW,Framework EAI
+rechnungswesen-eai-util.biz.qs,QS-APP/BIZ-BASE,1446,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+zuzahlung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,990,IT.TA.WAVE,Einzug von Zuzahlungen
+korrespondenzpartner.ui.api,DEV-APP/UI/COMPONENT,1156,IT.TA.KEGK,Geschaeftspartner
+microservice-pilot.biz.qs,QS-APP/BIZ,1715,IT.AF.FRW,Microservice Pilot
+versorgungsangebot.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,849,IT.TA.WAVE,Versorgungsangebot
+jakarta.servlet-api,EXTERNAL,154,Unbekannt,Unbekannt
+mockito-inline,EXTERNAL,167,Unbekannt,Unbekannt
+neuaufnahmemanager.ui.qs,QS-APP/UI,1863,IT.TA.KEGK,Neuaufnahmemanager
+da-basis.biz.qs,QS-APP/BIZ,1637,IT.TA.LEVE,Datenaustausch-Basis
+abr-sonst-leistungserbringer.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,978,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+geschaeftspartner-application.ui.qs,QS-APP/UI,1886,IT.TA.KEGK,Geschaeftspartner
+behandlerverzeichnis-components.ui.qs,QS-APP/UI,1775,IT.TA.WAVE,Behandler-Verzeichnis
+da-uv-traeger.ui,DEV-APP/UI/APPLICATION,1307,IT.TA.LEBQ,Durchgangsarztberichte
+arbeitgeberbestandsfuehrung.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,699,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+behandlerverzeichnis.biz.api,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,710,IT.TA.WAVE,Behandler-Verzeichnis
+vertrieb.ext.inbound.qs,QS-APP/EXTERN,1939,IT.TA.BCRM,Vertriebsmanagement
+dokumentenaufnahme.ui.qs,QS-APP/UI,1756,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+tk.sys.gui.mail.qs,QS-FRAMEWORK/QS,547,IT.AF.FRW,Framework GUI
+korrespondenzpartner.biz,DEV-APP/BIZ/BASIS/BASISROLLEN,682,IT.TA.KEGK,Geschaeftspartner
+unfall.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,986,IT.TA.LEBQ,Unfall
+gericht.biz.qs,QS-APP/BIZ,1613,IT.TA.WAVE,Widerspruchsbearbeitung
+tk.batch.run,DEV-FRAMEWORK/BATCH,344,IT.AF.FRW,Framework EAI
+schriftgut-archiv.biz,DEV-APP/BIZ/PROZESSDATEN/VERWALTUNG,743,IT.BA.DOC,KISG-Java (Altsysteme)
+tk.sys.eai.adapter.kafka.qs,QS-FRAMEWORK/BASE,484,IT.AF.FRW,Framework EAI
+haertefall-components.ui,DEV-APP/UI/COMPONENT,1165,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+haftpflichtversicherer.ui.impl,DEV-APP/UI/APPLICATION,1224,IT.TA.LEBQ,Unfall
+da-mitteilungsverfahren-rv.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,941,IT.TA.LEVE,DA Mitteilungsverfahren RV
+tk.sys.documentoutput.qs,QS-FRAMEWORK/QS,534,IT.AF.FRW,Framework GUI
+selvteilnahme.ui,DEV-APP/UI/APPLICATION,1345,IT.TA.WAVE,Versorgungsangebot
+crm-components.ui.qs,QS-APP/UI,1785,IT.TA.BCRM,CRM
+vollmacht.ui.qs,QS-APP/UI,1858,IT.TA.KEGK,Geschaeftspartner
+byte-buddy-agent,EXTERNAL,44,Unbekannt,Unbekannt
+dokumentenarchiv.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,634,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+tk.server.api,DEV-FRAMEWORK/API/SERVER-API,311,IT.AF.FRW,Framework Server
+tk.sys.eai.adapter.exchange,DEV-FRAMEWORK/EAI,395,IT.AF.FRW,Framework EAI
+dokumentenarchiv-vorgang.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,647,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+mutterschaftsgeld.proc.qs,QS-APP/BIZ-TOP,1751,IT.TA.GL,Mutterschaftsgeld (MUG)
+vertriebspartner.ui.api,DEV-APP/UI/APPLICATION,1240,IT.TA.BCRM,Vertriebsmanagement
+mongo-driver-all,EXTERNAL,36,Unbekannt,Unbekannt
+haftpflichtversicherer.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,690,IT.TA.LEBQ,Unfall
+vollmacht.ui.impl,DEV-APP/UI/COMPONENT,1129,IT.TA.KEGK,Geschaeftspartner
+httpunit,EXTERNAL,81,Unbekannt,Unbekannt
+korrespondenz.ui.qs,QS-APP/UI,1852,IT.BA.DOC,Kiss24-TKeasy
+tk.tool.checkclass.qs,QS-FRAMEWORK/QS,559,IT.AF.FRW,Framework Server
+sonstigerleistungserbringer.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,712,IT.TA.LEBQ,Heilmittelverzeichnis
+apothekenabrechnung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,947,IT.TA.WAVE,DA Apotheken
+haftpflichtversicherer.biz.qs,QS-APP/BIZ,1630,IT.TA.LEBQ,Unfall
+javax.validation.api,EXTERNAL,-1,Unbekannt,Unbekannt
+tk.sys.util.concurrent.admin,DEV-FRAMEWORK/SERVER-BASE,345,IT.AF.FRW,Framework Server
+sonstiger-geschaeftspartner.biz,DEV-APP/BIZ/BASIS/BASISROLLEN,686,IT.TA.KEGK,Geschaeftspartner
+leistungen-basis.ui,DEV-APP/UI/COMPONENT,1170,IT.TA.LEBQ,Leistungen-Basis
+jakarta.xml.soap-api,EXTERNAL,107,Unbekannt,Unbekannt
+beitrag.biz.qs,QS-APP/BIZ,1578,IT.TA.BCRM,"Beitragssaetze, Rechengroessen"
+tk.sys.eventing,DEV-FRAMEWORK/PROCESS,413,IT.AF.PEP,Framework Process
+dokumentenaufnahme.ui.api,DEV-APP/UI/COMPONENT,1120,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+meinetk.ui.qs,QS-APP/UI,1897,IT.ON.ONB1,MeineTK
+korrespondenz.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,667,IT.BA.DOC,Kiss24-TKeasy
+einstufungsverlauf.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,727,IT.TA.KEGK,Einstufungsverlauf
+kassenwechselmeldungen.ui.qs,QS-APP/UI,1877,IT.TA.KMEL,Kassenwechselmeldungen
+pflegeversicherung.web,DEV-APP/WEB,1078,IT.TA.PV,Pflegeversicherung
+TKLogbackConfiguration,EXTERNAL,19,Unbekannt,Unbekannt
+tk-termin.biz.impl,DEV-APP/BIZ/PROZESSDATEN/VERWALTUNG,741,IT.ON.OGP2,TK-Termin
+korrespondenz-adapter.biz,DEV-APP/BIZ/BASIS/INTERAKTION,662,IT.BA.DOC,Kiss24-TKeasy
+zahnersatz.ui,DEV-APP/UI/APPLICATION,1339,IT.TA.ZED,Zahnersatz
+behandlerverzeichnis.ui.qs,QS-APP/UI,1829,IT.TA.WAVE,Behandler-Verzeichnis
+jaxfront-pdf,EXTERNAL/JAXFRONT,257,Unbekannt,Unbekannt
+gebietsabgrenzung.biz.qs,QS-APP/BIZ,1649,IT.AF.PIM,Gebietsabgrenzung (GBA)
+tk.sys.services.arm,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,379,IT.AF.FRW,Framework Persistenz
+datenaustausch-eessi.ui.qs,QS-APP/UI,1903,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+e-nachricht.biz.impl,DEV-APP/BIZ/BASIS/INTERAKTION,674,IT.AF.PIM,e-Nachricht
+pflegeversicherung.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,904,IT.TA.PV,Pflegeversicherung
+jetty-ee10-webapp,EXTERNAL,145,Unbekannt,Unbekannt
+sap-eam-stammdaten.biz.qs,QS-APP/BIZ,1689,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+tk.sys.communication.host.qs,QS-FRAMEWORK/QS,556,IT.AF.FRW,Framework Persistenz
+slf4j.api,EXTERNAL,-1,Unbekannt,Unbekannt
+tk.sys.communication.socket,DEV-FRAMEWORK/GUI-CORE,431,IT.AF.FRW,Framework GUI
+behandlerverzeichnis.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,711,IT.TA.WAVE,Behandler-Verzeichnis
+leistungssystem.ui.api,DEV-APP/UI/COMPONENT,1172,IT.TA.LEBQ,Leistungssystem
+rvtraeger.biz.qs,QS-APP/BIZ,1652,IT.TA.KMEL,Rente
+entsendung.ui,DEV-APP/UI/APPLICATION,1368,IT.TA.KMEL,Entsendung
+hilfsmittelversorgung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,918,IT.TA.LEBQ,Hilfsmittel
+tk.sys.query,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,375,IT.AF.FRW,Framework Persistenz
+xmpcore,EXTERNAL,201,Unbekannt,Unbekannt
+kurverzeichnis.ui.qs,QS-APP/UI,1826,IT.TA.LEVE,Kur
+adress-service.ui.qs,QS-APP/UI,1869,IT.TA.KEGK,Adress-Service
+haertefall.biz.qs,QS-APP/BIZ,1528,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+tracking-components.ui.qs,QS-APP/UI,1864,IT.TA.BCRM,Vorgangstracking
+prozess-beispiel.proc.qs,QS-APP/BIZ-TOP,1730,IT.AF.PEP,Prozess-Beispiel
+tk.sys.gui.infotree,DEV-FRAMEWORK/GUI-APPLICATION,443,IT.AF.FRW,Framework GUI
+mitteilungsmanagement.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,917,IT.TA.GL,Mitteilungsmanagement
+org.eclipse.equinox.registry,EXTERNAL,15,Unbekannt,Unbekannt
+haeusliche-krankenpflege.biz.qs,QS-APP/BIZ,1503,IT.TA.LEBQ,Haeusliche Krankenpflege
+widerspruch.biz,DEV-APP/BIZ/PROZESSDATEN/BESCHWERDE,997,IT.TA.WAVE,Widerspruchsbearbeitung
+org.glassfish.ha.ha-api,EXTERNAL,112,Unbekannt,Unbekannt
+zusatzvertrag-batch.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,996,IT.TA.WAVE,Wahltarife
+studienverlauf.type.qs,QS-TYPE,1412,IT.TA.KMEL,Studienverlauf
+arztgebuehrenpositionen.biz.qs,QS-APP/BIZ,1683,IT.TA.WAVE,Arztgebuehrenordnungsposition
+da-sonstigeleistungserbringer.biz.qs,QS-APP/BIZ,1634,IT.TA.LEVE,DA Sonstige Leistungserbringer
+asm-analysis,EXTERNAL,30,Unbekannt,Unbekannt
+jakarta.websocket-api,EXTERNAL,156,Unbekannt,Unbekannt
+korrespondenz-releasetest.biz,DEV-APP/BIZ/RELEASETEST,1062,IT.BA.DOC,Kiss24-TKeasy
+kim-log.ui.impl,DEV-APP/UI/APPLICATION,1188,IT.AF.PIM,Kommunikation im Medizinwesen Log
+ca.uhn.hapi.fhir.org.hl7.fhir.convertors,EXTERNAL/HAPI-FHIR,243,Unbekannt,Unbekannt
+hzv.biz.qs,QS-APP/BIZ,1573,IT.TA.LEVE,Hausarztzentrierte Versorgung (HzV)
+crm.biz.qs,QS-APP/BIZ,1654,IT.TA.BCRM,CRM
+tk.de.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,730,IT.ON.OGP2,tk.de
+tk.db.log,DEV-FRAMEWORK/DB,330,IT.AF.FRW,Framework Persistenz
+au-steuerung.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1418,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+datenaustausch-eel-uebergreifend.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,981,IT.TA.GL,DA Entgeltersatzleistungen
+mutterschaftsgeld.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,959,IT.TA.GL,Mutterschaftsgeld (MUG)
+fusionsarchiv-dmp.ui,DEV-APP/UI/APPLICATION,1259,IT.TA.WAVE,Diseasemanagement-Programme
+rehasport.ui.impl,DEV-APP/UI/APPLICATION,1315,IT.PM.PJ,Rehasport und Funktionstraining
+einstufungsverlauf.biz.api,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,720,IT.TA.KEGK,Einstufungsverlauf
+leistungen-basis.ui.api,DEV-APP/UI/COMPONENT,1169,IT.TA.LEBQ,Leistungen-Basis
+tk.batch.framework,DEV-FRAMEWORK/BATCH,342,IT.AF.FRW,Framework EAI
+tk.sys.eai.adapter.ponton,DEV-FRAMEWORK/EAI,400,IT.AF.FRW,Framework EAI
+hauptzollamt.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,691,IT.TA.BCRM,Vollstreckung
+eel.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,939,IT.TA.GL,Entgeltersatzleistungen
+KernpruefungRVKVTKmod,EXTERNAL,118,Unbekannt,Unbekannt
+gesundheitsdividende.proc.qs,QS-APP/BIZ,1598,IT.TA.BCRM,Gesundheitsdividende
+tk.sys.workitem.qs,QS-FRAMEWORK/QS,537,IT.AF.FRW,Framework GUI
+zahnersatz.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,948,IT.TA.ZED,Zahnersatz
+datenaustausch-eessi-xml.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,994,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+bankverzeichnis-components.ui,DEV-APP/UI/COMPONENT,1100,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+haertefall.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,824,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+betriebsnummernverzeichnis.biz.qs,QS-APP/BIZ,1552,IT.TA.WAVE,Betriebsnummern-Verzeichnis
+tk.sys.viewagent,DEV-FRAMEWORK/GUI-CORE,434,IT.AF.FRW,Framework GUI
+uvtraeger.biz.api,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,687,IT.TA.LEBQ,Unfall
+eessi-institution.biz.qs,QS-APP/BIZ,1703,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+jakarta.jms-api,EXTERNAL,64,Unbekannt,Unbekannt
+neuaufnahmemanager.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,864,IT.TA.KEGK,Neuaufnahmemanager
+tkschriftgut.type,DEV-APP/BIZ/BASIS/INTERAKTION,636,IT.BA.DOC,KISG-Java (Altsysteme)
+swing2mockupOSGi,EXTERNAL,182,Unbekannt,Unbekannt
+org.eclipse.equinox.common,EXTERNAL,13,Unbekannt,Unbekannt
+ui-testtools.ui,DEV-APP/UI/TESTTOOLS,1383,IT.AF.FRW,UI-Components
+melderegisterabgleich.biz.impl,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,734,IT.TA.KEGK,Melderegisterabgleich
+jgiven-junit5,EXTERNAL/TEST_ONLY/JGIVEN,290,Unbekannt,Unbekannt
+everordnungmanager.ui.impl,DEV-APP/UI/APPLICATION,1330,IT.AF.PIM,eVerordnung Manager
+versorgungsangebot.ui,DEV-APP/UI/APPLICATION,1252,IT.TA.WAVE,Versorgungsangebot
+haftpflichtversicherer.ui.qs,QS-APP/UI,1921,IT.TA.LEBQ,Unfall
+leistungen-basis.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,812,IT.TA.LEBQ,Leistungen-Basis
+versichertenbestandsfuehrung.ui.api,DEV-APP/UI/APPLICATION,1290,IT.TA.KEGK,Versichertenbestandsfuehrung
+everordnungmanager.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,897,IT.AF.PIM,eVerordnung Manager
+tk.sys.gui.test,QS-INTEGRATIONTEST/GUI,1969,IT.AF.FRW,Integrationstests
+tk.sys.eai.adapter.notes,DEV-FRAMEWORK/EAI,409,IT.AF.FRW,Framework EAI
+implantattraeger.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1435,IT.TA.LEVE,Implantattraeger
+rehasport.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1051,IT.PM.PJ,Rehasport und Funktionstraining
+com.twelvemonkeys.common.common-io,EXTERNAL,71,Unbekannt,Unbekannt
+tk-patientenquittung.biz.qs,QS-APP/BIZ,1545,IT.TA.WAVE,TK-Patientenquittung
+psychotherapie.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,884,IT.TA.LEBQ,Psychotherapie
+apothekenabrechnung.biz.qs.api,QS-APP/BIZ,1556,IT.TA.WAVE,DA Apotheken
+mdkverzeichnis.ui,DEV-APP/UI/APPLICATION,1238,IT.TA.WAVE,MDK-Verzeichnis
+pzr.proc.qs,QS-APP/BIZ-TOP,1734,IT.TA.ZED,Professionelle Zahnreinigung
+diga.ext.inbound,DEV-APP/EXTERN/INBOUND,1094,IT.TA.ZED,Digitale Gesundheitsanwendung
+mitteilungsmanagement.ui.qs,QS-APP/UI,1892,IT.TA.GL,Mitteilungsmanagement
+unfall-basis.biz.qs,QS-APP/BIZ,1627,IT.TA.LEBQ,Unfall
+da-sonstigeleistungserbringer.ui.qs,QS-APP/UI,1794,IT.TA.LEVE,DA Sonstige Leistungserbringer
+fusionsarchiv-dmp.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,761,IT.TA.WAVE,Diseasemanagement-Programme
+jfreechart,EXTERNAL,88,Unbekannt,Unbekannt
+hotswap-agent-core,HOTSWAP,302,Unbekannt,Unbekannt
+diseasemanagement.ui,DEV-APP/UI/APPLICATION,1263,IT.TA.WAVE,Diseasemanagement-Programme
+interessent-pflege.biz.qs,QS-APP/BIZ,1473,IT.TA.BCRM,CRM-Akquisemanager
+pzr.ui.qs,QS-APP/UI,1909,IT.TA.ZED,Professionelle Zahnreinigung
+tk.sys.workitem.test,QS-INTEGRATIONTEST/GUI,1966,IT.AF.FRW,Integrationstests
+medizinproduktregress.biz.qs,QS-APP/BIZ,1468,IT.TA.LEBQ,Medizinproduktregress
+schriftgut.biz,DEV-APP/BIZ/BASIS/INTERAKTION,670,IT.BA.DOC,KISG-Java (Altsysteme)
+com.ibm.icu,EXTERNAL,222,Unbekannt,Unbekannt
+sozv-meldungen.biz.qs.api,QS-APP/BIZ,1592,IT.TA.KMEL,SozV-Meldungen
+zusatzvertrag.ui.qs,QS-APP/UI,1760,IT.TA.WAVE,Wahltarife
+dokumentenklasse.biz,DEV-APP/BIZ/BASIS/INTERAKTION,646,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+inbound-versicherter.ext.inbound,DEV-APP/EXTERN/INBOUND,1085,IT.TA.KEGK,Versichertenbestandsfuehrung
+proko-schriftgut-beispiel.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1037,IT.PM.PJ,Prozesskomponente-Schriftgut-Beispiel
+tk.sys.eai.adapter.queueinbox,DEV-FRAMEWORK/EAI,399,IT.AF.FRW,Framework EAI
+geschaeftspartner.ui.api,DEV-APP/UI/COMPONENT,1112,IT.TA.KEGK,Geschaeftspartner
+xmlunit-assertj3,EXTERNAL/TEST_ONLY,283,Unbekannt,Unbekannt
+pflegeunterstuetzungsgeld.biz.qs,QS-APP/BIZ,1682,IT.TA.PV,Pflegeunterstuetzungsgeld
+tk.sys.gui.editpattern,DEV-FRAMEWORK/GUI-APPLICATION,440,IT.AF.FRW,Framework GUI
+vertrieb.biz.qs.api,QS-APP/BIZ,1472,IT.TA.BCRM,Vertriebsmanagement
+tk.sys.util.log,DEV-FRAMEWORK/SERVER-BASE,347,IT.AF.FRW,Framework Server
+jdtaus-banking-charsets,EXTERNAL,86,Unbekannt,Unbekannt
+datenschutzcockpit.ui.impl,DEV-APP/UI/APPLICATION,1214,IT.TA.KMEL,Datenschutzcockpit
+zusatzvertrag.ui.api,DEV-APP/UI/APPLICATION,1206,IT.TA.WAVE,Wahltarife
+ant-junitlauncher,EXTERNAL,40,Unbekannt,Unbekannt
+arbeitgeberbeitrag.ui.qs,QS-APP/UI,1801,IT.TA.BCRM,Arbeitgeberbeitrag
+tk.sys.gui.image.qs,QS-FRAMEWORK/QS,536,IT.AF.FRW,Framework GUI
+versichertenbestandsfuehrung.ui.qs,QS-APP/UI,1839,IT.TA.KEGK,Versichertenbestandsfuehrung
+hilfsmittelversorgung.ext.outbound,DEV-APP/EXT-OUTBOUND,592,IT.TA.LEBQ,Hilfsmittel
+prozessereignismanager.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1035,IT.AF.PEP,Geschaeftsprozess
+org.osgi.service.component.annotations,EXTERNAL,166,Unbekannt,Unbekannt
+icd.biz,DEV-APP/BIZ/VERZEICHNIS,613,IT.TA.LEBQ,Leistungen-Basis
+sozv-meldungen.ui.api,DEV-APP/UI/APPLICATION,1291,IT.TA.KMEL,SozV-Meldungen
+fusionsarchiv-crm.ui,DEV-APP/UI/APPLICATION,1211,IT.TA.BCRM,CRM
+logback-classic,EXTERNAL,-1,Unbekannt,Unbekannt
+datenaustausch-geldleistungen-basis.biz.qs,QS-APP/BIZ,1516,IT.TA.GL,DA Entgeltersatzleistungen
+junit-jupiter-migrationsupport,EXTERNAL/JUNIT-JUPITER,270,Unbekannt,Unbekannt
+tk.sys.gui.metrics,DEV-FRAMEWORK/GUI-BASE,425,IT.AF.FRW,Framework GUI
+datenaustausch-eessi.ui,DEV-APP/UI/APPLICATION,1371,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+crm.biz.qs.api,QS-APP/BIZ,1510,IT.TA.BCRM,CRM
+testdaten-pflegeversicherung.biz.impl,DEV-APP/BIZ/TESTDATEN,1065,IT.TA.PV,Pflegeversicherung
+eingabe-protokoll.ui,DEV-APP/UI/APPLICATION,1246,IT.AF.FRW,Eingabe-Protokoll
+proto-kostenerstattungen.ui.qs,QS-APP/UI,1755,IT.PM.PJ,Prototyp Kostenerstattungen
+tk-termin.web.qs,QS-APP/WEB,1924,IT.ON.OGP2,TK-Termin
+tk.sys.kafka,DEV-FRAMEWORK/CORE,326,IT.AF.FRW,Framework EAI
+da-aerzte-asv.ui.qs,QS-APP/UI,1868,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+tk.sys.gui.uiserver.qs,QS-FRAMEWORK/QS,553,IT.AF.FRW,Framework GUI
+abr-sonst-leistungserbringer.ext.outbound,DEV-APP/EXT-OUTBOUND,585,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+bankverzeichnis.biz.qs,QS-APP/BIZ,1568,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+meldungen-basis.biz.qs.api,QS-APP/BIZ,1507,IT.TA.KMEL,Meldungen-Basis
+rsa-clearing.biz.qs,QS-APP/BIZ,1691,IT.TA.KEGK,RSA-Clearing
+tk.de.web.outbound,DEV-APP/WEB-OUTBOUND,605,IT.ON.OGP2,tk.de
+com.hazelcast,EXTERNAL,-1,Unbekannt,Unbekannt
+prozess-beispiel.ui.impl,DEV-APP/UI/APPLICATION,1377,IT.AF.PEP,Prozess-Beispiel
+zahnersatz-components.ui,DEV-APP/UI/COMPONENT,1166,IT.TA.ZED,Zahnersatz
+leistung-uebergreifend.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,983,IT.TA.LEBQ,Leistungen-Basis
+javassist,EXTERNAL,83,Unbekannt,Unbekannt
+resolver,EXTERNAL/JAXFRONT,261,Unbekannt,Unbekannt
+viewagent.notifications,DEV-FRAMEWORK/TOOL,471,IT.AF.FRW,Framework GUI
+datenaustausch-eessi.biz.qs.api,QS-APP/BIZ,1707,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+identitaetsdatenabruf.ui.impl,DEV-APP/UI/APPLICATION,1216,IT.TA.KMEL,Identitaetsdatenabruf
+hilfsmittelversorgung.ui,DEV-APP/UI/APPLICATION,1320,IT.TA.LEBQ,Hilfsmittel
+seminarverwaltung-pin-auskunft.ui.qs,QS-APP/UI,1803,IT.TA.BCRM,Seminarverwaltung
+meinetk-basis.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,723,IT.ON.ONB1,MeineTK
+abr-sonst-leistungserbringer.ui.qs,QS-APP/UI,1828,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+kur.proc.qs,QS-APP/BIZ-TOP,1742,IT.TA.LEVE,Kur
+kur-components.ui,DEV-APP/UI/COMPONENT,1145,IT.TA.LEVE,Kur
+leistungsrueckforderung.biz.qs,QS-APP/BIZ,1585,IT.TA.WAVE,Pruefung der Leistungspflicht - PLP
+stoppuhr.biz,DEV-APP/BIZ/VERZEICHNIS,608,IT.AF.PEP,Geschaeftsprozess
+com.github.virtuald.curvesapi,EXTERNAL,-1,Unbekannt,Unbekannt
+prozess-beispiel.biz.qs,QS-APP/BIZ,1713,IT.AF.PEP,Prozess-Beispiel
+fv-meldungen.biz.qs,QS-APP/BIZ,1579,IT.TA.KMEL,FV-Meldungen
+org.glassfish.hk2.external.jakarta.inject,EXTERNAL,219,Unbekannt,Unbekannt
+kinderkrankengeld.biz.qs,QS-APP/BIZ,1519,IT.TA.GL,Kinderkrankengeld (KKG)
+tkeasy-schema-reader,EXTERNAL,62,Unbekannt,Unbekannt
+com.google.guava,EXTERNAL,-1,Unbekannt,Unbekannt
+datenaustausch-geldleistungen-basis.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,908,IT.TA.GL,DA Entgeltersatzleistungen
+dokumentenaufnahme.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,660,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+beitragserstattung-aus-rente.ui.qs,QS-APP/UI,1871,IT.TA.BCRM,Beitragserstattung aus Rente
+tk.sys.server,DEV-FRAMEWORK/SERVER,355,IT.AF.FRW,Framework Server
+bevap.biz.api,DEV-APP/BIZ/VERZEICHNIS,606,IT.TA.PV,Beschaeftigtenverzeichnis in der ambulanten Pflege
+subethasmtp,EXTERNAL,174,Unbekannt,Unbekannt
+vertriebspartner.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,866,IT.TA.BCRM,Vertriebsmanagement
+unfall.biz.qs,QS-APP/BIZ,1551,IT.TA.LEBQ,Unfall
+selvabrechnung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,972,IT.TA.LEVE,DA Integrierte Versorgung
+leistungen-basis.biz.qs.api,QS-APP/BIZ,1480,IT.TA.LEBQ,Leistungen-Basis
+sap-eam-stammdaten.ui,DEV-APP/UI/APPLICATION,1198,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+tk.sys.process.qs,QS-INTEGRATIONTEST/PROCESS,1964,IT.AF.FRW,Integrationstests
+datenaustausch-eessi.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,671,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+pzr.ui.impl,DEV-APP/UI/APPLICATION,1325,IT.TA.ZED,Professionelle Zahnreinigung
+kostenerstattung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,965,IT.TA.LEBQ,Kostenerstattung
+korrespondenz-parameterpanel.ui.impl,DEV-APP/UI/COMPONENT,1162,SK.KT.SGE,Standard-Schriftgut Kiss24
+geschaeftspartner.ext.inbound,DEV-APP/EXTERN/INBOUND,1082,IT.TA.KEGK,Geschaeftspartner
+interessent.ui,DEV-APP/UI/COMPONENT,1138,IT.TA.BCRM,CRM-Akquisemanager
+bonusprogramm.biz.qs,QS-APP/BIZ,1600,IT.TA.BCRM,CRM-Bonusprogramm
+mutterschaftsgeld.biz.qs,QS-APP/BIZ,1520,IT.TA.GL,Mutterschaftsgeld (MUG)
+unfall.ui.qs,QS-APP/UI,1818,IT.TA.LEBQ,Unfall
+tk.sys.gui.print,DEV-FRAMEWORK/GUI-CORE,428,IT.AF.FRW,Framework GUI
+dokumentenklasse.ui.impl,DEV-APP/UI/COMPONENT,1152,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+tk.sys.util.jserverevent,DEV-FRAMEWORK/SERVER-BASE,346,IT.AF.FRW,Framework Server
+jaxfront-core,EXTERNAL/JAXFRONT,255,Unbekannt,Unbekannt
+junit-vintage-engine,EXTERNAL/JUNIT-JUPITER,279,Unbekannt,Unbekannt
+da-mitteilungsverfahren-rv.ui.impl,DEV-APP/UI/APPLICATION,1182,IT.TA.LEVE,DA Mitteilungsverfahren RV
+einstufungsverlauf.web,DEV-APP/WEB,1076,IT.TA.KEGK,Einstufungsverlauf
+mvel2,EXTERNAL,186,Unbekannt,Unbekannt
+rente.ui,DEV-APP/UI/APPLICATION,1262,IT.TA.KMEL,Rente
+praeventionskurs.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,714,IT.TA.LEBQ,Praeventionskurse
+vorgang-crm.ui.api,DEV-APP/UI/COMPONENT,1106,IT.AF.PIM,Vorgangssystem
+vps.ui.qs,QS-APP/UI,1873,IT.TA.LEVE,Vorpruefsoftware
+jcalendar,EXTERNAL/JAXFRONT,259,Unbekannt,Unbekannt
+tim.biz.api,DEV-APP/BIZ/PROZESSDATEN/SERVICE,998,IT.AF.PIM,TI-Messenger-Adapter
+tkkonto.biz.qs,QS-APP/BIZ,1615,IT.TA.BCRM,TK-Konto (TKeasy-GUI  Schriftgut)
+rechnungswesen.proc.qs,QS-APP/BIZ-TOP,1753,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+versorgungsamtsbescheid.ui.qs,QS-APP/UI,1766,IT.TA.WAVE,Versorgungsamtsbescheid
+tk.sys.gui.uiserverjars,DEV-FRAMEWORK/TKX-SERVER,438,IT.AF.FRW,Framework GUI
+leistung-services.hh.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,798,IT.TA.LEBQ,Leistung-Services
+tk.sys.daemon.qs,QS-FRAMEWORK/QS,526,IT.AF.FRW,Framework GUI
+kurverzeichnis.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,709,IT.TA.LEVE,Kur
+tk.tool.eaigenerator,DEV-FRAMEWORK/TOOL,461,IT.AF.FRW,Framework EAI
+org.apache.felix.scr,EXTERNAL,9,Unbekannt,Unbekannt
+krankenhausverzeichnis-systemanforderungen.biz.qs,QS-APP/BIZ,1564,IT.TA.LEVE,Verzeichnis Krankenhaeuser
+zusatzvertrag.biz.qs,QS-APP/BIZ,1559,IT.TA.WAVE,Wahltarife
+proko-schriftgut-beispiel.biz.impl,DEV-APP/BIZ/BSPL,1024,IT.PM.PJ,Prozesskomponente-Schriftgut-Beispiel
+widerspruch.ui.qs,QS-APP/UI,1912,IT.TA.WAVE,Widerspruchsbearbeitung
+tk.sys.test,QS-FRAMEWORK/BASE,481,IT.AF.FRW,Framework Server
+rechtsakte.biz.qs,QS-APP/BIZ,1671,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+tk.util.test,QS-INTEGRATIONTEST/MISC,1971,IT.AF.FRW,Integrationstests
+kvnr-meldungen.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,771,IT.TA.KMEL,KVNr-Meldungen
+kinderkrankengeld.ui.qs,QS-APP/UI,1812,IT.TA.GL,Kinderkrankengeld (KKG)
+korrespondenzpartner.ui.impl,DEV-APP/UI/COMPONENT,1158,IT.TA.KEGK,Geschaeftspartner
+mandatsakte.ui,DEV-APP/UI/COMPONENT,1127,IT.TA.KEGK,Geschaeftspartner
+krankenkassenverzeichnis.ui.qs,QS-APP/UI,1913,IT.TA.WAVE,Krankenkassen-Verzeichnis
+kur.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,919,IT.TA.LEVE,Kur
+korrespondenz.ext.outbound,DEV-APP/EXT-OUTBOUND,587,IT.BA.DOC,Kiss24-TKeasy
+interessent.biz.qs,QS-APP/BIZ,1474,IT.TA.BCRM,CRM-Akquisemanager
+leistungssystem.biz.qs,QS-APP/BIZ,1483,IT.TA.LEBQ,Leistungssystem
+mdkverzeichnis-components.ui.api,DEV-APP/UI/COMPONENT,1135,IT.TA.WAVE,MDK-Verzeichnis
+tk.de.web.qs,QS-APP/WEB,1923,IT.ON.OGP2,tk.de
+widerspruch.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERWALTUNG,738,IT.TA.WAVE,Widerspruchsbearbeitung
+ext-mtext.qs,QS-FRAMEWORK/QS,545,Unbekannt,Unbekannt
+tk.sys.gui.infomessage,DEV-FRAMEWORK/GUI-CORE,435,IT.AF.FRW,Framework GUI
+zahnersatz.proc.qs,QS-APP/BIZ-TOP,1741,IT.TA.ZED,Zahnersatz
+leistung-services.hk.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,800,IT.TA.LEBQ,Leistung-Services
+arbeitgeberbestandsfuehrung-uebergreifend.biz,DEV-APP/BIZ/UEBERGREIFEND,1014,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+chroniker.ui.qs,QS-APP/UI,1850,IT.TA.LEBQ,Chronikerdaten
+ki-pilot.biz.qs,QS-APP/BIZ,1692,IT.AF.KI,KI-Basis
+krankenhausaufenthalt-components.ui,DEV-APP/UI/APPLICATION,1304,IT.TA.LEVE,Krankenhausaufenthalt
+jackson-databind,EXTERNAL/JACKSON,189,Unbekannt,Unbekannt
+everordnungmanager.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,892,IT.AF.PIM,eVerordnung Manager
+vorgang.biz.qs.api,QS-APP/BIZ,1452,IT.AF.PIM,Vorgangssystem
+mandatsakte.ui.qs,QS-APP/UI,1857,IT.TA.KEGK,Geschaeftspartner
+rechnungswesen-type.biz.qs,QS-APP/BIZ,1645,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+javax.servlet,EXTERNAL,-1,Unbekannt,Unbekannt
+tk.sys.automation,DEV-FRAMEWORK/SERVER,364,IT.AF.FRW,Framework Server
+tk-vorsorge-planer.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,971,IT.TA.LEVE,TK-Vorsorgeplaner
+datenaustausch-eessi.ext.outbound,DEV-APP/EXT-OUTBOUND,582,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+fusionsarchiv-krankenhaus.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,759,IT.TA.LEVE,Fusionsarchiv-Krankenhaus
+leistungsaushilfe-ausland.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,907,IT.TA.ZED,Leistungsaushilfe Ausland
+beitrag.ui,DEV-APP/UI/APPLICATION,1251,IT.TA.BCRM,"Beitragssaetze, Rechengroessen"
+com.cedarsoftware.json-io,EXTERNAL,187,Unbekannt,Unbekannt
+betriebsnummernverzeichnis.ui.qs,QS-APP/UI,1791,IT.TA.WAVE,Betriebsnummern-Verzeichnis
+datenaustausch-finanzverwaltung.ext.inbound,DEV-APP/EXTERN/INBOUND,1087,IT.TA.BCRM,Steuerdaten
+selvabrechnung.biz.qs,QS-APP/BIZ,1636,IT.TA.LEVE,DA Integrierte Versorgung
+e-nachricht.ui.impl,DEV-APP/UI/APPLICATION,1189,IT.AF.PIM,e-Nachricht
+e-nachricht.ui.qs,QS-APP/UI,1777,IT.AF.PIM,e-Nachricht
+schnellerfassung.ui,DEV-APP/UI/COMPONENT,1154,IT.AF.PEP,Geschaeftsprozess
+arbeitgeberbeitrag.biz.api,DEV-APP/BIZ/PROZESSDATEN/BEITRAG,837,IT.TA.BCRM,Arbeitgeberbeitrag
+au-steuerung.biz.qs,QS-APP/BIZ,1609,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+everordnungmanager.ext.inbound.qs,QS-APP/EXTERN,1946,IT.AF.PIM,eVerordnung Manager
+kieferorthopaedie.biz.qs,QS-APP/BIZ,1587,IT.TA.ZED,Kieferorthopaedie
+ik-inhaber-verzeichnis.biz,DEV-APP/BIZ/BASIS/BASISROLLEN,684,IT.TA.KEGK,Geschaeftspartner
+tk.sys.documentoutput,DEV-FRAMEWORK/DOCUMENT-OUTPUT,383,IT.AF.FRW,Framework GUI
+datenaustausch-finanzverwaltung.biz,DEV-APP/BIZ/PROZESSDATEN/FINANZEN,749,IT.TA.BCRM,Steuerdaten
+commons-csv,EXTERNAL,130,Unbekannt,Unbekannt
+com.sun.xml.stream.buffer.streambuffer,EXTERNAL,103,Unbekannt,Unbekannt
+org.apache.kafka.client,EXTERNAL,66,Unbekannt,Unbekannt
+asv-verzeichnis.ui.qs,QS-APP/UI,1867,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+konfigurierbare-leistung.ui.qs,QS-APP/UI,1908,IT.TA.LEBQ,Konfigurierbare Leistung
+sonstiger-geschaeftspartner-systemanforderungen.biz,DEV-APP/BIZ/UEBERGREIFEND/ANALYSE,1005,IT.TA.KEGK,Geschaeftspartner
+micrometer-observation,EXTERNAL,196,Unbekannt,Unbekannt
+leistungsuebersicht.biz.qs.api,QS-APP/BIZ,1718,IT.TA.LEBQ,Leistungsuebersicht
+jansi,EXTERNAL/TEST_ONLY/JGIVEN,292,Unbekannt,Unbekannt
+com.sun.mail.dsn,EXTERNAL,185,Unbekannt,Unbekannt
+vertrieb.ext.outbound,DEV-APP/EXT-OUTBOUND,597,IT.TA.BCRM,Vertriebsmanagement
+meldungen-basis.ui,DEV-APP/UI/APPLICATION,1294,IT.TA.KMEL,Meldungen-Basis
+arbeitsunfaehigkeit.biz.qs,QS-APP/BIZ,1607,IT.TA.GL,Arbeitsunfaehigkeit
+prozessereignismanager.ui.qs,QS-APP/UI,1788,IT.AF.PEP,Geschaeftsprozess
+kurverzeichnis.biz.qs,QS-APP/BIZ,1673,IT.TA.LEVE,Kur
+activation,EXTERNAL/RUNTIME,294,Unbekannt,Unbekannt
+leistungen-components.ui,DEV-APP/UI/COMPONENT,1163,IT.TA.LEBQ,Leistungen-Basis
+adress-service.ui,DEV-APP/UI/APPLICATION,1360,IT.TA.KEGK,Adress-Service
+xercesImpl,EXTERNAL/JAXFRONT,256,Unbekannt,Unbekannt
+kur.ui,DEV-APP/UI/APPLICATION,1316,IT.TA.LEVE,Kur
+com.oracle.database.messaging.aqapi-jakarta,EXTERNAL,65,Unbekannt,Unbekannt
+jgiven-utils,EXTERNAL/TEST_ONLY/JGIVEN,291,Unbekannt,Unbekannt
+resource-available-rest,EXTERNAL,162,Unbekannt,Unbekannt
+korrespondenz.ext.inbound.qs,QS-APP/EXTERN,1944,IT.BA.DOC,Kiss24-TKeasy
+gebietsabgrenzung.ui,DEV-APP/UI/APPLICATION,1230,IT.AF.PIM,Gebietsabgrenzung (GBA)
+schema-reader,EXTERNAL,60,Unbekannt,Unbekannt
+mitteilungsmanagement-basis.biz.qs,QS-APP/BIZ,1695,IT.TA.GL,Mitteilungsmanagement
+annogen,EXTERNAL,-1,Unbekannt,Unbekannt
+generische-kostenerstattung.ext.outbound,DEV-APP/EXT-OUTBOUND,574,IT.PM.PJ,Generische Kostenerstattung
+fileimportexport.util.impl,DEV-TYPE,569,IT.TA.LEBQ,Leistungen-Basis
+iText,EXTERNAL/JAXFRONT,254,Unbekannt,Unbekannt
+tk.sys.gui.versladentest.test,QS-INTEGRATIONTEST/SERVER,1960,IT.AF.FRW,Integrationstests
+eessi-institution.ui.qs,QS-APP/UI,1901,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+jakarta.enterprise.cdi-api,EXTERNAL,-1,Unbekannt,Unbekannt
+praevention.ui.qs,QS-APP/UI,1795,IT.TA.LEBQ,Praevention
+bevap.ui.qs,QS-APP/UI,1789,IT.TA.PV,Beschaeftigtenverzeichnis in der ambulanten Pflege
+fusionsarchiv-arbeitgeberleistung.ui,DEV-APP/UI/APPLICATION,1276,IT.TA.LEBQ,Erstattung von AG-Aufwendungen
+vertriebspartner.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,869,IT.TA.BCRM,Vertriebsmanagement
+com.sun.el.javax.el,EXTERNAL,161,Unbekannt,Unbekannt
+DbTuple,DEV-FRAMEWORK/SERVER-TUPLE,341,IT.AF.FRW,Framework Persistenz
+tk.sys.gui.error,DEV-FRAMEWORK/GUI-BASE,423,IT.AF.FRW,Framework GUI
+jmxtools_p,EXTERNAL,92,Unbekannt,Unbekannt
+truth,EXTERNAL,218,Unbekannt,Unbekannt
+korrespondenz-fachbezug.ui,DEV-APP/UI/COMPONENT,1161,IT.BA.DOC,Kiss24-TKeasy
+fahrkosten.proc.qs,QS-APP/BIZ-TOP,1733,IT.TA.LEBQ,Fahrkosten
+systemanforderungen.biz.api,DEV-APP/BIZ/UEBERGREIFEND/ANALYSE,1003,IT.TA.BCRM,Listanforderungen (SAF)
+org.bitbucket.b_c.jose4j,EXTERNAL,93,Unbekannt,Unbekannt
+testdatenmanagement.biz,DEV-APP/BIZ/TESTDATEN,1063,IT.BA.DOC,Testdatenmanagement
+rechnungswesen-type.biz,DEV-APP/BIZ/BASIS/FINANZEN,677,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+kvnr-meldungen.biz.impl,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,775,IT.TA.KMEL,KVNr-Meldungen
+tkone.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1439,IT.TA.BCRM,CRM
+jetty-ee10-servlets,EXTERNAL,144,Unbekannt,Unbekannt
+akquise.ui.impl,DEV-APP/UI/APPLICATION,1379,IT.TA.BCRM,CRM-Akquisemanager
+versichertenbestandsfuehrung-components.ui,DEV-APP/UI/COMPONENT,1139,IT.TA.KEGK,Versichertenbestandsfuehrung
+distance-matrix.ext.outbound,DEV-APP/EXT-OUTBOUND,584,IT.TA.LEBQ,Fahrkosten
+versorgungsamtsbescheid-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,796,IT.TA.WAVE,Versorgungsamtsbescheid
+geschaeftspartner.biz.impl,DEV-APP/BIZ/BASIS/STRUKTUR,630,IT.TA.KEGK,Geschaeftspartner
+gesundheitsprojekte.biz.api,DEV-APP/BIZ/PROZESSDATEN/CRM,793,IT.TA.LEBQ,Gesundheitsprojekte
+gebuehrenordnung.biz,DEV-APP/BIZ/VERZEICHNIS,616,IT.TA.LEBQ,Kostenerstattung
+tk.sys.eai.adapter.file,DEV-FRAMEWORK/EAI,403,IT.AF.FRW,Framework EAI
+com.launchkarkly.okhttp-eventsource,EXTERNAL,223,Unbekannt,Unbekannt
+vorgang-application.ui,DEV-APP/UI/APPLICATION,1366,IT.AF.PIM,Vorgangssystem
+zusatzvertrag-extern.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,860,IT.TA.WAVE,Zusatztarif / Zusatzversicherung
+tkkonto.biz.qs.api,QS-APP/BIZ,1614,IT.TA.BCRM,TK-Konto (TKeasy-GUI  Schriftgut)
+KernpruefungEGV,EXTERNAL,-1,Unbekannt,Unbekannt
+leistungsrueckforderung.type.qs,QS-APP/BIZ,1582,IT.TA.WAVE,Pruefung der Leistungspflicht - PLP
+eel-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,924,IT.TA.GL,Entgeltersatzleistungen
+sonstige-leistung.ui,DEV-APP/UI/APPLICATION,1322,IT.TA.LEBQ,Sonstige Leistungen
+tk-patientenquittung.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,817,IT.TA.WAVE,TK-Patientenquittung
+tk.sys.image,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,378,IT.AF.FRW,Framework GUI
+kvnr-meldungen.biz.qs,QS-APP/BIZ,1589,IT.TA.KMEL,KVNr-Meldungen
+da-uv-traeger.biz.qs,QS-APP/BIZ,1544,IT.TA.LEBQ,Durchgangsarztberichte
+fusionsarchiv-leistung.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,760,IT.TA.LEBQ,Fusionsarchiv Leistung
+opentelemetry-api,EXTERNAL,229,Unbekannt,Unbekannt
+geschaeftspartner.ui.impl,DEV-APP/UI/COMPONENT,1114,IT.TA.KEGK,Geschaeftspartner
+tracking.biz.qs,QS-APP/BIZ,1685,IT.TA.BCRM,Vorgangstracking
+tk.db.schema,DEV-FRAMEWORK/DB,333,IT.AF.FRW,Framework Persistenz
+begleiter.ui,DEV-APP/UI/APPLICATION,1374,IT.TA.BCRM,CRM
+diga.ext.inbound.qs,QS-APP/EXTERN,1945,IT.TA.ZED,Digitale Gesundheitsanwendung
+vertrieb.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,868,IT.TA.BCRM,Vertriebsmanagement
+da-insolvenzgeld.biz.impl,DEV-APP/BIZ/PROZESSDATEN/BEITRAG,839,IT.TA.BCRM,Datenaustausch Insolvenzgeld
+rehasport.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,911,IT.PM.PJ,Rehasport und Funktionstraining
+tk.sys.eai.adapter.sap,DEV-FRAMEWORK/EAI,394,IT.AF.FRW,Framework EAI
+neuaufnahmemanager.type.qs,QS-TYPE,1414,IT.TA.KEGK,Neuaufnahmemanager
+tk.tool.deployment,DEV-FRAMEWORK/TOOL,459,IT.AF.FRW,Framework Server
+crm-imail.ui.qs,QS-APP/UI,1784,IT.TA.BCRM,CRM
+versicherter.type.qs,QS-TYPE,1411,IT.TA.KEGK,Versichertenbestandsfuehrung
+com.oracle.database.nls.orai18n,EXTERNAL,52,Unbekannt,Unbekannt
+tk.tool.eaimessage,DEV-FRAMEWORK/TOOL,462,IT.AF.FRW,Framework EAI
+indikationsverzeichnis.ui.impl,DEV-APP/UI/APPLICATION,1314,IT.TA.LEVE,Kur
+arbeitsunfaehigkeit.ui,DEV-APP/UI/APPLICATION,1347,IT.TA.GL,Arbeitsunfaehigkeit
+generische-kostenerstattung.ui.impl,DEV-APP/UI/APPLICATION,1180,IT.PM.PJ,Generische Kostenerstattung
+angus-activation,EXTERNAL,-1,Unbekannt,Unbekannt
+ca.uhn.hapi.fhir.org.hl7.fhir.utilities,EXTERNAL/HAPI-FHIR,249,Unbekannt,Unbekannt
+rsa-clearing.biz,DEV-APP/BIZ/UEBERGREIFEND/ANALYSE,1009,IT.TA.KEGK,RSA-Clearing
+tk.sys.mail,DEV-FRAMEWORK/CORE,328,IT.AF.FRW,Framework Server
+vorgang.ui,DEV-APP/UI/COMPONENT,1122,IT.AF.PIM,Vorgangssystem
+bevap.biz.qs,QS-APP/BIZ,1455,IT.TA.PV,Beschaeftigtenverzeichnis in der ambulanten Pflege
+da-zahnaerzte.biz.qs,QS-APP/BIZ,1665,IT.TA.LEVE,DA Zahnaerzte / Behandlungsfallnachweis
+gebietsabgrenzung.biz,DEV-APP/BIZ/BASIS/STRUKTUR,631,IT.AF.PIM,Gebietsabgrenzung (GBA)
+KernpruefungEEL,EXTERNAL,116,Unbekannt,Unbekannt
+chroniker.ui.api,DEV-APP/UI/APPLICATION,1342,IT.TA.LEBQ,Chronikerdaten
+jackson-module-jakarta-xmlbind-annotations,EXTERNAL/JACKSON,193,Unbekannt,Unbekannt
+kieferorthopaedie.ui,DEV-APP/UI/APPLICATION,1340,IT.TA.ZED,Kieferorthopaedie
+crm.ext.outbound,DEV-APP/EXT-OUTBOUND,579,IT.TA.BCRM,CRM
+versorgungsbezug-meldungen.ui.qs,QS-APP/UI,1833,IT.TA.KMEL,Versorgungsbezug-Meldungen
+datenschutzcockpit.biz.impl,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,736,IT.TA.KMEL,Datenschutzcockpit
+geschaeftspartner-systemanforderungen.biz.qs,QS-APP/BIZ,1625,IT.TA.KEGK,Geschaeftspartner
+gesundheitskarte.ui.qs,QS-APP/UI,1831,IT.TA.KEGK,Gesundheitskarte (eGK)
+prozess-beispiel.biz.impl,DEV-APP/BIZ/BSPL,1026,IT.AF.PEP,Prozess-Beispiel
+tk.tool.korrespondenzgenerator,DEV-FRAMEWORK/TOOL,474,IT.AF.FRW,Framework Server
+implantattraeger.ext.outbound,DEV-APP/EXT-OUTBOUND,594,IT.TA.LEVE,Implantattraeger
+mitteilungsmanagement-xsd.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,833,IT.TA.GL,Mitteilungsmanagement
+apotheke.ui,DEV-APP/UI/APPLICATION,1288,IT.TA.WAVE,DA Apotheken
+mitgliederbeitrag.ui,DEV-APP/UI/APPLICATION,1210,IT.TA.BCRM,Mitgliederbeitrag
+log4j.over.slf4j,EXTERNAL,120,Unbekannt,Unbekannt
+jetty-websocket-jetty-api,EXTERNAL,152,Unbekannt,Unbekannt
+versichertenbestandsfuehrung.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,725,IT.TA.KEGK,Versichertenbestandsfuehrung
+org.eclipse.osgi.compatibility.state,EXTERNAL,2,Unbekannt,Unbekannt
+da-aerzte-hzv.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,968,IT.TA.LEVE,DA Hausarztzentrierte Versorgung
+proto-kostenerstattungen.biz.qs,QS-APP/BIZ,1450,IT.PM.PJ,Prototyp Kostenerstattungen
+tk-termin.ui.qs,QS-APP/UI,1896,IT.ON.OGP2,TK-Termin
+tk.batch.admin,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,369,IT.AF.FRW,Framework EAI
+sozialhilfetraeger-abrechnung.leistung.api.qs,QS-APP/BIZ,1705,IT.TA.WAVE,Sozialhilfetraeger
+testdaten-versicherter.ui,DEV-APP/UI/TESTDATEN,1385,IT.TA.KEGK,Versichertenbestandsfuehrung
+tk.sys.test.gui,QS-FRAMEWORK/BASE,489,IT.AF.FRW,Framework GUI
+ik-inhaber-verzeichnis-suche.ui,DEV-APP/UI/COMPONENT,1140,IT.TA.KEGK,Geschaeftspartner
+mitgliederbeitrag.biz.qs,QS-APP/BIZ,1524,IT.TA.BCRM,Mitgliederbeitrag
+dokumentenaufnahme-uebergreifend.biz,DEV-APP/BIZ/UEBERGREIFEND,1016,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+haushaltshilfe.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,956,IT.TA.GL,Haushaltshilfe
+tim.ui.impl,DEV-APP/UI/APPLICATION,1380,IT.AF.PIM,TI-Messenger-Adapter
+bpmn-model-checksum,EXTERNAL,233,Unbekannt,Unbekannt
+sozialhilfetraeger.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,696,IT.TA.WAVE,Sozialhilfetraeger
+zuzahlung.ui,DEV-APP/UI/APPLICATION,1208,IT.TA.WAVE,Einzug von Zuzahlungen
+krankenhausverzeichnis.ui.qs,QS-APP/UI,1841,IT.TA.LEVE,Verzeichnis Krankenhaeuser
+tk.de.web.outbound.qs,QS-APP/WEB-OUTBOUND,1445,IT.ON.OGP2,tk.de
+rechnungswesen.proc.api,DEV-APP/BIZ/GESCHAEFTSPROZESS,1030,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+zentralregistratur.biz,DEV-APP/BIZ/PROZESSDATEN/VERWALTUNG,744,IT.TA.WAVE,Registratur
+da-za-leistungsantraege.ui.qs,QS-APP/UI,1778,IT.TA.ZED,DA Zahnaerzte Leistungsantraege (ELAG)
+akquise.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1045,IT.TA.BCRM,CRM-Akquisemanager
+portal.ui,DEV-APP/UI/APPLICATION,1209,IT.AF.FRW,Portal
+geschaeftspartner.biz,DEV-APP/BIZ/BASIS/STRUKTUR,629,IT.TA.KEGK,Geschaeftspartner
+tk-termin.biz.qs,QS-APP/BIZ,1699,IT.ON.OGP2,TK-Termin
+jna-platform,EXTERNAL,216,Unbekannt,Unbekannt
+proto-kostenerstattungen.proc.qs,QS-APP/BIZ-TOP,1724,IT.PM.PJ,Prototyp Kostenerstattungen
+fahrkosten.ui.api,DEV-APP/UI/APPLICATION,1326,IT.TA.LEBQ,Fahrkosten
+opentest4j,EXTERNAL/JUNIT-JUPITER,280,Unbekannt,Unbekannt
+arbeitsagentur.ui.qs,QS-APP/UI,1870,IT.TA.WAVE,Betriebsnummern-Verzeichnis
+fusionsarchiv-leistung.ui,DEV-APP/UI/APPLICATION,1281,IT.TA.LEBQ,Fusionsarchiv Leistung
+KernpruefungEAV,EXTERNAL,-1,Unbekannt,Unbekannt
+suchfeldaufbereitung.util.qs,QS-TYPE,1415,IT.AF.ARC,Anwendungs Infrastruktur
+insolvenzmanagement.ui,DEV-APP/UI/APPLICATION,1319,IT.TA.BCRM,Insolvenzmanagement
+tk.sys.gui.infomessage.qs,QS-FRAMEWORK/QS,533,IT.AF.FRW,Framework GUI
+ant,EXTERNAL,39,Unbekannt,Unbekannt
+org.glassfish.external.management-api,EXTERNAL,110,Unbekannt,Unbekannt
+sozialausgleich-meldungen.biz.qs,QS-APP/BIZ,1595,IT.TA.KMEL,BBG-Meldungen
+api-management-beispiel.biz.api,DEV-APP/BIZ/BSPL,1021,IT.AF.PEP,API-Management-Beispiel
+fusionsarchiv-arbeitgeberleistung.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,756,IT.TA.LEBQ,Erstattung von AG-Aufwendungen
+ca.uhn.hapi.fhir.hapi-fhir-base,EXTERNAL/HAPI-FHIR,237,Unbekannt,Unbekannt
+betriebsnummernverzeichnis.biz,DEV-APP/BIZ/VERZEICHNIS,618,IT.TA.WAVE,Betriebsnummern-Verzeichnis
+krankenhausaufenthalt.ext.outbound,DEV-APP/EXT-OUTBOUND,583,IT.TA.LEVE,Krankenhausaufenthalt
+XADisk,EXTERNAL,56,Unbekannt,Unbekannt
+versorgungsangebot-components.ui,DEV-APP/UI/COMPONENT,1144,IT.TA.WAVE,Versorgungsangebot
+meinetk-basis.biz.qs,QS-APP/BIZ,1680,IT.ON.ONB1,MeineTK
+da-basis.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,825,IT.TA.LEVE,Datenaustausch-Basis
+KernpruefungKVdR_KVKV,EXTERNAL,119,Unbekannt,Unbekannt
+au-steuerung.ext.inbound.qs,QS-APP/EXTERN,1931,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+diseasemanagement.biz.qs,QS-APP/BIZ,1563,IT.TA.WAVE,Diseasemanagement-Programme
+tk.process.api,DEV-FRAMEWORK/API/PROCESS-API,312,IT.AF.PEP,Framework Process
+gkkmitgliederarchiv.ui,DEV-APP/UI/APPLICATION,1232,IT.TA.KEGK,Fusionsarchiv
+vollstreckung.ui.qs,QS-APP/UI,1783,IT.TA.BCRM,Vollstreckung
+tk.sys.gui.framework.qs,QS-FRAMEWORK/QS,540,IT.AF.FRW,Framework GUI
+fusionsarchiv-stammdaten.ui.qs,QS-APP/UI,1816,IT.TA.KEGK,Fusionsarchiv
+tk.sys.gui.framework,DEV-FRAMEWORK/GUI-CORE,427,IT.AF.FRW,Framework GUI
+da-abfrage-mitgliedschaft.biz.impl,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,767,IT.TA.KMEL,DA Abfrage Mitgliedschaft
+jakarta.transaction-api,EXTERNAL,95,Unbekannt,Unbekannt
+tk.sys.gui.customizer,DEV-FRAMEWORK/GUI-APPLICATION,451,IT.AF.FRW,Framework GUI
+tk.sys.application,DEV-FRAMEWORK/GUI-BASE,422,IT.AF.FRW,Framework GUI
+tk.sys.gui.component.timechart,DEV-FRAMEWORK/GUI-CORE,436,IT.AF.FRW,Framework GUI
+tk.tool.checkclass,DEV-FRAMEWORK/TOOL,457,IT.AF.FRW,Framework Server
+junit-jupiter-params,EXTERNAL/JUNIT-JUPITER,268,Unbekannt,Unbekannt
+prozess-tutorial.biz.impl,DEV-MISC/SCHULUNG/PIF,1395,IT.AF.PEP,Prozess-Tutorial
+korrespondenz-uebergreifend.biz,DEV-APP/BIZ/UEBERGREIFEND,1015,IT.BA.DOC,Kiss24-TKeasy
+tk.sys.util.concurrent,DEV-FRAMEWORK/CORE,319,IT.AF.FRW,Framework Server
+organisationsverwaltung-uebergreifend.biz.qs,QS-APP/BIZ,1716,IT.AF.PIM,Organisations-Verwaltung
+org.fhir.ucum,EXTERNAL/HAPI-FHIR,251,Unbekannt,Unbekannt
+commons-text,EXTERNAL,235,Unbekannt,Unbekannt
+tkkonto.biz,DEV-APP/BIZ/PROZESSDATEN/FINANZEN,750,IT.TA.BCRM,TK-Konto (TKeasy-GUI  Schriftgut)
+meldungen-basis.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,765,IT.TA.KMEL,Meldungen-Basis
+da-basis.ui.qs,QS-APP/UI,1883,IT.TA.LEVE,Datenaustausch-Basis
+organisationsverwaltung-components.ui,DEV-APP/UI/COMPONENT,1131,IT.AF.PIM,Organisations-Verwaltung
+vertrieb.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1428,IT.TA.BCRM,Vertriebsmanagement
+identitaetsdatenabruf.biz.impl,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,764,IT.TA.KMEL,Identitaetsdatenabruf
+eel.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,937,IT.TA.GL,Entgeltersatzleistungen
+mbkarchiv.ui,DEV-APP/UI/APPLICATION,1265,IT.TA.BCRM,Mitgliederbeitrag
+versorgungsbezug-meldungen.biz.qs.api,QS-APP/BIZ,1604,IT.TA.KMEL,Versorgungsbezug-Meldungen
+org.eclipse.equinox.util,EXTERNAL,133,Unbekannt,Unbekannt
+schriftgut-archiv.ui,DEV-APP/UI/APPLICATION,1197,IT.BA.DOC,KISG-Java (Altsysteme)
+meldungen-basis.biz.qs,QS-APP/BIZ,1508,IT.TA.KMEL,Meldungen-Basis
+tk.sys.util.webserver.qs,QS-FRAMEWORK/QS,548,IT.AF.FRW,Framework Server
+datenaustausch-eel.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,932,IT.TA.GL,DA Entgeltersatzleistungen
+tk.sys.eai.adapter.vinna,DEV-FRAMEWORK/EAI,397,IT.AF.FRW,Framework EAI
+sozv-meldungen.ext.outbound,DEV-APP/EXT-OUTBOUND,580,IT.TA.KMEL,SozV-Meldungen
+dokumentenklasse.ui.api,DEV-APP/UI/COMPONENT,1117,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+prozess.biz.qs,QS-APP/BIZ,1487,IT.AF.PEP,Geschaeftsprozess
+tk.sys.gui.textphrase,DEV-FRAMEWORK/GUI-APPLICATION,444,IT.AF.FRW,Framework GUI
+stoppuhr.ui,DEV-APP/UI/COMPONENT,1103,IT.AF.PEP,Geschaeftsprozess
+indikationsverzeichnis.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,906,IT.TA.LEVE,Kur
+sozialversicherungsabkommen.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,902,IT.TA.ZED,Leistungsaushilfe Ausland
+leistungsuebersicht.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,814,IT.TA.LEBQ,Leistungsuebersicht
+jimfs,EXTERNAL/TEST_ONLY,281,Unbekannt,Unbekannt
+gesundheitsdividende.ui.qs,QS-APP/UI,1891,IT.TA.BCRM,Gesundheitsdividende
+sonst-leistungsrueckforderung.ui.impl,DEV-APP/UI/APPLICATION,1308,IT.TA.WAVE,Sonstige Leistungsrueckforderungen
+ext-webpdf.qs,QS-FRAMEWORK/QS,520,IT.AF.FRW,Framework GUI
+da-beitragsdifferenzierung-pv.ui.qs,QS-APP/UI,1899,IT.TA.KMEL,DA Beitragsdifferenzierung PV
+korrespondenz-datenmodelle.generiert,DEV-APP/BIZ/BASIS/INTERAKTION,664,IT.BA.DOC,Kiss24-TKeasy
+DependencyRules,DEV-FRAMEWORK/BOOTSTRAP,304,IT.AF.FRW,Framework Server
+leistung-services.biz.qs.api,QS-APP/BIZ,1479,IT.TA.LEBQ,Leistung-Services
+adress-service.biz.api,DEV-APP/BIZ/BASIS/STRUKTUR,623,IT.TA.KEGK,Adress-Service
+api-management-beispiel.biz.qs,QS-APP/BIZ,1714,IT.AF.PEP,API-Management-Beispiel
+da-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,826,IT.TA.LEVE,Datenaustausch-Basis
+prozessereignismanager.biz.qs,QS-APP/BIZ,1489,IT.AF.PEP,Geschaeftsprozess
+tk.sys.gui.print.qs,QS-FRAMEWORK/QS,529,IT.AF.FRW,Framework GUI
+prozessereignismanager.biz.impl,DEV-APP/BIZ/BASIS/INTERAKTION,659,IT.AF.PEP,Geschaeftsprozess
+javax.xml.soap-api,EXTERNAL/RUNTIME,297,Unbekannt,Unbekannt
+logback-core,EXTERNAL,122,Unbekannt,Unbekannt
+da-aerzte-kollektiv.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,890,IT.TA.LEVE,DA Ärzte / Einzelfallnachweis
+byte-buddy,EXTERNAL,43,Unbekannt,Unbekannt
+asm,EXTERNAL,26,Unbekannt,Unbekannt
+org.apache.james.apache-mime4j-core,EXTERNAL,137,Unbekannt,Unbekannt
+bonusprogramm.ui,DEV-APP/UI/APPLICATION,1264,IT.TA.BCRM,CRM-Bonusprogramm
+da-mitteilungsverfahren-rv.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,905,IT.TA.LEVE,DA Mitteilungsverfahren RV
+bcmail-jdk18on,EXTERNAL,46,Unbekannt,Unbekannt
+einstufungsverlauf.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1041,IT.TA.KEGK,Einstufungsverlauf
+leistung-services.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,809,IT.TA.LEBQ,Leistung-Services
+micrometer-core,EXTERNAL,195,Unbekannt,Unbekannt
+arbeitgeberbeitrag-suche.ui,DEV-APP/UI/COMPONENT,1142,IT.TA.BCRM,Arbeitgeberbeitrag
+schulung,DEV-MISC/SCHULUNG,1393,Unbekannt,Unbekannt
+tk.de.ui,DEV-APP/UI/APPLICATION,1370,IT.ON.OGP2,tk.de
+da-aerzte-kollektiv.ui.qs,QS-APP/UI,1906,IT.TA.LEVE,DA Ärzte / Einzelfallnachweis
+korrespondenz.ui,DEV-APP/UI/COMPONENT,1160,IT.BA.DOC,Kiss24-TKeasy
+org.apache.commons.math3,EXTERNAL,207,Unbekannt,Unbekannt
+ExternalBundlesWrapper,EXTERNAL,20,Unbekannt,Unbekannt
+dokumentenklasse.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,644,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+hochschul-meldungen.biz.qs,QS-APP/BIZ,1509,IT.TA.KMEL,Hochschul-Meldungen
+tk.sys.eai.adapter.mail.qs,QS-FRAMEWORK/QS,491,IT.AF.FRW,Framework EAI
+tlbimp,EXTERNAL,176,Unbekannt,Unbekannt
+junit-platform-suite-commons,EXTERNAL/JUNIT-JUPITER,276,Unbekannt,Unbekannt
+arztgebuehrenpositionen.biz,DEV-APP/BIZ/VERZEICHNIS,621,IT.TA.WAVE,Arztgebuehrenordnungsposition
+neuaufnahmemanager.ext.inbound.qs,QS-APP/EXTERN,1942,IT.TA.KEGK,Neuaufnahmemanager
+org.eclipse.osgi.util,EXTERNAL,7,Unbekannt,Unbekannt
+geschaeftspartner.biz.api,DEV-APP/BIZ/BASIS/STRUKTUR,628,IT.TA.KEGK,Geschaeftspartner
+sonst-leistungsrueckforderung.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,980,IT.TA.WAVE,Sonstige Leistungsrueckforderungen
+tk.sys.releasetest.qs,QS-FRAMEWORK/QS,546,IT.AF.FRW,Framework Server
+tk-termin.ui.impl,DEV-APP/UI/APPLICATION,1196,IT.ON.OGP2,TK-Termin
+da-sonstigeleistungserbringer.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,964,IT.TA.LEVE,DA Sonstige Leistungserbringer
+indikationsverzeichnis.ui.qs,QS-APP/UI,1796,IT.TA.LEVE,Kur
+psychotherapie.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,883,IT.TA.LEBQ,Psychotherapie
+gutachterverzeichnis.ui,DEV-APP/UI/APPLICATION,1239,IT.TA.WAVE,Gutachter-Verzeichnis
+dokumentenklasse-vorgang.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,645,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+generische-kostenerstattung.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,873,IT.PM.PJ,Generische Kostenerstattung
+stoppuhr.ui.qs,QS-APP/UI,1790,IT.AF.PEP,Geschaeftsprozess
+jackson-annotations,EXTERNAL/JACKSON,191,Unbekannt,Unbekannt
+tk.sys.eai.adapter.kim,DEV-FRAMEWORK/EAI,407,IT.AF.FRW,Framework EAI
+unicode.util,DEV-TYPE,560,IT.AF.ARC,Anwendungs Infrastruktur
+releasetest.ui,DEV-APP/UI/RELEASETEST,1382,IT.AF.FRW,Releasetest
+suchfeldaufbereitung-basis.util,DEV-TYPE,561,IT.AF.ARC,Anwendungs Infrastruktur
+kvnr-meldungen.ui.impl,DEV-APP/UI/APPLICATION,1295,IT.TA.KMEL,KVNr-Meldungen
+versorgungsangebot.ui.qs,QS-APP/UI,1814,IT.TA.WAVE,Versorgungsangebot
+datenaustausch-eel.biz.qs.api,QS-APP/BIZ,1517,IT.TA.GL,DA Entgeltersatzleistungen
+leistungsaushilfe-ausland.ui,DEV-APP/UI/APPLICATION,1229,IT.TA.ZED,Leistungsaushilfe Ausland
+da-aerzte-hzv.ui,DEV-APP/UI/APPLICATION,1337,IT.TA.LEVE,DA Hausarztzentrierte Versorgung
+vertrieb.ui.qs,QS-APP/UI,1792,IT.TA.BCRM,Vertriebsmanagement
+einstufungsverlauf-basis.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,721,IT.TA.KEGK,Einstufungsverlauf
+tk.sys.eai.adapter.host,DEV-FRAMEWORK/EAI,411,IT.AF.FRW,Framework EAI
+da-md-au.ui.qs,QS-APP/UI,1821,IT.TA.GL,Datenaustausch MD AU
+tk.sys.eai.adapter.mail,DEV-FRAMEWORK/EAI,405,IT.AF.FRW,Framework EAI
+rechnungswesen.biz.api,DEV-APP/BIZ/PROZESSDATEN/FINANZEN,746,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+com.sun.xml.messaging.saaj.impl,EXTERNAL,102,Unbekannt,Unbekannt
+meinetk.ext.inbound,DEV-APP/EXTERN/INBOUND,1092,IT.ON.ONB1,MeineTK
+arbeitsunfaehigkeit.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,934,IT.TA.GL,Arbeitsunfaehigkeit
+krebsregister.ui.qs,QS-APP/UI,1861,IT.TA.LEVE,Krebsregister
+junit-platform-commons,EXTERNAL/JUNIT-JUPITER,271,Unbekannt,Unbekannt
+insolvenzmanagement.biz.api,DEV-APP/BIZ/PROZESSDATEN/BEITRAG,838,IT.TA.BCRM,Insolvenzmanagement
+uvtraeger.ui.api,DEV-APP/UI/APPLICATION,1220,IT.TA.LEBQ,Unfall
+testdaten-pflegeversicherung.ui.impl,DEV-APP/UI/TESTDATEN,1386,IT.TA.PV,Pflegeversicherung
+fusionsarchiv-crm.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,753,IT.TA.BCRM,CRM
+tk.sys.gui.ctiframework.test,QS-INTEGRATIONTEST/GUI,1967,IT.AF.FRW,Integrationstests
+SparseBitSet,EXTERNAL,208,Unbekannt,Unbekannt
+guava,EXTERNAL,225,Unbekannt,Unbekannt
+rvtraeger.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,697,IT.TA.KMEL,Rente
+krankenhausaufenthalt.biz.qs,QS-APP/BIZ,1547,IT.TA.LEVE,Krankenhausaufenthalt
+unicode.util.qs,QS-TYPE,1407,IT.AF.ARC,Anwendungs Infrastruktur
+organisationsverwaltung-uebergreifend.biz,DEV-APP/BIZ/UEBERGREIFEND,1013,IT.AF.PIM,Organisations-Verwaltung
+meldungen-basis.ui.qs.api,QS-APP/UI,1762,IT.TA.KMEL,Meldungen-Basis
+util-base,EXTERNAL,300,IT.AF.FRW,Framework Server
+prozess.ui.qs,QS-APP/UI,1787,IT.AF.PEP,Geschaeftsprozess
+tk.batch.zos.adapter,DEV-FRAMEWORK/BATCH,343,IT.AF.FRW,Framework EAI
+au-steuerung.ext.outbound,DEV-APP/EXT-OUTBOUND,578,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+rechnungswesen.biz.qs,QS-APP/BIZ,1572,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+gerichtsverzeichnis.ui.impl,DEV-APP/UI/APPLICATION,1233,IT.TA.WAVE,Gerichtsverzeichnis
+TkClassLoaderDelegateRegistry,EXTERNAL,1,Unbekannt,Unbekannt
+versorgungsangebot.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1427,IT.TA.WAVE,Versorgungsangebot
+tk.sys.value.qs,QS-FRAMEWORK/QS,514,IT.AF.FRW,Framework Server
+fv-meldungen.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,783,IT.TA.KMEL,FV-Meldungen
+ems.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1442,IT.ON.ONG,E-Mail Marketing System
+hochschul-meldungen.ui,DEV-APP/UI/APPLICATION,1191,IT.TA.KMEL,Hochschul-Meldungen
+kim-log.biz.impl,DEV-APP/BIZ/BASIS/INTERAKTION,675,IT.AF.PIM,Kommunikation im Medizinwesen Log
+testdaten-pzr.ui.impl,DEV-APP/UI/TESTDATEN,1390,IT.TA.ZED,Professionelle Zahnreinigung
+tk.sys.services.mail,DEV-FRAMEWORK/SERVER-BASE,348,IT.AF.FRW,Framework Server
+einstufungsverlauf-basis.biz.qs,QS-APP/BIZ,1475,IT.TA.KEGK,Einstufungsverlauf
+kur.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,910,IT.TA.LEVE,Kur
+ki-services.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1438,IT.AF.KI,KI-Basis
+kostenerstattungswahl.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,848,IT.TA.LEBQ,Wahl der Kostenerstattung
+datenaustausch-eel.ui.qs,QS-APP/UI,1902,IT.TA.GL,DA Entgeltersatzleistungen
+proko-schriftgut-beispiel.proc.qs,QS-APP/BIZ-TOP,1729,IT.PM.PJ,Prozesskomponente-Schriftgut-Beispiel
+duebak-meldungen.biz.qs.api,QS-APP/BIZ,1511,IT.TA.KMEL,Datenuebermittlung BA - DÜBAK
+fusionsarchiv-krankenhaus.ui,DEV-APP/UI/APPLICATION,1256,IT.TA.LEVE,Fusionsarchiv-Krankenhaus
+leistungsmanagement.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,954,IT.TA.LEVE,LM-Fallfuehrung
+org.apache.commons.commons-compress,EXTERNAL,209,Unbekannt,Unbekannt
+arbeitgeberbestandsfuehrung-einstieg.ui,DEV-APP/UI/COMPONENT,1150,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+dokumentenaufnahme.ui.impl,DEV-APP/UI/COMPONENT,1121,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+gesundheitsdividende.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,844,IT.TA.BCRM,Gesundheitsdividende
+de.kwsoft.mtext.client.impl,EXTERNAL,203,Unbekannt,Unbekannt
+praevention.biz.qs,QS-APP/BIZ,1525,IT.TA.LEBQ,Praevention
+haertefall.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,946,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+gesundheitsdividende.ui,DEV-APP/UI/APPLICATION,1193,IT.TA.BCRM,Gesundheitsdividende
+da-basis.ui,DEV-APP/UI/APPLICATION,1364,IT.TA.LEVE,Datenaustausch-Basis
+datenaustausch-finanzverwaltung.ui,DEV-APP/UI/APPLICATION,1204,IT.TA.BCRM,Steuerdaten
+de.tk.db2.sqlparser,EXTERNAL,32,Unbekannt,Unbekannt
+proko-schriftgut-beispiel.ui.impl,DEV-APP/UI/APPLICATION,1376,IT.PM.PJ,Prozesskomponente-Schriftgut-Beispiel
+bearbeitungsinformation.biz,DEV-APP/BIZ/BASIS/STRUKTUR,627,IT.AF.ARC,Anwendungs Infrastruktur
+tk.sys.gui.application.qs,QS-FRAMEWORK/QS,541,IT.AF.FRW,Framework GUI
+seminarverwaltung.ui.qs,QS-APP/UI,1849,IT.TA.BCRM,Seminarverwaltung
+org.eclipse.swt,EXTERNAL,31,Unbekannt,Unbekannt
+arbeitgeberleistung.biz.qs,QS-APP/BIZ,1565,IT.TA.LEBQ,Erstattung von AG-Aufwendungen
+sonstigerleistungserbringer.biz.qs,QS-APP/BIZ,1553,IT.TA.LEBQ,Heilmittelverzeichnis
+krankenhausverzeichnis.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,705,IT.TA.LEVE,Verzeichnis Krankenhaeuser
+dhd.ext.outbound,DEV-APP/EXT-OUTBOUND,575,IT.TA.BCRM,Digital Service Solutions (DSS)
+datenaustausch-eel.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1434,IT.TA.GL,DA Entgeltersatzleistungen
+suchfeldaufbereitung.util,DEV-TYPE,571,IT.AF.ARC,Anwendungs Infrastruktur
+ki-pilot.biz,DEV-APP/BIZ/UEBERGREIFEND/ANALYSE,1010,IT.AF.KI,KI-Basis
+sozialversicherungsabkommen.biz.qs,QS-APP/BIZ,1527,IT.TA.ZED,Leistungsaushilfe Ausland
+tk.sys.testbos.qs,QS-FRAMEWORK/QS,490,IT.AF.FRW,Framework Server
+tk.db.fieldmapper,DEV-FRAMEWORK/DB,334,IT.AF.FRW,Framework Persistenz
+tk.sys.gui.layout,DEV-FRAMEWORK/GUI-BASE,419,IT.AF.FRW,Framework GUI
+vorgang-prozess.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,642,IT.AF.PIM,Vorgangssystem
+hzv.ui,DEV-APP/UI/APPLICATION,1336,IT.TA.LEVE,Hausarztzentrierte Versorgung (HzV)
+junit-jupiter-api,EXTERNAL/JUNIT-JUPITER,267,Unbekannt,Unbekannt
+fusionsarchiv-stammdaten.biz.qs,QS-APP/BIZ,1548,IT.TA.KEGK,Fusionsarchiv
+kunde-vor-ort.web,DEV-APP/WEB/TK.DE,1074,IT.TA.BCRM,CRM-Empfangssteuerung
+com.tngtech.archunit,EXTERNAL/TEST_ONLY,284,Unbekannt,Unbekannt
+versorgungsabrechnung.ui.qs,QS-APP/UI,1779,IT.TA.LEVE,Ambulante Versorgungsabrechnungen
+mitteilungsmanagement.biz.qs,QS-APP/BIZ,1696,IT.TA.GL,Mitteilungsmanagement
+tk.sys.gui.mainframe,DEV-FRAMEWORK/GUI-APPLICATION,442,IT.AF.FRW,Framework GUI
+da-zahnaerzte.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,950,IT.TA.LEVE,DA Zahnaerzte / Behandlungsfallnachweis
+jakarta.xml.ws-api,EXTERNAL,108,Unbekannt,Unbekannt
+implantattraeger.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,886,IT.TA.LEVE,Implantattraeger
+sap-eam-stammdaten.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,700,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+prozess.biz.impl,DEV-APP/BIZ/BASIS/INTERAKTION,657,IT.AF.PEP,Geschaeftsprozess
+versorgungsbezug-meldungen.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,785,IT.TA.KMEL,Versorgungsbezug-Meldungen
+kur.biz.qs,QS-APP/BIZ,1529,IT.TA.LEVE,Kur
+krankenhausaufenthalt-basis.type,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,797,IT.TA.LEVE,Krankenhausaufenthalt
+jna,EXTERNAL,215,Unbekannt,Unbekannt
+tk.tool.codegenerator,DEV-FRAMEWORK/TOOL,458,IT.AF.FRW,Framework Persistenz
+haertefall-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,823,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+waffle-jna,EXTERNAL,214,Unbekannt,Unbekannt
+systemanforderungen.biz,DEV-APP/BIZ/UEBERGREIFEND/ANALYSE,1004,IT.TA.BCRM,Listanforderungen (SAF)
+uvtraeger.ui.impl,DEV-APP/UI/APPLICATION,1221,IT.TA.LEBQ,Unfall
+com.twelvemonkeys.imageio.imageio-metadata,EXTERNAL,77,Unbekannt,Unbekannt
+entsendung-dokumente.biz.impl,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,789,IT.TA.KMEL,Entsendung
+dividende.ui.qs,QS-APP/UI,1844,IT.TA.BCRM,Dividendenverlauf
+da-md-au.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,936,IT.TA.GL,Datenaustausch MD AU
+prozessdatencontainer.ui,DEV-APP/UI/APPLICATION,1201,IT.AF.PIM,Vorgangssystem
+kieferorthopaedie.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,880,IT.TA.ZED,Kieferorthopaedie
+unfall-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,820,IT.TA.LEBQ,Unfall
+regiplan.ui,DEV-APP/UI/APPLICATION,1287,IT.TA.WAVE,Registratur
+sozialhilfetraeger.ui,DEV-APP/UI/APPLICATION,1225,IT.TA.WAVE,Sozialhilfetraeger
+tk.sys.util.jserverevent.qs,QS-FRAMEWORK/QS,503,IT.AF.FRW,Framework Server
+sozialausgleich-meldungen.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,786,IT.TA.KMEL,BBG-Meldungen
+versorgungsabrechnung.ui.impl,DEV-APP/UI/APPLICATION,1331,IT.TA.LEVE,Ambulante Versorgungsabrechnungen
+datenaustausch-eel.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,909,IT.TA.GL,DA Entgeltersatzleistungen
+crm.ui,DEV-APP/UI/APPLICATION,1305,IT.TA.BCRM,CRM
+erv.ext.outbound,DEV-APP/EXT-OUTBOUND,589,IT.AF.PIM,Elektronischer Rechtsverkehr
+selvabrechnung.ui.qs,QS-APP/UI,1854,IT.TA.LEVE,DA Integrierte Versorgung
+tk-patientenquittung.ui,DEV-APP/UI/APPLICATION,1257,IT.TA.WAVE,TK-Patientenquittung
+api-management-beispiel.ext.inbound.qs,QS-APP/EXTERN,1948,IT.AF.PEP,API-Management-Beispiel
+datenaustausch-eel.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1044,IT.TA.GL,DA Entgeltersatzleistungen
+datenschutzcockpit.biz.api,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,735,IT.TA.KMEL,Datenschutzcockpit
+tk.sys.gui.communication,DEV-FRAMEWORK/GUI-BASE,417,IT.AF.FRW,Framework GUI
+gkkmitgliederarchiv.biz.qs,QS-APP/BIZ,1453,IT.TA.KEGK,Fusionsarchiv
+zuzahlung-basis.biz.qs,QS-APP/BIZ,1581,IT.TA.WAVE,Einzug von Zuzahlungen
+sys-type,EXTERNAL,301,IT.AF.FRW,Framework Server
+ext-eprocurement.ext.forward.qs,QS-APP/EXTERN,1937,IT.AF.FRW,E-Procurement
+eessi-institution.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,701,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+fahrkosten.ui.impl,DEV-APP/UI/APPLICATION,1327,IT.TA.LEBQ,Fahrkosten
+icd.biz.qs,QS-APP/BIZ,1461,IT.TA.LEBQ,Leistungen-Basis
+jackson-datatype-jsr310,EXTERNAL/JACKSON,192,Unbekannt,Unbekannt
+leistungsrueckforderung.ui,DEV-APP/UI/APPLICATION,1309,IT.TA.WAVE,Pruefung der Leistungspflicht - PLP
+organisationsverwaltung.biz.qs,QS-APP/BIZ,1464,IT.AF.PIM,Organisations-Verwaltung
+org.apache.servicemix.bundles.aopalliance,EXTERNAL,221,Unbekannt,Unbekannt
+gutachterverzeichnis.ui.qs,QS-APP/UI,1825,IT.TA.WAVE,Gutachter-Verzeichnis
+paranamer,EXTERNAL/TEST_ONLY/JGIVEN,293,Unbekannt,Unbekannt
+pflegeperson.ui.qs,QS-APP/UI,1842,IT.TA.PV,Pflegeperson
+testdatenmanagement.ui.qs,QS-APP/UI,1851,IT.BA.DOC,Testdatenmanagement
+tool-qs-xmlbeans,EXTERNAL,177,Unbekannt,Unbekannt
+abr-sonst-leistungserbringer.ui.impl,DEV-APP/UI/APPLICATION,1249,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+tk.sys.eai.adapter.base,DEV-FRAMEWORK/EAI,396,IT.AF.FRW,Framework EAI
+crm-type.biz.qs,QS-APP/BIZ,1451,IT.TA.BCRM,CRM
+commons-lang3,EXTERNAL,224,Unbekannt,Unbekannt
+kassenwechsel-leistungsdaten.ui.qs,QS-APP/UI,1878,IT.TA.LEVE,Kassenwechsel-Leistungsdaten
+praevention.ui,DEV-APP/UI/APPLICATION,1245,IT.TA.LEBQ,Praevention
+versichertenbestandsfuehrung.ui.impl,DEV-APP/UI/APPLICATION,1292,IT.TA.KEGK,Versichertenbestandsfuehrung
+mutterschaftsgeld.ui,DEV-APP/UI/APPLICATION,1273,IT.TA.GL,Mutterschaftsgeld (MUG)
+gesundheitsprojekte.biz,DEV-APP/BIZ/PROZESSDATEN/CRM,794,IT.TA.LEBQ,Gesundheitsprojekte
+ems.ext.outbound,DEV-APP/EXT-OUTBOUND,602,IT.ON.ONG,E-Mail Marketing System
+zuzahlung.ui.qs,QS-APP/UI,1761,IT.TA.WAVE,Einzug von Zuzahlungen
+tk.gui.api,DEV-FRAMEWORK/API/GUI-API,313,IT.AF.FRW,Framework GUI
+unfall.biz.qs.api,QS-APP/BIZ,1550,IT.TA.LEBQ,Unfall
+vps.ui,DEV-APP/UI/APPLICATION,1363,IT.TA.LEVE,Vorpruefsoftware
+org.apache.felix.metatype,EXTERNAL,132,Unbekannt,Unbekannt
+cpsuite,EXTERNAL,212,Unbekannt,Unbekannt
+tracking-prozesse.biz.qs,QS-APP/BIZ,1686,IT.TA.BCRM,Vorgangstracking
+rsa-clearing.ui.qs,QS-APP/UI,1889,IT.TA.KEGK,RSA-Clearing
+tk.db.tuple,DEV-FRAMEWORK/DB,336,IT.AF.FRW,Framework Persistenz
+krankenhausaufenthalt.ui,DEV-APP/UI/APPLICATION,1333,IT.TA.LEVE,Krankenhausaufenthalt
+implantattraeger.biz.qs,QS-APP/BIZ,1546,IT.TA.LEVE,Implantattraeger
+fusionsarchiv-allgemein.ui.qs,QS-APP/UI,1815,IT.TA.KEGK,Fusionsarchiv
+prozess.biz,DEV-APP/BIZ/BASIS/INTERAKTION,656,IT.AF.PEP,Geschaeftsprozess
+testdaten-krankenhausaufenthalt.ui.impl,DEV-APP/UI/TESTDATEN,1392,IT.TA.LEVE,Krankenhausaufenthalt
+tk.db.sql,DEV-FRAMEWORK/DB,332,IT.AF.FRW,Framework Persistenz
+tk.sys.eai.adapter.file.qs,QS-FRAMEWORK/BASE,483,IT.AF.FRW,Framework EAI
+mscom,EXTERNAL,123,Unbekannt,Unbekannt
+curvesapi,EXTERNAL,211,Unbekannt,Unbekannt
+prozessereignismanager.ui.impl,DEV-APP/UI/COMPONENT,1126,IT.AF.PEP,Geschaeftsprozess
+tk.sys.process,DEV-FRAMEWORK/PROCESS,414,IT.AF.PEP,Framework Process
+erv.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,669,IT.AF.PIM,Elektronischer Rechtsverkehr
+prozessereignismanager.ui.api,DEV-APP/UI/COMPONENT,1124,IT.AF.PEP,Geschaeftsprozess
+gesundheitsprojekte.ui,DEV-APP/UI/APPLICATION,1243,IT.TA.LEBQ,Gesundheitsprojekte
+pflegeperson.proc.qs,QS-APP/BIZ-TOP,1745,IT.TA.PV,Pflegeperson
+tk.sys.gui.gbo.qs,QS-FRAMEWORK/QS,538,IT.AF.FRW,Framework GUI
+jakarta.annotation-api,EXTERNAL,104,Unbekannt,Unbekannt
+chroniker.ui,DEV-APP/UI/APPLICATION,1343,IT.TA.LEBQ,Chronikerdaten
+ManifestBuilder,DEV-FRAMEWORK/BOOTSTRAP,303,IT.AF.FRW,Framework Server
+vollstreckung.ui,DEV-APP/UI/APPLICATION,1205,IT.TA.BCRM,Vollstreckung
+sonstiger-geschaeftspartner.biz.qs,QS-APP/BIZ,1497,IT.TA.KEGK,Geschaeftspartner
+versorgungsangebot.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,854,IT.TA.WAVE,Versorgungsangebot
+vollmacht.ui.api,DEV-APP/UI/COMPONENT,1128,IT.TA.KEGK,Geschaeftspartner
+com.oracle.database.jdbc.ojdbc17,EXTERNAL,53,Unbekannt,Unbekannt
+kim-log.biz.qs.api,QS-APP/BIZ,1513,IT.AF.PIM,Kommunikation im Medizinwesen Log
+vertrieb-components.ui,DEV-APP/UI/COMPONENT,1149,IT.TA.BCRM,Vertriebsmanagement
+meldungen-basis.ui.api,DEV-APP/UI/APPLICATION,1218,IT.TA.KMEL,Meldungen-Basis
+jta,EXTERNAL,-1,Unbekannt,Unbekannt
+leistungen-datenaustausch.biz.qs,QS-APP/BIZ,1650,IT.TA.LEBQ,Leistungen-Basis
+pzr.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1042,IT.TA.ZED,Professionelle Zahnreinigung
+jakarta.jws-api,EXTERNAL,105,Unbekannt,Unbekannt
+vollstreckung.biz,DEV-APP/BIZ/PROZESSDATEN/FINANZEN,745,IT.TA.BCRM,Vollstreckung
+type.impl,DEV-TYPE,563,IT.AF.DD,Übergreifende fachliche Typen (biz-type)
+versichertenbestandsfuehrung.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1040,IT.TA.KEGK,Versichertenbestandsfuehrung
+jpedal,EXTERNAL,94,Unbekannt,Unbekannt
+versicherter.type.impl,DEV-TYPE,565,IT.TA.KEGK,Versichertenbestandsfuehrung
+xmlbeans,EXTERNAL,210,Unbekannt,Unbekannt
+leistungsuebersicht.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,988,IT.TA.LEBQ,Leistungsuebersicht
+org.junit,EXTERNAL,163,Unbekannt,Unbekannt
+pzr.biz.qs,QS-APP/BIZ,1537,IT.TA.ZED,Professionelle Zahnreinigung
+vertrieb.ui.api,DEV-APP/UI/COMPONENT,1148,IT.TA.BCRM,Vertriebsmanagement
+versorgungsbezug-meldungen.ui,DEV-APP/UI/APPLICATION,1253,IT.TA.KMEL,Versorgungsbezug-Meldungen
+fahrkosten.ui.qs,QS-APP/UI,1910,IT.TA.LEBQ,Fahrkosten
+bcel,EXTERNAL,42,Unbekannt,Unbekannt
+zusatzvertrag.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,862,IT.TA.WAVE,Wahltarife
+hilfsmittelversorgung.ui.qs,QS-APP/UI,1845,IT.TA.LEBQ,Hilfsmittel
+org.eclipse.core.jobs,EXTERNAL,140,Unbekannt,Unbekannt
+arbeitgeberleistung-antrag-suche.ui,DEV-APP/UI/COMPONENT,1177,IT.TA.LEBQ,Erstattung von AG-Aufwendungen
+adress-service.biz.qs,QS-APP/BIZ,1662,IT.TA.KEGK,Adress-Service
+diseasemanagement.ui.qs,QS-APP/UI,1771,IT.TA.WAVE,Diseasemanagement-Programme
+com.twelvemonkeys.common.common-image,EXTERNAL,70,Unbekannt,Unbekannt
+prozess.ui,DEV-APP/UI/COMPONENT,1125,IT.AF.PEP,Geschaeftsprozess
+jhlabsfilters,EXTERNAL,91,Unbekannt,Unbekannt
+jgiven-core,EXTERNAL/TEST_ONLY/JGIVEN,288,Unbekannt,Unbekannt
+dokumentenarchiv.ui.api,DEV-APP/UI/COMPONENT,1116,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+vorgang.biz,DEV-APP/BIZ/BASIS/INTERAKTION,651,IT.AF.PIM,Vorgangssystem
+vollmacht-uebergreifend.biz.impl,DEV-APP/BIZ/UEBERGREIFEND,1012,IT.TA.KEGK,Geschaeftspartner
+leistungsmanagement.ui,DEV-APP/UI/APPLICATION,1317,IT.TA.LEVE,LM-Fallfuehrung
+kunde-vor-ort.web.qs,QS-APP/WEB,1925,IT.TA.BCRM,CRM-Empfangssteuerung
+datenaustausch-eel.ui,DEV-APP/UI/APPLICATION,1272,IT.TA.GL,DA Entgeltersatzleistungen
+da-uv-traeger.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,985,IT.TA.LEBQ,Durchgangsarztberichte
+fusionsarchiv-beitrag.ui,DEV-APP/UI/APPLICATION,1275,IT.TA.BCRM,Arbeitgeberbeitrag
+versorgungsbezug-meldungen.biz.api,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,784,IT.TA.KMEL,Versorgungsbezug-Meldungen
+korrespondenz.proc.qs,QS-APP/BIZ-TOP,1752,IT.BA.DOC,Kiss24-TKeasy
+kv-verzeichnis.biz.qs,QS-APP/BIZ,1616,IT.TA.WAVE,Behandler-Verzeichnis
+unfall.ui.api,DEV-APP/UI/APPLICATION,1222,IT.TA.LEBQ,Unfall
+tk.util,DEV-FRAMEWORK/CORE,315,IT.AF.FRW,Framework Server
+krankenhausverzeichnis.biz.qs,QS-APP/BIZ,1569,IT.TA.LEVE,Verzeichnis Krankenhaeuser
+organisationsverwaltung.ui,DEV-APP/UI/APPLICATION,1280,IT.AF.PIM,Organisations-Verwaltung
+fahrkosten.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1043,IT.TA.LEBQ,Fahrkosten
+kur.ui.qs,QS-APP/UI,1797,IT.TA.LEVE,Kur
+prozessdatencontainer.biz,DEV-APP/BIZ/BASIS/INTERAKTION,652,IT.AF.PIM,Vorgangssystem
+dokumentenaufnahme-uebergreifend.biz.qs,QS-APP/BIZ,1690,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+tk.sys.eventing.qs,QS-INTEGRATIONTEST/PROCESS,1963,IT.AF.FRW,Integrationstests
+sozv-meldungen.ui.qs,QS-APP/UI,1879,IT.TA.KMEL,SozV-Meldungen
+leistungsmanagement.ui.qs,QS-APP/UI,1824,IT.TA.LEVE,LM-Fallfuehrung
+jakarta.xml.bind-api,EXTERNAL,106,Unbekannt,Unbekannt
+TkRemoteJUnitTestRunner,DEV-FRAMEWORK/STARTUP,478,IT.AF.FRW,Framework Server
+bcutil-jdk18on,EXTERNAL,48,Unbekannt,Unbekannt
+fop,EXTERNAL/JAXFRONT,263,Unbekannt,Unbekannt
+tk.sys.tkx.qs,QS-FRAMEWORK/QS,552,IT.AF.FRW,Framework GUI
+h2,EXTERNAL,188,Unbekannt,Unbekannt
+meldungen-basis.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,766,IT.TA.KMEL,Meldungen-Basis
+korrespondenzpartner.biz.qs,QS-APP/BIZ,1501,IT.TA.KEGK,Geschaeftspartner
+beitragserstattung-aus-rente.biz.qs,QS-APP/BIZ,1678,IT.TA.BCRM,Beitragserstattung aus Rente
+tk.sys.gui.editpattern.qs,QS-FRAMEWORK/QS,543,IT.AF.FRW,Framework GUI
+org.apache.mina.mina-core,EXTERNAL,138,Unbekannt,Unbekannt
+geschaeftspartner-vertreterauskunft.ui,DEV-APP/UI/COMPONENT,1155,IT.TA.KEGK,Geschaeftspartner
+tk.sys.transaction,DEV-FRAMEWORK/DB,339,IT.AF.FRW,Framework Persistenz
+mandatsakte.biz.qs,QS-APP/BIZ-TOP,1748,IT.TA.KEGK,Geschaeftspartner
+tim.ext.outbound,DEV-APP/EXT-OUTBOUND,577,IT.AF.PIM,TI-Messenger-Adapter
+kostenerstattungswahl.ui,DEV-APP/UI/APPLICATION,1258,IT.TA.LEBQ,Wahl der Kostenerstattung
+tk-vorsorge-planer.biz.qs,QS-APP/BIZ,1670,IT.TA.LEVE,TK-Vorsorgeplaner
+tk.sys.boi.annotation,DEV-FRAMEWORK/CORE,322,IT.AF.FRW,Framework Server
+gesundheitskarte.ext.outbound,DEV-APP/EXT-OUTBOUND,590,IT.TA.KEGK,Gesundheitskarte (eGK)
+testdaten-versorgungsbezug-meldungen.ui,DEV-APP/UI/TESTDATEN,1388,IT.TA.KMEL,Versorgungsbezug-Meldungen
+jakarta.websocket-client-api,EXTERNAL,157,Unbekannt,Unbekannt
+au-steuerung.proc.qs,QS-APP/BIZ-TOP,1738,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+datenaustausch-eessi.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,995,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+prozess-tutorial.ui.qs,QS-MISC/SCHULUNG/PIF,1952,IT.AF.PEP,Prozess-Tutorial
+korrespondenz-basis.biz.qs,QS-APP/BIZ,1499,IT.BA.DOC,Kiss24-TKeasy
+neuaufnahmemanager.ext.inbound,DEV-APP/EXTERN/INBOUND,1091,IT.TA.KEGK,Neuaufnahmemanager
+mitteilungsmanagement-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,834,IT.TA.GL,Mitteilungsmanagement
+vertriebspartner.ext.inbound,DEV-APP/EXTERN/INBOUND,1088,IT.TA.BCRM,Vertriebsmanagement
+generische-kostenerstattung.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,874,IT.PM.PJ,Generische Kostenerstattung
+xmlgraphics-commons,EXTERNAL,200,Unbekannt,Unbekannt
+tk.sys.core.qs,QS-FRAMEWORK/QS,551,IT.AF.FRW,Framework Server
+tkx.showcase.qs,QS-FRAMEWORK/QS,558,IT.AF.FRW,Framework GUI
+widerspruch.ui,DEV-APP/UI/APPLICATION,1234,IT.TA.WAVE,Widerspruchsbearbeitung
+base32check-java,EXTERNAL,227,Unbekannt,Unbekannt
+bankverzeichnis.ext.inbound.qs,QS-APP/EXTERN,1934,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+gesundheitsdividende.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,845,IT.TA.BCRM,Gesundheitsdividende
+korrespondenz.biz.qs,QS-APP/BIZ,1500,IT.BA.DOC,Kiss24-TKeasy
+bcpkix-jdk18on,EXTERNAL,45,Unbekannt,Unbekannt
+dokumentenaufnahme.biz.qs.api,QS-APP/BIZ,1465,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+prozess.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,655,IT.AF.PEP,Geschaeftsprozess
+tk.sys.cid,DEV-FRAMEWORK/SERVER,366,IT.AF.FRW,Framework Server
+tk.sys.gui.component.timeline,DEV-FRAMEWORK/GUI-CORE,429,IT.AF.FRW,Framework GUI
+akquise.proc.qs,QS-APP/BIZ-TOP,1736,IT.TA.BCRM,CRM-Akquisemanager
+tk.eai.api,DEV-FRAMEWORK/API/EAI-API,310,IT.AF.FRW,Framework EAI
+arbeitsagentur.ui,DEV-APP/UI/APPLICATION,1361,IT.TA.WAVE,Betriebsnummern-Verzeichnis
+leistungssystem.ui.qs.api,QS-APP/UI,1836,IT.TA.LEBQ,Leistungssystem
+jetty-jmx,EXTERNAL,148,Unbekannt,Unbekannt
+com.sun.xml.bind.jaxb-impl,EXTERNAL,100,Unbekannt,Unbekannt
+datenaustausch-eessi-basis.biz.qs,QS-APP/BIZ,1704,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+tk.sys.boi.base,DEV-FRAMEWORK/CORE,321,IT.AF.FRW,Framework Server
+TKeasyStartup,DEV-FRAMEWORK/STARTUP,477,IT.AF.FRW,Framework Server
+jgiven-junit,EXTERNAL/TEST_ONLY/JGIVEN,289,Unbekannt,Unbekannt
+unfall-auskunft.ui,DEV-APP/UI/COMPONENT,1167,IT.TA.LEBQ,Unfall
+dhd.biz.qs,QS-APP/BIZ,1657,IT.TA.BCRM,Digital Service Solutions (DSS)
+jakarta.activation-api,EXTERNAL,98,Unbekannt,Unbekannt
+leistungen-basis.proc.qs,QS-APP/BIZ-TOP,1722,IT.TA.LEBQ,Leistungen-Basis
+dokumentenarchiv.ext.outbound,DEV-APP/EXT-OUTBOUND,588,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+tk.sys.injection,DEV-FRAMEWORK/CORE,323,IT.AF.FRW,Framework Server
+entsendung.ui.qs,QS-APP/UI,1898,IT.TA.KMEL,Entsendung
+BoiExtender,DEV-FRAMEWORK/SERVER,359,IT.AF.FRW,Framework Server
+krebsregister-stammdaten.biz.qs,QS-APP/BIZ,1674,IT.TA.LEVE,Krebsregister
+batik-all,EXTERNAL/JAXFRONT,264,Unbekannt,Unbekannt
+diseasemanagement.biz.api,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,851,IT.TA.WAVE,Diseasemanagement-Programme
+vps.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,827,IT.TA.LEVE,Vorpruefsoftware
+tk.db.statistic,DEV-FRAMEWORK/DB,338,IT.AF.FRW,Framework Persistenz
+fusionsarchiv-beleg.ui,DEV-APP/UI/APPLICATION,1283,IT.TA.KEGK,Fusionsarchiv
+tk.sys.eai.base,DEV-FRAMEWORK/CORE,325,IT.AF.FRW,Framework EAI
+kunde-vor-ort.biz,DEV-APP/BIZ/PROZESSDATEN/VERWALTUNG,740,IT.TA.BCRM,CRM-Empfangssteuerung
+arbeitsunfaehigkeit.ui.qs,QS-APP/UI,1819,IT.TA.GL,Arbeitsunfaehigkeit
+diga.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1053,IT.TA.ZED,Digitale Gesundheitsanwendung
+arbeitgeberbestandsfuehrung.biz.qs,QS-APP/BIZ,1493,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+leistungen-basis.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,811,IT.TA.LEBQ,Leistungen-Basis
+da-aerzte-kollektiv.biz.qs,QS-APP/BIZ,1635,IT.TA.LEVE,DA Ärzte / Einzelfallnachweis
+tk.sys.viewagent.qs,QS-FRAMEWORK/QS,542,IT.AF.FRW,Framework GUI
+testdaten-korrespondenz.biz,DEV-APP/BIZ/TESTDATEN,1066,IT.BA.DOC,Kiss24-TKeasy
+versicherter.type,DEV-TYPE,564,IT.TA.KEGK,Versichertenbestandsfuehrung
+javax.xml.bind-api,EXTERNAL/RUNTIME,296,Unbekannt,Unbekannt
+leistungssystem.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,807,IT.TA.LEBQ,Leistungssystem
+org.glassfish.gmbal.gmbal-api-only,EXTERNAL,111,Unbekannt,Unbekannt
+org.eclipse.jdt.junit4.runtime,EXTERNAL,180,Unbekannt,Unbekannt
+gesundheitskarte.biz.api,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,728,IT.TA.KEGK,Gesundheitskarte (eGK)
+krankenhausverzeichnis.ui,DEV-APP/UI/APPLICATION,1200,IT.TA.LEVE,Verzeichnis Krankenhaeuser
+tk.sys.tkx,DEV-FRAMEWORK/TKX,426,IT.AF.FRW,Framework GUI
+kostenerstattung.biz.qs,QS-APP/BIZ,1667,IT.TA.LEBQ,Kostenerstattung
+tk.sys.eai.adapter.batch.qs,QS-FRAMEWORK/BASE,485,IT.AF.FRW,Framework EAI
+org.apache.httpcomponents.httpcore,EXTERNAL,135,Unbekannt,Unbekannt
+arbeitgeberbeitrag.biz.qs.api,QS-APP/BIZ,1642,IT.TA.BCRM,Arbeitgeberbeitrag
+schriftgut.ui,DEV-APP/UI/COMPONENT,1115,IT.BA.DOC,KISG-Java (Altsysteme)
+versichertenbestandsfuehrung.ui,DEV-APP/UI/APPLICATION,1293,IT.TA.KEGK,Versichertenbestandsfuehrung
+TKeasyBootstrap,DEV-FRAMEWORK/BOOTSTRAP,305,IT.AF.FRW,Framework Server
+crm.ui.api,DEV-APP/UI/COMPONENT,1107,IT.TA.BCRM,CRM
+einstufungsverlauf.ui,DEV-APP/UI/APPLICATION,1346,IT.TA.KEGK,Einstufungsverlauf
+da-zahnaerzte.ui,DEV-APP/UI/APPLICATION,1271,IT.TA.LEVE,DA Zahnaerzte / Behandlungsfallnachweis
+unfall-components.ui,DEV-APP/UI/COMPONENT,1146,IT.TA.LEBQ,Unfall
+chroniker.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,944,IT.TA.LEBQ,Chronikerdaten
+da-beitragsdifferenzierung-pv.biz.impl,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,791,IT.TA.KMEL,DA Beitragsdifferenzierung PV
+gesundheitskarte.biz.qs,QS-APP/BIZ,1606,IT.TA.KEGK,Gesundheitskarte (eGK)
+TKeasyStartup.qs,QS-FRAMEWORK/STARTUP,480,IT.AF.FRW,Framework Server
+studienverlauf.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,770,IT.TA.KMEL,Studienverlauf
+testdaten-versorgungsbezug-meldungen.biz.qs,QS-APP/BIZ,1710,IT.TA.KMEL,Versorgungsbezug-Meldungen
+validation-api,EXTERNAL,159,Unbekannt,Unbekannt
+hzv.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,856,IT.TA.LEVE,Hausarztzentrierte Versorgung (HzV)
+leistungsuebersicht.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,815,IT.TA.LEBQ,Leistungsuebersicht
+geocodingservice.biz,DEV-APP/BIZ/VERZEICHNIS,612,IT.TA.KEGK,Geschaeftspartner
+kvnr-meldungen.ui.qs,QS-APP/UI,1876,IT.TA.KMEL,KVNr-Meldungen
+tk.sys.gui.search,DEV-FRAMEWORK/GUI-APPLICATION,449,IT.AF.FRW,Framework GUI
+meinetk.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,731,IT.ON.ONB1,MeineTK
+gutachterverzeichnis.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,704,IT.TA.WAVE,Gutachter-Verzeichnis
+da-aerzte-kollektiv.ui,DEV-APP/UI/APPLICATION,1277,IT.TA.LEVE,DA Ärzte / Einzelfallnachweis
+testdaten-pzr.biz.impl,DEV-APP/BIZ/TESTDATEN,1069,IT.TA.ZED,Professionelle Zahnreinigung
+datenaustausch-eel-uebergreifend.biz.qs,QS-APP/BIZ,1633,IT.TA.GL,DA Entgeltersatzleistungen
+prozess-tutorial.ui.impl,DEV-MISC/SCHULUNG/PIF,1397,IT.AF.PEP,Prozess-Tutorial
+tk-bpmn-schema-jaxb,EXTERNAL,232,Unbekannt,Unbekannt
+haftpflichtversicherer.ui.api,DEV-APP/UI/APPLICATION,1223,IT.TA.LEBQ,Unfall
+tkschriftgut-basis.biz,DEV-APP/BIZ/BASIS/INTERAKTION,653,IT.BA.DOC,KISG-Java (Altsysteme)
+hilfsmittelverzeichnis.biz.qs,QS-APP/BIZ,1577,IT.TA.WAVE,Hilfsmittelverzeichnis
+bcprov-jdk18on,EXTERNAL,47,Unbekannt,Unbekannt
+jhall,EXTERNAL,90,Unbekannt,Unbekannt
+tk.sys.util.webserver,DEV-FRAMEWORK/COMMUNICATION,350,IT.AF.FRW,Framework Server
+mdkverzeichnis.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,708,IT.TA.WAVE,MDK-Verzeichnis
+prozess-beispiel.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1039,IT.AF.PEP,Prozess-Beispiel
+hochschul-meldungen.ui.qs,QS-APP/UI,1782,IT.TA.KMEL,Hochschul-Meldungen
+jakarta.inject-api,EXTERNAL,220,Unbekannt,Unbekannt
+melderegisterabgleich.ui.qs,QS-APP/UI,1769,IT.TA.KEGK,Melderegisterabgleich
+akquise.ui.api,DEV-APP/UI/APPLICATION,1185,IT.TA.BCRM,CRM-Akquisemanager
+tk.sys.process.bpm,DEV-FRAMEWORK/PROCESS,416,IT.AF.PEP,Framework Process
+arbeitsunfaehigkeit.eel.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,915,IT.TA.GL,Arbeitsunfaehigkeit
+eingabe-protokoll.biz,DEV-APP/BIZ/UEBERGREIFEND,1018,IT.AF.FRW,Eingabe-Protokoll
+leistungen-basis.biz.qs,QS-APP/BIZ,1484,IT.TA.LEBQ,Leistungen-Basis
+mutterschaftsgeld.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1058,IT.TA.GL,Mutterschaftsgeld (MUG)
+neuaufnahmemanager.type,DEV-TYPE,570,IT.TA.KEGK,Neuaufnahmemanager
+jemmy,EXTERNAL,87,Unbekannt,Unbekannt
+pl.pragmatists.JUnitParams,EXTERNAL,170,Unbekannt,Unbekannt
+korrespondenz.biz,DEV-APP/BIZ/BASIS/INTERAKTION,668,IT.BA.DOC,Kiss24-TKeasy
+schriftgut-archiv.biz.qs,QS-APP/BIZ,1693,IT.BA.DOC,KISG-Java (Altsysteme)
+testdaten-diga.biz,DEV-APP/BIZ/TESTDATEN,1068,IT.TA.ZED,Digitale Gesundheitsanwendung
+korrespondenz.proc.api,DEV-APP/BIZ/GESCHAEFTSPROZESS,1029,IT.BA.DOC,Kiss24-TKeasy
+pflegeversicherung.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1056,IT.TA.PV,Pflegeversicherung
+diga.ext.outbound,DEV-APP/EXT-OUTBOUND,595,IT.TA.ZED,Digitale Gesundheitsanwendung
+melderegisterabgleich.biz.qs,QS-APP/BIZ,1486,IT.TA.KEGK,Melderegisterabgleich
+tk.sys.usersession,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,382,IT.AF.FRW,Framework Server
+sozialhilfetraeger-components.ui,DEV-APP/UI/COMPONENT,1137,IT.TA.WAVE,Sozialhilfetraeger
+crm-vorgang.ui.api,DEV-APP/UI/COMPONENT,1108,IT.TA.BCRM,CRM
+dokumentenaufnahme.biz.qs,QS-APP/BIZ,1466,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+ca.uhn.hapi.fhir.org.hl7.fhir.dstu2016may,EXTERNAL/HAPI-FHIR,245,Unbekannt,Unbekannt
+javax.websocket-api,EXTERNAL,-1,Unbekannt,Unbekannt
+gericht.biz,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,693,IT.TA.WAVE,Widerspruchsbearbeitung
+org.mockito.mockito-core,EXTERNAL,168,Unbekannt,Unbekannt
+org.apache.felix.gogo.command,EXTERNAL,6,Unbekannt,Unbekannt
+akquise.biz.impl,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,871,IT.TA.BCRM,CRM-Akquisemanager
+tk.sys.boi.persistence.qs,QS-FRAMEWORK/QS,521,IT.AF.FRW,Framework Persistenz
+leistungssystem.ui.impl,DEV-APP/UI/COMPONENT,1173,IT.TA.LEBQ,Leistungssystem
+arbeitsunfaehigkeit.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,935,IT.TA.GL,Arbeitsunfaehigkeit
+eel.ui,DEV-APP/UI/APPLICATION,1350,IT.TA.GL,Entgeltersatzleistungen
+einstufungsverlauf.biz.qs.api,QS-APP/BIZ,1477,IT.TA.KEGK,Einstufungsverlauf
+tk.db.tuple.qs,QS-FRAMEWORK/QS,518,IT.AF.FRW,Framework Persistenz
+transactions-osgi,EXTERNAL,55,Unbekannt,Unbekannt
+kv-verzeichnis-rollen.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,702,IT.TA.WAVE,Behandler-Verzeichnis
+classgraph,EXTERNAL,34,Unbekannt,Unbekannt
+chroniker.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,943,IT.TA.LEBQ,Chronikerdaten
+tk.help,DEV-FRAMEWORK/TOOL,467,IT.AF.FRW,Framework GUI
+da-za-leistungsantraege.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,878,IT.TA.ZED,DA Zahnaerzte Leistungsantraege (ELAG)
+gesundheitsprojekte.ui.qs,QS-APP/UI,1780,IT.TA.LEBQ,Gesundheitsprojekte
+tk.sys.gui.component.imageviewer,DEV-FRAMEWORK/GUI-CORE,430,IT.AF.FRW,Framework GUI
+tk.sys.communication.host,DEV-FRAMEWORK/SERVER,357,IT.AF.FRW,Framework Persistenz
+korrespondenzpartner.ui,DEV-APP/UI/COMPONENT,1157,IT.TA.KEGK,Geschaeftspartner
+prozess-beispiel.proc.api,DEV-APP/BIZ/GESCHAEFTSPROZESS,1038,IT.AF.PEP,Prozess-Beispiel
+tk.sys.deploy,DEV-FRAMEWORK/SERVER,360,IT.AF.FRW,Framework Server
+abr-sonst-leistungserbringer.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,977,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+api-management-beispiel.ext.outbound,DEV-APP/EXT-OUTBOUND/BSPL,604,IT.AF.PEP,API-Management-Beispiel
+da-md-au.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1048,IT.TA.GL,Datenaustausch MD AU
+eel.ui.qs,QS-APP/UI,1822,IT.TA.GL,Entgeltersatzleistungen
+tk.sys.process.bpm.qs,QS-FRAMEWORK/QS,550,IT.AF.PEP,Framework Process
+tk.sys.docarchive,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,370,IT.AF.FRW,Framework Server
+geschaeftspartner-systemanforderungen.biz,DEV-APP/BIZ/UEBERGREIFEND/ANALYSE,1006,IT.TA.KEGK,Geschaeftspartner
+diga.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1436,IT.TA.ZED,Digitale Gesundheitsanwendung
+ext-webpdf,DEV-FRAMEWORK/EXT-OUTBOUND,454,IT.AF.FRW,Framework GUI
+tk.tool.junit,DEV-FRAMEWORK/TOOL,468,IT.AF.FRW,Framework Server
+org.apache.felix.gogo.shell,EXTERNAL,5,Unbekannt,Unbekannt
+arzneimittelverzeichnis.biz.qs,QS-APP/BIZ,1463,IT.TA.WAVE,Arzneimittelverzeichnis
+fusionsarchiv-allgemein.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,751,IT.TA.KEGK,Fusionsarchiv
+fahrkosten.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,945,IT.TA.LEBQ,Fahrkosten
+micrometer-commons,EXTERNAL,194,Unbekannt,Unbekannt
+fusionsarchiv-stammdaten.ui,DEV-APP/UI/APPLICATION,1282,IT.TA.KEGK,Fusionsarchiv
+haertefall.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1057,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+com.itextpdf.full,EXTERNAL,67,Unbekannt,Unbekannt
+pflegeunterstuetzungsgeld.ui.qs,QS-APP/UI,1872,IT.TA.PV,Pflegeunterstuetzungsgeld
+leistung.type,DEV-TYPE,567,IT.TA.LEBQ,Leistungen-Basis
+versorgungsabrechnung.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,877,IT.TA.LEVE,Ambulante Versorgungsabrechnungen
+jakarta.ws.rs-api,EXTERNAL,158,Unbekannt,Unbekannt
+jspecify,EXTERNAL,230,Unbekannt,Unbekannt
+tk.sys.security,DEV-FRAMEWORK/SERVER,351,IT.AF.FRW,Framework Server
+sonstigerleistungserbringer.ui.qs,QS-APP/UI,1862,IT.TA.LEBQ,Heilmittelverzeichnis
+da-aerzte-hzv.biz.qs,QS-APP/BIZ,1669,IT.TA.LEVE,DA Hausarztzentrierte Versorgung
+psychotherapie.biz.qs,QS-APP/BIZ,1697,IT.TA.LEBQ,Psychotherapie
+tk.db.fieldmapper.qs,QS-FRAMEWORK/QS,519,IT.AF.FRW,Framework Persistenz
+au-steuerung.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,933,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+organisationsverwaltung.biz,DEV-APP/BIZ/BASIS/STRUKTUR,626,IT.AF.PIM,Organisations-Verwaltung
+versorgungsabrechnung.biz.qs,QS-APP/BIZ,1469,IT.TA.LEVE,Ambulante Versorgungsabrechnungen
+tk.sys.releasetest,DEV-FRAMEWORK/TOOL,464,IT.AF.FRW,Framework Server
+diga.proc.qs,QS-APP/BIZ-TOP,1743,IT.TA.ZED,Digitale Gesundheitsanwendung
+rsa-clearing.ui,DEV-APP/UI/APPLICATION,1365,IT.TA.KEGK,RSA-Clearing
+geschaeftspartner.ui,DEV-APP/UI/COMPONENT,1113,IT.TA.KEGK,Geschaeftspartner
+com.sun.xml.fastinfoset.FastInfoset,EXTERNAL,101,Unbekannt,Unbekannt
+krebsregister.ui,DEV-APP/UI/APPLICATION,1354,IT.TA.LEVE,Krebsregister
+tkeasy-environment,EXTERNAL,23,Unbekannt,Unbekannt
+tk.sys.gui.base.qs,QS-FRAMEWORK/QS,527,IT.AF.FRW,Framework GUI
+com4j,EXTERNAL,78,Unbekannt,Unbekannt
+datenaustausch-eessi.leistung.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,832,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+neuaufnahmemanager.ui,DEV-APP/UI/APPLICATION,1356,IT.TA.KEGK,Neuaufnahmemanager
+arbeitsunfaehigkeit.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1046,IT.TA.GL,Arbeitsunfaehigkeit
+tk.core.api,DEV-FRAMEWORK/API/CORE-API,308,IT.AF.FRW,Framework Core
+praeventionskurs.ui,DEV-APP/UI/APPLICATION,1244,IT.TA.LEBQ,Praeventionskurse
+diga.ui.api,DEV-APP/UI/APPLICATION,1328,IT.TA.ZED,Digitale Gesundheitsanwendung
+datenaustausch-eel.proc.qs,QS-APP/BIZ-TOP,1735,IT.TA.GL,DA Entgeltersatzleistungen
+kunde-vor-ort.ext.outbound,DEV-APP/EXT-OUTBOUND,601,IT.TA.BCRM,CRM-Empfangssteuerung
+leistungsuebersicht-impl.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,987,IT.TA.LEBQ,Leistungsuebersicht
+regiplan.biz,DEV-APP/BIZ/BASIS/STRUKTUR,632,IT.TA.WAVE,Registratur
+einstufungsverlauf.ui.qs,QS-APP/UI,1856,IT.TA.KEGK,Einstufungsverlauf
+ca.uhn.hapi.fhir.org.hl7.fhir.dstu3,EXTERNAL/HAPI-FHIR,246,Unbekannt,Unbekannt
+ca.uhn.hapi.fhir.org.hl7.fhir.dstu2,EXTERNAL/HAPI-FHIR,244,Unbekannt,Unbekannt
+tk.util.qs.api,QS-FRAMEWORK/QS-API/QS-CORE-API,479,IT.AF.FRW,Framework Server
+abr-sonst-leistungserbringer.ext.inbound,DEV-APP/EXTERN/INBOUND,1079,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+arbeitgeberbestandsfuehrung-uebergreifend.biz.qs,QS-APP/BIZ,1702,IT.TA.KEGK,Arbeitgeberbestandsfuehrung
+crm-components.ui,DEV-APP/UI/COMPONENT,1151,IT.TA.BCRM,CRM
+zusatzvertrag-extern.biz.qs,QS-APP/BIZ,1561,IT.TA.WAVE,Zusatztarif / Zusatzversicherung
+erv.ui.qs,QS-APP/UI,1911,IT.AF.PIM,Elektronischer Rechtsverkehr
+krankenhausaufenthalt.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1422,IT.TA.LEVE,Krankenhausaufenthalt
+kunde-vor-ort.ui.qs,QS-APP/UI,1895,IT.TA.BCRM,CRM-Empfangssteuerung
+arztgebuehrenpositionen-api.biz,DEV-APP/BIZ/VERZEICHNIS,620,IT.TA.WAVE,Arztgebuehrenordnungsposition
+da-za-leistungsantraege.ui.impl,DEV-APP/UI/APPLICATION,1190,IT.TA.ZED,DA Zahnaerzte Leistungsantraege (ELAG)
+insolvenzmanagement.biz,DEV-APP/BIZ/PROZESSDATEN/BEITRAG,841,IT.TA.BCRM,Insolvenzmanagement
+hauptzollamt.biz.qs,QS-APP/BIZ,1647,IT.TA.BCRM,Vollstreckung
+medizinproduktregress.ui.api,DEV-APP/UI/APPLICATION,1310,IT.TA.LEBQ,Medizinproduktregress
+tk.sys.services.ecsarchive,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,376,IT.AF.FRW,Framework EAI
+prozess-tutorial.biz.qs,QS-MISC/SCHULUNG/PIF,1950,IT.AF.PEP,Prozess-Tutorial
+studienverlauf.ui,DEV-APP/UI/APPLICATION,1299,IT.TA.KMEL,Studienverlauf
+tk.sys.gui,DEV-FRAMEWORK/GUI-BASE,424,IT.AF.FRW,Framework GUI
+hochschul-meldungen.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,769,IT.TA.KMEL,Hochschul-Meldungen
+datenaustausch-eessi-basis.biz,DEV-APP/BIZ/BASIS/INTERAKTION,672,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+leistungssystem.biz.qs.api,QS-APP/BIZ,1482,IT.TA.LEBQ,Leistungssystem
+asv-verzeichnis.ui,DEV-APP/UI/APPLICATION,1358,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+com.sun.activation.jakarta.activation,EXTERNAL,-1,Unbekannt,Unbekannt
+sozialhilfetraeger-abrechnung.leistung.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,830,IT.TA.WAVE,Sozialhilfetraeger
+tk.sys.gui.application,DEV-FRAMEWORK/GUI-CORE,433,IT.AF.FRW,Framework GUI
+vorgang-intern.biz.qs,QS-APP/BIZ,1694,IT.AF.PIM,Vorgangssystem
+tk.sys.eai.adapter.kafka,DEV-FRAMEWORK/EAI,388,IT.AF.FRW,Framework EAI
+tk.sys.eai.adapter.sap.qs,QS-FRAMEWORK/QS,500,IT.AF.FRW,Framework EAI
+da-aerzte-kollektiv.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,891,IT.TA.LEVE,DA Ärzte / Einzelfallnachweis
+leistung-services.ke.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,801,IT.TA.LEBQ,Leistung-Services
+hzv.ui.qs,QS-APP/UI,1846,IT.TA.LEVE,Hausarztzentrierte Versorgung (HzV)
+datenaustausch-finanzverwaltung.biz.qs,QS-APP/BIZ,1567,IT.TA.BCRM,Steuerdaten
+model-repository-signature,EXTERNAL,234,Unbekannt,Unbekannt
+com.fasterxml.woodstox.woodstox-core,EXTERNAL,97,Unbekannt,Unbekannt
+ch.qos.logback.classic,EXTERNAL,121,Unbekannt,Unbekannt
+da-mitteilungsverfahren-rv.ui.qs,QS-APP/UI,1764,IT.TA.LEVE,DA Mitteilungsverfahren RV
+da-aerzte-hybrid-drg.ui.qs,QS-APP/UI,1827,IT.TA.LEVE,DA Ärzte Hybrid-DRG
+leistungssystem.ui.qs,QS-APP/UI,1837,IT.TA.LEBQ,Leistungssystem
+hilfsmittelversorgung.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1433,IT.TA.LEBQ,Hilfsmittel
+leistungsaushilfe-ausland.biz.qs,QS-APP/BIZ,1603,IT.TA.ZED,Leistungsaushilfe Ausland
+vertriebspartner.biz.qs.api,QS-APP/BIZ,1471,IT.TA.BCRM,Vertriebsmanagement
+tk.sys.gui.metrics.qs,QS-FRAMEWORK/QS,528,IT.AF.FRW,Framework GUI
+tk.sys.server.dispatcher,DEV-FRAMEWORK/SERVER,356,IT.AF.FRW,Framework Server
+bankverzeichnis.ext.inbound,DEV-APP/EXTERN/INBOUND,1081,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+bankverzeichnis.ui,DEV-APP/UI/APPLICATION,1231,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+kur.ext.outbound,DEV-APP/EXT-OUTBOUND,586,IT.TA.LEVE,Kur
+medizinproduktregress.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,898,IT.TA.LEBQ,Medizinproduktregress
+dhd.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1416,IT.TA.BCRM,Digital Service Solutions (DSS)
+tk.batch.auskunft,DEV-FRAMEWORK/TOOL,463,IT.AF.FRW,Framework EAI
+duebak-meldungen.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,781,IT.TA.KMEL,Datenuebermittlung BA - DÜBAK
+unfall.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,819,IT.TA.LEBQ,Unfall
+everordnungmanager.ext.inbound,DEV-APP/EXTERN/INBOUND,1095,IT.AF.PIM,eVerordnung Manager
+asv-verzeichnis.biz.qs,QS-APP/BIZ,1639,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+krebsregister-stammdaten.biz,DEV-APP/BIZ/STAMMDATEN/VERZEICHNIS,715,IT.TA.LEVE,Krebsregister
+leistungen-basis.ui.qs.api,QS-APP/UI,1834,IT.TA.LEBQ,Leistungen-Basis
+selvabrechnung.ui,DEV-APP/UI/APPLICATION,1344,IT.TA.LEVE,DA Integrierte Versorgung
+korrespondenz-type.biz,DEV-APP/BIZ/BASIS/INTERAKTION,663,IT.BA.DOC,Kiss24-TKeasy
+tracking.biz,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,722,IT.TA.BCRM,Vorgangstracking
+da-aerzte-asv.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,973,IT.TA.LEVE,DA Ambulante spezialfachaerztliche Versorgung
+gesundheitsprojekte.biz.qs,QS-APP/BIZ,1658,IT.TA.LEBQ,Gesundheitsprojekte
+tk.db.primitive,DEV-FRAMEWORK/DB,335,IT.AF.FRW,Framework Persistenz
+jetty-http,EXTERNAL,146,Unbekannt,Unbekannt
+krankenhausaufenthalt.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,888,IT.TA.LEVE,Krankenhausaufenthalt
+krankenhausaufenthalt.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,920,IT.TA.LEVE,Krankenhausaufenthalt
+seminarverwaltung.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRIEB,872,IT.TA.BCRM,Seminarverwaltung
+zentralregistratur.ui.qs,QS-APP/UI,1860,IT.TA.WAVE,Registratur
+tk.sys.eai.transport.jms,DEV-FRAMEWORK/EAI,385,IT.AF.FRW,Framework EAI
+kassenwechsel-leistungsdaten.biz.qs,QS-APP/BIZ,1591,IT.TA.LEVE,Kassenwechsel-Leistungsdaten
+vorgang.biz.qs,QS-APP/BIZ,1506,IT.AF.PIM,Vorgangssystem
+crm-imail.ui,DEV-APP/UI/COMPONENT,1111,IT.TA.BCRM,CRM
+testdaten-kur.ui,DEV-APP/UI/TESTDATEN,1391,IT.TA.LEVE,Kur
+arbeitgeberbeitrag.biz.qs,QS-APP/BIZ,1643,IT.TA.BCRM,Arbeitgeberbeitrag
+geocodingservice.biz.qs,QS-APP/BIZ,1459,IT.TA.KEGK,Geschaeftspartner
+type,DEV-TYPE,562,IT.AF.DD,Übergreifende fachliche Typen (biz-type)
+influxdb,EXTERNAL,-1,Unbekannt,Unbekannt
+ems.web.qs,QS-APP/WEB,1927,IT.ON.ONG,E-Mail Marketing System
+versichertenbestandsfuehrung.biz.impl,DEV-APP/BIZ/STAMMDATEN/PRIVATKUNDE,726,IT.TA.KEGK,Versichertenbestandsfuehrung
+tk.sys.eai.transport.aq.qs,QS-FRAMEWORK/QS,497,IT.AF.FRW,Framework EAI
+jsqlparser,EXTERNAL,33,Unbekannt,Unbekannt
+optimization,DEV-APP/OPTIMIZATION,1099,IT.AF.FRW,Optimization
+fv-meldungen.ui,DEV-APP/UI/APPLICATION,1274,IT.TA.KMEL,FV-Meldungen
+haertefall.ui.api,DEV-APP/UI/COMPONENT,1164,IT.TA.LEBQ,Haertefall - Belastungsgrenze
+javax.xml.rpc-api,EXTERNAL,155,Unbekannt,Unbekannt
+versorgungsabrechnung.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,899,IT.TA.LEVE,Ambulante Versorgungsabrechnungen
+zentralregistratur.ui,DEV-APP/UI/APPLICATION,1226,IT.TA.WAVE,Registratur
+medizinproduktregress.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,876,IT.TA.LEBQ,Medizinproduktregress
+tk.qs.sys.boi.test,QS-INTEGRATIONTEST/SERVER,1959,IT.AF.FRW,Integrationstests
+leistung-services.ze.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,806,IT.TA.LEBQ,Leistung-Services
+connector-api,EXTERNAL,80,Unbekannt,Unbekannt
+prozessdatencontainer.biz.qs,QS-APP/BIZ,1629,IT.AF.PIM,Vorgangssystem
+SecPKIApi,EXTERNAL,35,Unbekannt,Unbekannt
+org.jvnet.staxex.stax-ex,EXTERNAL,114,Unbekannt,Unbekannt
+tk.de.ui.qs,QS-APP/UI,1900,IT.ON.OGP2,tk.de
+tk.sys.eai.adapter.batch,DEV-FRAMEWORK/EAI,398,IT.AF.FRW,Framework EAI
+tk-termin.web,DEV-APP/WEB/TK.DE,1073,IT.ON.OGP2,TK-Termin
+da-aerzte-hybrid-drg.ui.impl,DEV-APP/UI/APPLICATION,1248,IT.TA.LEVE,DA Ärzte Hybrid-DRG
+kim-log.ui.qs,QS-APP/UI,1776,IT.AF.PIM,Kommunikation im Medizinwesen Log
+tk.sys.injection.qs,QS-FRAMEWORK/QS,504,IT.AF.FRW,Framework Server
+mbkarchiv.biz.qs,QS-APP/BIZ,1664,IT.TA.BCRM,Mitgliederbeitrag
+prozessereignismanager-referenzen.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,638,IT.AF.PEP,Geschaeftsprozess
+meldungen-basis.ui.qs,QS-APP/UI,1875,IT.TA.KMEL,Meldungen-Basis
+praevention.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,967,IT.TA.LEBQ,Praevention
+everordnungmanager.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1437,IT.AF.PIM,eVerordnung Manager
+rechnungswesen.ui,DEV-APP/UI/COMPONENT,1168,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+zentralregistratur.biz.qs,QS-APP/BIZ,1620,IT.TA.WAVE,Registratur
+dividende.biz.qs,QS-APP/BIZ,1494,IT.TA.BCRM,Dividendenverlauf
+org.objenesis,EXTERNAL,165,Unbekannt,Unbekannt
+kv-verzeichnis.biz,DEV-APP/BIZ/VERZEICHNIS,615,IT.TA.WAVE,Behandler-Verzeichnis
+pflegeversicherung.biz.impl,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,927,IT.TA.PV,Pflegeversicherung
+meinetk.web,DEV-APP/WEB/MEINETK,1075,IT.ON.ONB1,MeineTK
+tk.sys.boi.test,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,381,IT.AF.FRW,Framework Server
+tk.sys.services.deploy,DEV-FRAMEWORK/EAI,412,IT.AF.FRW,Framework Server
+tk.sys.gui.gbo,DEV-FRAMEWORK/GUI-APPLICATION,450,IT.AF.FRW,Framework GUI
+jgraphlayout,EXTERNAL,-1,Unbekannt,Unbekannt
+datenaustausch-eessi.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1423,IT.TA.ZED,Elektronischer Austausch von Sozialversicherungsdaten (EESSI)
+vertrag.biz,DEV-APP/BIZ/BASIS/STRUKTUR,633,IT.AF.ARC,Anwendungs Infrastruktur
+Kernpruefung-API,EXTERNAL,117,Unbekannt,Unbekannt
+proko-schriftgut-beispiel.proc.api,DEV-APP/BIZ/GESCHAEFTSPROZESS,1036,IT.PM.PJ,Prozesskomponente-Schriftgut-Beispiel
+kv-verzeichnis-rollen.biz.qs,QS-APP/BIZ,1617,IT.TA.WAVE,Behandler-Verzeichnis
+adress-service.biz,DEV-APP/BIZ/BASIS/STRUKTUR,624,IT.TA.KEGK,Adress-Service
+ik-inhaber-verzeichnis.biz.qs,QS-APP/BIZ,1496,IT.TA.KEGK,Geschaeftspartner
+aub-verarbeitung.biz.qs,QS-APP/BIZ,1611,IT.TA.GL,Entgeltersatzleistungen
+sonstiger-geschaeftspartner-systemanforderungen.biz.qs,QS-APP/BIZ,1668,IT.TA.KEGK,Geschaeftspartner
+personalisierte-secpruefung.biz.qs,QS-APP/BIZ,1458,IT.AF.PIM,Dokumentenarchiv und Dokumentenaufnahme
+mx4j-tools-p,EXTERNAL,124,Unbekannt,Unbekannt
+krankenhausverzeichnis-systemanforderungen.biz,DEV-APP/BIZ/UEBERGREIFEND/ANALYSE,1007,IT.TA.LEVE,Verzeichnis Krankenhaeuser
+konfigurierbare-leistung.biz.qs,QS-APP/BIZ,1536,IT.TA.LEBQ,Konfigurierbare Leistung
+fusionsarchiv-beleg.biz,DEV-APP/BIZ/PROZESSDATEN/FUSIONSARCHIV,762,IT.TA.KEGK,Fusionsarchiv
+leistungsrueckforderung.leistung.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,831,IT.TA.WAVE,Pruefung der Leistungspflicht - PLP
+integrierteversorgung.biz,DEV-APP/BIZ/PROZESSDATEN/VERTRAG,853,IT.TA.WAVE,Versorgungsangebot
+generische-kostenerstattung.proc.qs,QS-APP/BIZ-TOP,1723,IT.PM.PJ,Generische Kostenerstattung
+tk.sys.user,DEV-FRAMEWORK/CORE,316,IT.AF.FRW,Framework Server
+tk.sys.dynamictkenum.qs,QS-FRAMEWORK/QS,494,IT.AF.FRW,Framework Server
+mitgliederbeitrag-components.ui,DEV-APP/UI/COMPONENT,1178,IT.TA.BCRM,Mitgliederbeitrag
+haeusliche-krankenpflege.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,922,IT.TA.LEBQ,Haeusliche Krankenpflege
+rfc2445-4Mar,EXTERNAL/JAXFRONT,262,Unbekannt,Unbekannt
+da-md-au.biz.api,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,916,IT.TA.GL,Datenaustausch MD AU
+hilfsmittelverzeichnis.ui,DEV-APP/UI/APPLICATION,1255,IT.TA.WAVE,Hilfsmittelverzeichnis
+external-application.ui,DEV-APP/UI/EXTERNALAPPLICATION,1381,IT.AF.ARC,Anwendungs Infrastruktur
+tk.sys.gui.test.suites,QS-FRAMEWORK/QS,544,IT.AF.FRW,Framework GUI
+einstufungsverlauf.web.qs,QS-APP/WEB,1928,IT.TA.KEGK,Einstufungsverlauf
+tkeasy-tuple-generator,EXTERNAL,63,Unbekannt,Unbekannt
+konfigurierbare-leistung.ui,DEV-APP/UI/APPLICATION,1323,IT.TA.LEBQ,Konfigurierbare Leistung
+tk.sys.services.tempfilestreaming,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,377,IT.AF.FRW,Framework EAI
+gerichtsverzeichnis.biz.api,DEV-APP/BIZ/STAMMDATEN/INSTITUTIONEN,694,IT.TA.WAVE,Gerichtsverzeichnis
+kieferorthopaedie-uebergreifend.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-UEBERGREIFEND,984,IT.TA.ZED,Kieferorthopaedie
+mbkarchiv.ui.qs,QS-APP/UI,1919,IT.TA.BCRM,Mitgliederbeitrag
+tk.sys.util.jmx,DEV-FRAMEWORK/CORE,327,IT.AF.FRW,Framework Server
+datenaustausch-eel.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,931,IT.TA.GL,DA Entgeltersatzleistungen
+rechnungswesen.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1060,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+commons-io,EXTERNAL,228,Unbekannt,Unbekannt
+eel.proc.qs,QS-APP/BIZ-TOP,1740,IT.TA.GL,Entgeltersatzleistungen
+prozessereignismanager.biz.api,DEV-APP/BIZ/BASIS/INTERAKTION,658,IT.AF.PEP,Geschaeftsprozess
+generische-kostenerstattung.ui.qs,QS-APP/UI,1754,IT.PM.PJ,Generische Kostenerstattung
+osgi.annotation,EXTERNAL,49,Unbekannt,Unbekannt
+beitrag.ui.qs,QS-APP/UI,1830,IT.TA.BCRM,"Beitragssaetze, Rechengroessen"
+vertriebspartner.biz.qs,QS-APP/BIZ,1574,IT.TA.BCRM,Vertriebsmanagement
+prozess.biz.qs.api,QS-APP/BIZ,1476,IT.AF.PEP,Geschaeftsprozess
+au-steuerung.ui.qs,QS-APP/UI,1820,IT.TA.GL,Arbeitsunfaehigkeit-Steuerung
+erv.biz.impl,DEV-APP/BIZ/PROZESSDATEN/VERWALTUNG,737,IT.AF.PIM,Elektronischer Rechtsverkehr
+tk.db.api,DEV-FRAMEWORK/API/DB-API,309,IT.AF.FRW,Framework Persistenz
+begleiter.biz.qs,QS-APP/BIZ,1656,IT.TA.BCRM,CRM
+tk.sys.gui.uiserver,DEV-FRAMEWORK/TKX-SERVER,439,IT.AF.FRW,Framework GUI
+sozialversicherungsabkommen.ui,DEV-APP/UI/APPLICATION,1228,IT.TA.ZED,Leistungsaushilfe Ausland
+einstufungsverlauf.ext.outbound.qs,QS-APP/EXT-OUTBOUND,1443,IT.TA.KEGK,Einstufungsverlauf
+tk.sys.cti,DEV-FRAMEWORK/TOOL,465,IT.AF.FRW,Framework GUI
+tk.sys.eai.service,DEV-FRAMEWORK/EAI,408,IT.AF.FRW,Framework EAI
+sap-eam-stammdaten.ui.qs,QS-APP/UI,1884,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+tk.batch.framework.qs,QS-FRAMEWORK/QS,507,IT.AF.FRW,Framework EAI
+kassenwechselmeldungen.biz.qs,QS-APP/BIZ,1590,IT.TA.KMEL,Kassenwechselmeldungen
+sozialhilfetraeger-abrechnung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG,979,IT.TA.WAVE,Sozialhilfetraeger
+tk.sys.boi.qs,QS-FRAMEWORK/QS,522,IT.AF.FRW,Framework Server
+versichertenbestandsfuehrung.biz.qs,QS-APP/BIZ,1478,IT.TA.KEGK,Versichertenbestandsfuehrung
+sonstiger-geschaeftspartner.ui.qs,QS-APP/UI,1888,IT.TA.KEGK,Geschaeftspartner
+jetty-security,EXTERNAL,149,Unbekannt,Unbekannt
+sonstige-leistung.ui.qs,QS-APP/UI,1866,IT.TA.LEBQ,Sonstige Leistungen
+datenaustausch-eel.biz.qs,QS-APP/BIZ,1518,IT.TA.GL,DA Entgeltersatzleistungen
+tk.sys.dynamictkenum.server,DEV-FRAMEWORK/SERVER-INFRASTRUCTURE,371,IT.AF.FRW,Framework Persistenz
+duebak-meldungen.biz.qs,QS-APP/BIZ,1512,IT.TA.KMEL,Datenuebermittlung BA - DÜBAK
+personalverzeichnis.ui,DEV-APP/UI/APPLICATION,1237,IT.TA.BCRM,"TKeasy-Rechnungswesen (Vorbeleg, GP-Konto, Forderungsrealisierung)"
+sozialausgleich-meldungen.biz,DEV-APP/BIZ/PROZESSDATEN/MELDEVERFAHREN,787,IT.TA.KMEL,BBG-Meldungen
+korrespondenz-parameterpanel.ui.qs,QS-APP/UI,1853,SK.KT.SGE,Standard-Schriftgut Kiss24
+bonusprogramm.biz.qs.api,QS-APP/BIZ,1599,IT.TA.BCRM,CRM-Bonusprogramm
+e-nachricht.biz.qs,QS-APP/BIZ,1530,IT.AF.PIM,e-Nachricht
+sozv-meldungen.biz.qs,QS-APP/BIZ,1593,IT.TA.KMEL,SozV-Meldungen
+sozialausgleich-meldungen.ui.qs,QS-APP/UI,1763,IT.TA.KMEL,BBG-Meldungen
+proko-schriftgut-beispiel.biz.api,DEV-APP/BIZ/BSPL,1023,IT.PM.PJ,Prozesskomponente-Schriftgut-Beispiel
+abr-sonst-leistungserbringer.proc,DEV-APP/BIZ/GESCHAEFTSPROZESS,1033,IT.TA.LEVE,Abrechnungsmanagement Sonstige Leistungserbringer
+duebak-meldungen.ui.qs,QS-APP/UI,1757,IT.TA.KMEL,Datenuebermittlung BA - DÜBAK
+icdverzeichnis.ui,DEV-APP/UI/APPLICATION,1266,IT.TA.GL,ICD-Verzeichnis
+behandlerverzeichnis.ui,DEV-APP/UI/APPLICATION,1250,IT.TA.WAVE,Behandler-Verzeichnis
+da-aerzte-hzv.ui.qs,QS-APP/UI,1847,IT.TA.LEVE,DA Hausarztzentrierte Versorgung
+tk-patientenquittung.biz,DEV-APP/BIZ/PROZESSDATEN/LEISTUNG-BASIS,818,IT.TA.WAVE,TK-Patientenquittung
+de.tk.txfs.api,EXTERNAL,58,Unbekannt,Unbekannt
+testdatenmanagement.ui,DEV-APP/UI/TESTDATEN,1384,IT.BA.DOC,Testdatenmanagement
+da-insolvenzgeld.biz.api,DEV-APP/BIZ/PROZESSDATEN/BEITRAG,836,IT.TA.BCRM,Datenaustausch Insolvenzgeld
+verordnung-util.biz.qs,QS-APP/BIZ,1539,IT.TA.ZED,Digitale Gesundheitsanwendung
+vertriebspartner.ext.inbound.qs,QS-APP/EXTERN,1941,IT.TA.BCRM,Vertriebsmanagement
+OsgiManifestBuilder,DEV-FRAMEWORK/INFRASTRUCTURE,475,IT.AF.FRW,Framework Server
+indikationsverzeichnis.biz.qs,QS-APP/BIZ,1672,IT.TA.LEVE,Kur
+pflegeversicherung.ui,DEV-APP/UI/APPLICATION,1335,IT.TA.PV,Pflegeversicherung
+arbeitgeberbeitrag-systemanforderungen.biz,DEV-APP/BIZ/UEBERGREIFEND/ANALYSE,1008,IT.TA.BCRM,Arbeitgeberbeitrag
+jfxrt,EXTERNAL,89,Unbekannt,Unbekannt
+gson,EXTERNAL,236,Unbekannt,Unbekannt

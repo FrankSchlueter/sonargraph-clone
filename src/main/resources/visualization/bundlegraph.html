@@ -1,0 +1,2177 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<base href="/" />
+<title>Bundle Dependency Graph</title>
+<style>
+  /* ------------------------------------------------------------------
+     Layout
+     ------------------------------------------------------------------ */
+  :root {
+    --row-height: 22px;
+    --col-tree:       480px;
+    --col-bg:         #eef3f7;
+    --col-grid:       #7f9db9;
+    --col-outgoing:   #2e7d32;   /* grün */
+    --col-incoming:   #ef6c00;   /* orange */
+    --col-link:       #1565c0;
+    --col-link-hover: #0d47a1;
+    --col-folder-bg:  #dfe6ec;
+    --col-bundle-bg:  #ffffff;
+  }
+  html, body {
+    margin: 0; padding: 0;
+    font: 12px/1.4 "Segoe UI", system-ui, sans-serif;
+    background: var(--col-bg);
+    color: #000;
+    height: 100%;
+  }
+  body { display: flex; flex-direction: column; }
+
+  /* ------------------------------------------------------------------
+     Header
+     ------------------------------------------------------------------ */
+  header {
+    padding: 8px 12px;
+    background: #fff;
+    border-bottom: 1px solid var(--col-grid);
+    display: flex; gap: 16px; align-items: center;
+    flex-wrap: wrap;
+  }
+  header .title { font-weight: bold; font-size: 13px; }
+  header .stats { color: #555; }
+  header .stats .out { color: var(--col-outgoing); font-weight: 600; }
+  header .stats .in  { color: var(--col-incoming); font-weight: 600; }
+  header .stats .sel { color: #444; font-style: italic; }
+  header input[type=search] {
+    flex: 1; min-width: 200px; padding: 4px 8px; font: inherit;
+    border: 1px solid #ccc; border-radius: 4px;
+  }
+  header label { display: flex; align-items: center; gap: 4px; }
+
+  /* ------------------------------------------------------------------
+     Dropdowns (Root Classifications + Tree Level)
+     ------------------------------------------------------------------ */
+  .roots-dropdown, .level-dropdown { position: relative; }
+  .roots-button {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; font: inherit;
+    background: #fff; color: #000;
+    border: 1px solid #ccc; border-radius: 4px;
+    cursor: pointer;
+  }
+  .roots-button:hover { background: #f5f5f5; }
+  .roots-button[aria-expanded="true"] { background: #e3f2fd; border-color: #90caf9; }
+  .roots-count { color: #888; font-size: 11px; }
+  .roots-caret { font-size: 10px; color: #888; }
+  .roots-menu {
+    position: absolute; top: calc(100% + 4px); left: 0;
+    z-index: 1000;
+    min-width: 260px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    padding: 4px 0;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  .roots-menu[hidden] { display: none; }
+  .roots-menu-header {
+    display: flex; gap: 4px;
+    padding: 4px 10px 6px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4px;
+  }
+  .roots-link-btn {
+    background: none; border: none; color: #1565c0;
+    font: inherit; padding: 2px 4px; cursor: pointer;
+    text-decoration: underline;
+  }
+  .roots-link-btn:hover { color: #0d47a1; }
+  .roots-menu-items { display: flex; flex-direction: column; }
+  .roots-menu-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 4px 12px; cursor: pointer;
+    user-select: none;
+  }
+  .roots-menu-item:hover { background: #f5f5f5; }
+  .roots-menu-item input[type=checkbox] { cursor: pointer; }
+  .roots-menu-item .label { flex: 1; }
+  .roots-menu-item .count { color: #888; font-size: 11px; }
+
+  /* ------------------------------------------------------------------
+     Main grid: 3 Spalten (Consumers | Tree | Used)
+     ------------------------------------------------------------------ */
+  .grid {
+    flex: 1; display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    overflow: hidden;
+    background: var(--col-bg);
+    position: relative;
+    gap: 1px;
+  }
+  .col {
+    background: var(--col-bg);
+    overflow: auto;
+    position: relative;
+  }
+  .col-left  { border-right: 1px solid var(--col-grid); }
+  .col-center { border-right: 1px solid var(--col-grid); }
+  .col-tree { background: var(--col-bg); }
+  .col-header {
+    padding: 6px 10px;
+    font-weight: 600;
+    color: #333;
+    background: #e8eef3;
+    border-bottom: 1px solid var(--col-grid);
+    position: sticky; top: 0; z-index: 5;
+  }
+  .col-content { padding: 0; }
+  .col-empty {
+    padding: 16px 12px;
+    color: #888;
+    font-style: italic;
+    font-size: 11px;
+  }
+  .col-section-title {
+    padding: 8px 10px;
+    background: #f5f7fa;
+    border-bottom: 1px solid var(--col-grid);
+    font-size: 11px;
+    color: #444;
+  }
+
+  /* ------------------------------------------------------------------
+     Bundle tree
+     ------------------------------------------------------------------ */
+  .artifact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--row-height);
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--col-grid);
+    padding-left: 4px;
+    padding-right: 8px;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.1s;
+  }
+  .artifact-row.no-deps { cursor: default; }
+  .artifact-row:hover:not(.no-deps) {
+    background-color: rgba(21, 101, 192, 0.12);
+  }
+  .artifact-row.is-package:hover {
+    background-color: #cfd8dc;
+  }
+  /* Markierung der selektierten Zeile (deutlich hervorgehoben) */
+  .artifact-row.selected {
+    background-color: #1976d2 !important;
+    color: #fff;
+    box-shadow: inset 4px 0 0 0 #0d47a1, inset -4px 0 0 0 #0d47a1;
+  }
+  .artifact-row.selected .name,
+  .artifact-row.selected .name:hover { color: #fff; }
+  .artifact-row.selected .toggle-box,
+  .artifact-row.selected .toggle-dummy { border-color: #fff; color: #fff; }
+  .artifact-row.selected .cardinality-badge { outline: 2px solid #fff; }
+  .artifact-row.selected.is-package {
+    background-color: #1565c0 !important;
+  }
+  .artifact-row.is-package {
+    font-weight: bold;
+    background-color: var(--col-folder-bg);
+  }
+  .artifact-row.is-bundle {
+    background-color: var(--col-bundle-bg);
+  }
+  .artifact-row-left {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+  }
+  .artifact-row .name {
+    display: inline-block;
+    padding: 2px 4px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .artifact-row .name:hover { text-decoration: underline; }
+  .artifact-row.is-package .name { cursor: default; }
+
+  .toggle-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #555;
+    background-color: #fff;
+    font-size: 9px;
+    line-height: 9px;
+    font-family: monospace;
+    cursor: pointer;
+    margin-right: 4px;
+    color: #000;
+  }
+  .toggle-dummy {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 4px;
+  }
+
+  .artifact-row .indent {
+    display: inline-block;
+    width: 16px;
+  }
+
+  /* right-side cardinality badge */
+  .right-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cardinality-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 16px;
+    border-radius: 9px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #607d8b;
+    padding: 0 6px;
+  }
+  .cardinality-badge.out { background-color: var(--col-outgoing); }
+  .cardinality-badge.in  { background-color: var(--col-incoming); }
+  .cardinality-badge.empty { background-color: #cfd8dc; color: #888; }
+
+  /* Bundle-Spalte: kompakte Side-Tree-Rows */
+  .side-row {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e3eaf0;
+    padding: 0 8px;
+    user-select: none;
+  }
+  .side-row .side-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #555;
+    background-color: #fff;
+    font-size: 9px;
+    line-height: 9px;
+    font-family: monospace;
+    cursor: pointer;
+    margin-right: 4px;
+    color: #000;
+  }
+  .side-row .side-toggle-dummy {
+    display: inline-block;
+    width: 13px;
+    margin-right: 4px;
+  }
+  .side-row .side-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .side-row .side-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 15px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #607d8b;
+    padding: 0 5px;
+    margin-left: 6px;
+  }
+  .side-row.is-package {
+    font-weight: 600;
+    background-color: #dfe6ec;
+  }
+  .side-row .side-name a { color: #000; text-decoration: none; }
+  .side-row .side-name a:hover { text-decoration: underline; }
+
+  /* perf hint while rendering */
+  .rendering {
+    position: fixed; inset: 0;
+    background: rgba(255,255,255,0.7);
+    display: flex; align-items: center; justify-content: center;
+    font: 14px sans-serif; color: #555;
+    z-index: 10;
+  }
+  .rendering.hidden { display: none; }
+
+  /* datalist-style suggestions aren't natively styled; rely on browser default */
+  input[type=search]::-webkit-calendar-picker-indicator { display: none; }
+
+  /* ------------------------------------------------------------------
+     Kontextmenü (Rechtsklick auf Bundle)
+     ------------------------------------------------------------------ */
+  .bundle-context-menu {
+    position: fixed; z-index: 2000;
+    background: #fff;
+    border: 1px solid #888;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    padding: 4px 0;
+    min-width: 240px;
+    font: 12px/1.4 "Segoe UI", system-ui, sans-serif;
+  }
+  .bundle-context-menu .ctx-header {
+    padding: 4px 14px;
+    color: #666; font-style: italic; font-size: 11px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4px;
+  }
+  .bundle-context-menu .ctx-item {
+    padding: 6px 14px; cursor: pointer; user-select: none;
+  }
+  .bundle-context-menu .ctx-item:hover { background: #e3f2fd; }
+  .bundle-context-menu .ctx-item.disabled {
+    color: #aaa; cursor: default;
+  }
+  .bundle-context-menu .ctx-item.disabled:hover { background: transparent; }
+  .bundle-context-menu .ctx-item .ctx-check {
+    float: right; color: #2e7d32;
+  }
+  .bundle-context-menu .ctx-sep {
+    border-top: 1px solid #ddd; margin: 4px 0;
+  }
+
+  /* ------------------------------------------------------------------
+     Mode-Switch in der rechten Spalte
+     ------------------------------------------------------------------ */
+  .mode-switch {
+    display: inline-flex; gap: 0;
+    margin-left: 8px;
+  }
+  .mode-switch button {
+    font: 11px "Segoe UI", system-ui, sans-serif;
+    padding: 2px 8px;
+    background: #fff; color: #000;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  .mode-switch button:first-child { border-radius: 4px 0 0 4px; }
+  .mode-switch button:last-child  { border-radius: 0 4px 4px 0; }
+  .mode-switch button + button { border-left: 0; }
+  .mode-switch button.active {
+    background: #1976d2; color: #fff; border-color: #1976d2;
+  }
+  .mode-switch button:disabled {
+    color: #aaa; background: #f5f5f5; cursor: not-allowed;
+  }
+
+  /* ------------------------------------------------------------------
+     Allowed-Dependencies Side-Tree
+     ------------------------------------------------------------------ */
+  .side-row.is-excluded .side-name a {
+    color: #c62828;
+    font-style: italic;
+  }
+  .side-row.is-excluded .side-name a:hover {
+    text-decoration: underline;
+    text-decoration-color: #c62828;
+  }
+  /* Impl-Category-Verstoss: Bundle ist nur fuer das eigene Produkt
+     sichtbar, fuer andere Produkte "verboten" (purple + italic). */
+  .side-row.is-impl-violated .side-name a {
+    color: #6a1b9a;
+    font-style: italic;
+  }
+  .side-row.is-impl-violated .side-name a:hover {
+    text-decoration: underline;
+    text-decoration-color: #6a1b9a;
+  }
+  .side-row.folder-only-excluded .side-name {
+    color: #b71c1c;
+    font-style: italic;
+    opacity: 0.75;
+  }
+  .col-section-title .badge {
+    display: inline-block;
+    background: #e8eef3; color: #555;
+    border-radius: 9px;
+    padding: 1px 6px; margin: 0 2px;
+    font-size: 10px; font-weight: 600;
+  }
+  .col-section-title .badge.excluded { background: #ffebee; color: #c62828; }
+  .col-section-title .badge.allowed { background: #e8f5e9; color: #2e7d32; }
+
+  /* ------------------------------------------------------------------
+     Impl-Category Icon
+     ------------------------------------------------------------------ */
+  .impl-icon {
+    width: 16.8px;
+    height: 16.8px;
+    vertical-align: -3px;
+    margin-left: 4px;
+    opacity: 0.75;
+  }
+  .impl-icon[title]:hover { opacity: 1.0; }
+</style>
+__IMPL_ICON_SYMBOL__
+</head>
+<body>
+
+<header>
+  <strong class="title">Bundle Dependency Graph</strong>
+  <span class="stats" id="stats">…</span>
+
+  <div class="roots-dropdown" id="roots-dropdown">
+    <button type="button" id="roots-button" class="roots-button" aria-haspopup="true" aria-expanded="false">
+      Root Classifications
+      <span class="roots-count" id="roots-count">(0/0)</span>
+      <span class="roots-caret">▾</span>
+    </button>
+    <div class="roots-menu" id="roots-menu" hidden>
+      <div class="roots-menu-header">
+        <button type="button" id="roots-all" class="roots-link-btn">Alle einblenden</button>
+        <button type="button" id="roots-none" class="roots-link-btn">Alle ausblenden</button>
+        <button type="button" id="roots-default" class="roots-link-btn">Default</button>
+      </div>
+      <div class="roots-menu-items" id="roots-menu-items">
+        <!-- Wird dynamisch aus dem Modell gefüllt -->
+      </div>
+    </div>
+  </div>
+
+  <div class="level-dropdown" id="level-dropdown">
+    <button type="button" id="level-button" class="roots-button" aria-haspopup="true" aria-expanded="false">
+      Tree Level: <span id="level-label">All</span>
+      <span class="roots-caret">▾</span>
+    </button>
+    <div class="roots-menu" id="level-menu" hidden>
+      <label class="roots-menu-item"><input type="radio" name="treeLevel" value="1" /> Only Root Level 1</label>
+      <label class="roots-menu-item"><input type="radio" name="treeLevel" value="2" /> Level 2</label>
+      <label class="roots-menu-item"><input type="radio" name="treeLevel" value="3" checked /> All</label>
+    </div>
+  </div>
+
+  <input type="search" id="search" list="bundle-suggestions" placeholder="Filter / search bundle…" autocomplete="off" />
+  <datalist id="bundle-suggestions"></datalist>
+  <label><input type="checkbox" id="hide-unused"> Hide Unused Dependencies</label>
+</header>
+
+<div class="grid" id="grid">
+  <div class="col col-left" id="col-left">
+    <div class="col-header" id="col-left-header">
+      <span id="col-left-title">Consumers</span>
+      <div class="mode-switch" id="left-mode-switch">
+        <button type="button" data-mode="used"      class="active">Used</button>
+        <button type="button" data-mode="consumers" disabled>Allowed Consumers</button>
+      </div>
+    </div>
+    <div id="col-left-content" class="col-content"></div>
+  </div>
+  <div class="col col-center" id="col-center">
+    <div class="col-header" id="col-center-header">Tree</div>
+    <div id="col-center-content" class="col-content"></div>
+  </div>
+  <div class="col col-right" id="col-right">
+    <div class="col-header" id="col-right-header">
+      <span id="col-right-title">Used</span>
+      <div class="mode-switch" id="right-mode-switch">
+        <button type="button" data-mode="used"      class="active">Used</button>
+        <button type="button" data-mode="allowed"   disabled>Allowed Dependencies</button>
+      </div>
+    </div>
+    <div id="col-right-content" class="col-content"></div>
+  </div>
+</div>
+
+<div class="rendering" id="rendering">Rendering graph…</div>
+<div id="tooltip" style="position: fixed; display: none; pointer-events: none; background: rgba(33, 33, 33, 0.92); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 6px; padding: 14px 18px; font-size: 22px; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.25); z-index: 1000; font-family: inherit; opacity: 0; line-height: 1.4; transition: opacity 0.1s ease; max-width: 600px; white-space: pre-line;"></div>
+
+<!--INJECT-MODEL-->
+
+<script>
+(function () {
+  'use strict';
+
+  const ROW_H = 22;
+
+  function el(tag, attrs, ...children) {
+    const e = document.createElement(tag);
+    if (attrs) for (const k in attrs) {
+      if (k === 'class') e.className = attrs[k];
+      else if (k === 'style') e.setAttribute('style', attrs[k]);
+      else if (k.startsWith('on') && typeof attrs[k] === 'function') {
+        e.addEventListener(k.slice(2).toLowerCase(), attrs[k]);
+      } else e.setAttribute(k, attrs[k]);
+    }
+    for (const c of children) {
+      if (c == null) continue;
+      e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+    }
+    return e;
+  }
+  function svgEl(tag, attrs) {
+    const e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    if (attrs) for (const k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  /**
+   * Erzeugt ein Bundle-Namenselement. Bei impl-Bundles wird zusaetzlich
+   * das locked-Icon (inline SVG via <use href="#locked-icon"/>) angezeigt.
+   * Der Tooltip erklaert die Bedeutung der Impl-Category.
+   */
+  function makeBundleName(name, isImpl) {
+    const span = el('span', { class: 'bundle-name' });
+    span.appendChild(document.createTextNode(name));
+    if (isImpl) {
+      // Inline-SVG mit <use> auf den im <defs>-Block definierten
+      // <symbol id="locked-icon">. Garantiert ohne Data-URL-Fallback.
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('class', 'impl-icon');
+      svg.setAttribute('title', 'Impl-Bundle: nur fuer das eigene Produkt sichtbar');
+      const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+      use.setAttribute('href', '#locked-icon');
+      svg.appendChild(use);
+      span.appendChild(svg);
+    }
+    return span;
+  }
+
+  /**
+   * Liefert true, wenn das Bundle laut Modell-JSON der Impl-Category
+   * angehoert. Sucht sowohl in der idToIndex-Map (Center-Tree) als
+   * auch in der uebergebenen BundleInfo (Side-Tree).
+   */
+  function isImplBundle(bundleId, bundleInfo) {
+    if (bundleInfo && bundleInfo.category === 'impl') return true;
+    if (bundleId && state.idToIndex) {
+      const a = state.idToIndex.get(bundleId);
+      if (a && a.category === 'impl') return true;
+    }
+    return false;
+  }
+
+  // Standardmäßig ausgeblendete Root-Klassifikationen
+  const DEFAULT_HIDDEN_ROOTS = new Set(['EXTERNAL', 'HOTSWAP', 'DEV-FRAMEWORK', 'QS-FRAMEWORK']);
+
+  const state = {
+    model: null,
+    idToIndex: null,
+    rows: [],
+    rowY: new Map(),
+    filter: '',
+    hideUnused: false,
+    collapsedFolders: new Set(),
+    userExpandedFolders: new Set(),  /* vom User explizit expandierte Folder
+                                       (dürfen Children auch unterhalb des
+                                       Level-Filters zeigen) */
+    hiddenRoots: new Set(DEFAULT_HIDDEN_ROOTS),
+    treeLevel: 3,           /* 1 = nur Root, 2 = +1. Child, 3 = alle */
+    selectedId: null,
+    incomingByParent: new Map(),
+    outgoingByParent: new Map(),
+    // Mode-Switch (linke Spalte: Consumers/Allowed-Consumers, rechte Spalte: Used/Allowed-Deps)
+    rightMode: 'used',      // 'used' | 'allowed'
+    leftMode:  'used',      // 'used' | 'consumers'
+    rulesLoaded: false,     // true sobald dependencyrules2.xml verfügbar
+    allowedDepsCache: new Map(),    // bundleName -> Array (forward)
+    consumersCache: new Map(),      // bundleName -> Array (reverse)
+    embeddedMode: false             // true wenn allowedDeps bereits im Modell
+  };
+
+  function showTooltip(html, x, y) {
+    const t = document.getElementById('tooltip');
+    if (!t) return;
+    // Mehrzeiliger Text (mit \n) → in <pre> wrappen für korrekte Zeilenumbrüche
+    t.innerHTML = '<pre style="margin:0;padding:0;background:transparent;color:#fff;font:inherit;white-space:pre-wrap;">' + html + '</pre>';
+    t.style.display = 'block';
+    t.style.opacity = '1';
+    let left = x + 16, top = y - t.offsetHeight - 16;
+    if (left + t.offsetWidth > window.innerWidth) left = x - t.offsetWidth - 16;
+    if (top < 0) top = y + 24;
+    t.style.left = left + 'px';
+    t.style.top = top + 'px';
+  }
+  function hideTooltip() {
+    const t = document.getElementById('tooltip');
+    if (!t) return;
+    t.style.opacity = '0';
+    t.style.display = 'none';
+  }
+
+  // ------------------------------------------------------------------
+  // Allowed-Dependencies: Bridge zwischen Java-Backend und JS
+  // (synchron — der DependencyRulesService ist beim Erstellen des
+  // Widgets bereits vollständig geladen.)
+  // ------------------------------------------------------------------
+
+  /** Wird vom Java-Code aufgerufen, sobald die Regeln geladen sind. */
+  window.__onRulesLoaded = function(ok, errorMessage) {
+    state.rulesLoaded = !!ok;
+    if (ok) {
+      enableAllowedModeSwitches();
+    } else {
+      console.warn('[Rules] load failed:', errorMessage);
+    }
+  };
+
+  /** Aktiviert die Mode-Switch-Buttons für die Allowed-Sichten. */
+  function enableAllowedModeSwitches() {
+    document.querySelectorAll('#left-mode-switch button[data-mode="consumers"]').forEach(b => b.disabled = false);
+    document.querySelectorAll('#right-mode-switch button[data-mode="allowed"]').forEach(b => b.disabled = false);
+  }
+
+  /** Liefert Allowed-Deps oder Consumers synchron aus dem eingebetteten
+   *  Modell-JSON. In RAP können wir keine BrowserFunction nutzen, weil
+   *  der Aufruf einen Client-Server-Roundtrip erfordert. Stattdessen
+   *  werden die Daten beim Start in die JSON-Datei eingebettet. */
+  function getAllowedDeps(bundleName, kind) {
+    const cache = kind === 'consumers' ? state.consumersCache : state.allowedDepsCache;
+    if (cache.has(bundleName)) return cache.get(bundleName);
+    if (state.model) {
+      const raw = kind === 'consumers'
+          ? state.model.allowedConsumers && state.model.allowedConsumers[bundleName]
+          : state.model.allowedDeps && state.model.allowedDeps[bundleName];
+      if (raw) {
+        const data = parseCompactAllowedDeps(raw);
+        cache.set(bundleName, data);
+        return data;
+      }
+    }
+    return [];
+  }
+
+  /**
+   * Wandelt das kompakte Pipe-Format (siehe JsonBundleSerializer) in
+   * eine Liste von Objekten mit {n, c, l, x, r, ln, iv} zurück.
+   *
+   * <p>Format pro Eintrag:
+   * {@code "<name>|<classification>|<layerPath>|<0|1>[|<ruleText>|<ruleLine>][|<implFlag>]"}</p>
+   *
+   * <p>Das letzte Feld {@code iv} ist {@code 1}, wenn der Dependency
+   * lediglich wegen der Impl-Category des Quell-Bundles
+   * herausgefiltert wurde (Impl-Bundle eines anderen Produkts).
+   * In diesem Fall ist die Rule-Zeile (b.r) leer.</p>
+   */
+  function parseCompactAllowedDeps(arr) {
+    if (!Array.isArray(arr)) return [];
+    const out = [];
+    for (let i = 0; i < arr.length; i++) {
+      const s = arr[i];
+      const parts = s.split('|');
+      if (parts.length < 4) continue;
+      const d = {
+        n: parts[0], c: parts[1], l: parts[2], x: parts[3] === '1'
+      };
+      if (d.x && parts.length >= 6) {
+        d.r = parts[4] || ''; d.ln = parseInt(parts[5], 10) || 0;
+      } else {
+        d.r = ''; d.ln = 0;
+      }
+      // Der Impl-Flag ist IMMER das letzte Feld (Compact-Format:
+      // non-excluded = "...|0|implFlag" (5 Teile), excluded = "...|1|rule|line|implFlag" (7 Teile)).
+      d.iv = parts[parts.length - 1] === '1';
+      out.push(d);
+    }
+    return out;
+  }
+
+  // ------------------------------------------------------------------
+  // Kontextmenü (Rechtsklick auf Bundle)
+  // ------------------------------------------------------------------
+
+  let activeContextMenu = null;
+
+  function hideContextMenu() {
+    if (activeContextMenu && activeContextMenu.parentNode) {
+      activeContextMenu.parentNode.removeChild(activeContextMenu);
+    }
+    activeContextMenu = null;
+  }
+
+  function showBundleContextMenu(x, y, bundleName, isPackage) {
+    hideContextMenu();
+    const menu = document.createElement('div');
+    menu.className = 'bundle-context-menu';
+    menu.style.left = x + 'px';
+    menu.style.top = y + 'px';
+
+    const header = el('div', { class: 'ctx-header' }, bundleName);
+    menu.appendChild(header);
+
+    if (isPackage) {
+      // Folder: Aggregat-Sicht
+      const item = el('div', { class: 'ctx-item' + (state.rulesLoaded ? '' : ' disabled') },
+        'Allowed Dependencies (Aggregat)');
+      item.addEventListener('click', () => {
+        hideContextMenu();
+        const selRow = state.rows.find(rr => rr.name === bundleName && rr.isPackage);
+        if (!selRow) return;
+        const aggregated = computeFolderAggregatedAllowedDeps(selRow.id);
+        state.allowedDepsCache.set(bundleName, aggregated);
+        setRightMode('allowed');
+      });
+      menu.appendChild(item);
+    } else {
+      // Bundle: Allowed Dependencies (rechte Spalte)
+      const itemAllowed = el('div', { class: 'ctx-item' + (state.rulesLoaded ? '' : ' disabled') },
+        'Allowed Dependencies');
+      itemAllowed.addEventListener('click', () => {
+        hideContextMenu();
+        const data = getAllowedDeps(bundleName, 'fwd');
+        state.allowedDepsCache.set(bundleName, data);
+        setRightMode('allowed');
+      });
+      menu.appendChild(itemAllowed);
+
+      // Bundle: Allowed Consumers (linke Spalte)
+      const itemConsumers = el('div', { class: 'ctx-item' + (state.rulesLoaded ? '' : ' disabled') },
+        'Allowed Consumers');
+      itemConsumers.addEventListener('click', () => {
+        hideContextMenu();
+        const data = getAllowedDeps(bundleName, 'consumers');
+        state.consumersCache.set(bundleName, data);
+        setLeftMode('consumers');
+      });
+      menu.appendChild(itemConsumers);
+    }
+
+    menu.appendChild(el('div', { class: 'ctx-sep' }));
+
+    const itemUsed = el('div', { class: 'ctx-item' }, 'Used Dependencies');
+    itemUsed.addEventListener('click', () => {
+      hideContextMenu();
+      setRightMode('used');
+      setLeftMode('used');
+    });
+    menu.appendChild(itemUsed);
+
+    document.body.appendChild(menu);
+    activeContextMenu = menu;
+
+    // Auto-close bei Klick außerhalb
+    setTimeout(() => {
+      document.addEventListener('click', hideContextMenu, { once: true });
+    }, 0);
+  }
+
+  /**
+   * Aggregiert die Allowed-Dependencies über alle Bundle-Kinder eines
+   * Folders. Pro Ziel-Bundle: isExcluded = true nur wenn für ALLE Kinder
+   * ausgeschlossen.
+   *
+   * @param folderId die Bundle-ID des Folders, z. B. "bundle:fold:DEV-FRAMEWORK"
+   */
+  function computeFolderAggregatedAllowedDeps(folderId) {
+    // Sammle alle Leaf-Bundles darunter
+    const leaves = getLeafDescendants(folderId).map(id => {
+      const a = state.idToIndex.get(id);
+      return a ? a.name : null;
+    }).filter(Boolean);
+    if (leaves.length === 0) return [];
+
+    // Per Bundle: Allowed-Deps (vom Cache oder synchron aus embedded data)
+    const childDepsList = leaves.map(b => {
+      // Versuche zuerst Cache
+      if (state.allowedDepsCache.has(b)) return state.allowedDepsCache.get(b);
+      // Versuche embedded data
+      if (state.embeddedMode && state.model.allowedDeps && state.model.allowedDeps[b]) {
+        return parseCompactAllowedDeps(state.model.allowedDeps[b]);
+      }
+      return null;
+    }).filter(Boolean);
+    if (childDepsList.length === 0) return [];
+
+    // Vereinigung über alle Deps
+    const union = new Map(); // name -> { dep, excludedCount, totalCount }
+    for (const deps of childDepsList) {
+      for (const d of deps) {
+        const k = d.n;
+        if (!union.has(k)) union.set(k, { dep: d, excludedCount: 0, totalCount: 0 });
+        const u = union.get(k);
+        u.totalCount++;
+        if (d.x) u.excludedCount++;
+      }
+    }
+    const out = [];
+    for (const [name, u] of union) {
+      const d = u.dep;
+      const isExcludedForAll = (u.excludedCount === u.totalCount);
+      out.push({
+        n: d.n, c: d.c, l: d.l,
+        x: isExcludedForAll,
+        r: isExcludedForAll ? d.r : null,
+        ln: isExcludedForAll ? d.ln : 0
+      });
+    }
+    // Filtere Self-Refs (das ausgewählte Folder ist nicht in den Children)
+    return out;
+  }
+
+  function isOrHasAncestorIn(id, set) {
+    let curr = state.idToIndex.get(id);
+    while (curr) {
+      if (set.has(curr.id)) return true;
+      curr = state.idToIndex.get(curr.parentId);
+    }
+    return false;
+  }
+
+  /** Liefert die ID des Wurzel-Klassifikations-Folders (z. B. "bundle:fold:DEV-APP"). */
+  function getRootFolderId(id) {
+    let curr = state.idToIndex.get(id);
+    while (curr && curr.parentId && curr.parentId !== 'bundle:root') {
+      curr = state.idToIndex.get(curr.parentId);
+    }
+    return curr ? curr.id : null;
+  }
+
+  /** Liefert die Tiefe (0 = Root) eines Knotens. */
+  function getDepth(id) {
+    let d = 0;
+    let curr = state.idToIndex.get(id);
+    while (curr && curr.parentId && curr.parentId !== 'bundle:root') {
+      d++;
+      curr = state.idToIndex.get(curr.parentId);
+    }
+    return d;
+  }
+
+  /** Aggregiert alle Edges nach Parent-Folder (für Side-Tree-Darstellung). */
+  function computeEdgeIndices() {
+    state.incomingByParent.clear();
+    state.outgoingByParent.clear();
+    if (!state.model) return;
+    // Zähle pro Leaf-Bundle eingehende/ausgehende Gesamt-Cardinality
+    const inTotals = new Map();   // leafId -> totalWeight
+    const outTotals = new Map();
+    for (const e of state.model.edges || []) {
+      inTotals.set(e.to,   (inTotals.get(e.to)   || 0) + e.weight);
+      outTotals.set(e.from, (outTotals.get(e.from) || 0) + e.weight);
+    }
+    // Map leafId -> parent-Folder (für Aggregation)
+    const leafToParent = new Map();
+    for (const a of state.model.artifacts) {
+      if (a.id === 'bundle:root') continue;
+      let parent = a.parentId;
+      if (parent === 'bundle:root') {
+        // Leaf direkt unter Root? Sollte nicht vorkommen, aber skip.
+        continue;
+      }
+      if (!a.isPackage) {
+        // Leaf: Mappe auf seinen direkten Parent-Folder
+        leafToParent.set(a.id, parent);
+      }
+    }
+    for (const [leafId, w] of inTotals.entries()) {
+      const p = leafToParent.get(leafId);
+      if (!p) continue;
+      let m = state.incomingByParent.get(p);
+      if (!m) { m = new Map(); state.incomingByParent.set(p, m); }
+      m.set(leafId, w);
+    }
+    for (const [leafId, w] of outTotals.entries()) {
+      const p = leafToParent.get(leafId);
+      if (!p) continue;
+      let m = state.outgoingByParent.get(p);
+      if (!m) { m = new Map(); state.outgoingByParent.set(p, m); }
+      m.set(leafId, w);
+    }
+  }
+
+  function getDescendants(id) {
+    const out = [];
+    const stack = [id];
+    while (stack.length) {
+      const cur = stack.pop();
+      for (const a of state.model.artifacts) {
+        if (a.parentId === cur) {
+          out.push(a.id);
+          stack.push(a.id);
+        }
+      }
+    }
+    return out;
+  }
+
+  function getLeafDescendants(id) {
+    const out = [];
+    for (const a of state.model.artifacts) {
+      if (a.id === id) continue;
+      if (a.isPackage) continue;
+      if (isOrHasAncestorIn(a.id, new Set([id]))) out.push(a.id);
+    }
+    return out;
+  }
+
+  function getVisibleAncestorId(id) {
+    let curr = state.idToIndex.get(id);
+    while (curr) {
+      if (state.rowY.has(curr.id)) return curr.id;
+      curr = state.idToIndex.get(curr.parentId);
+    }
+    return null;
+  }
+
+  function isAncestorCollapsed(r) {
+    let curr = r;
+    while (curr && curr.parentId) {
+      if (state.collapsedFolders.has(curr.parentId)) return true;
+      curr = state.idToIndex.get(curr.parentId);
+    }
+    return false;
+  }
+
+  function triggerJavaOnBundleClick(id) {
+    const fn = window.javaOnBundleClick || window.__javaOnBundleClick;
+    if (fn) fn(id);
+  }
+  function triggerJavaOnEdgeClick(from, to, weight) {
+    const fn = window.javaOnEdgeClick || window.__javaOnEdgeClick;
+    if (fn) fn(from, to, weight);
+  }
+  function triggerJavaOnBundleSelect(id, cycle, isSelected) {
+    const fn = window.javaOnBundleSelect || window.__javaOnBundleSelect;
+    if (fn) fn(id, cycle, isSelected);
+  }
+  /**
+   * Wird bei Klick auf ein Bundle in der linken (Consumer) oder rechten
+   * (Used) Side-Tree-Spalte aufgerufen. Löst KEINE neue Selektion im
+   * Center-Tree aus.
+   *
+   * @param isConsumer true = linke Spalte (Nutzers dieses Bundles),
+   *                   false = rechte Spalte (verwendetes Bundle)
+   */
+  function triggerJavaOnDependency(isConsumer, fromBundle, cardinality, toBundle) {
+    const fn = window.javaOnDependencyCallback || window.__javaOnDependencyCallback;
+    if (fn) fn(isConsumer, fromBundle, cardinality, toBundle);
+  }
+
+  window.__render = render;
+  function render() {
+    document.getElementById('rendering').classList.remove('hidden');
+    setTimeout(doRender, 16);
+  }
+
+  /**
+   * Adapter: Wandelt das v2-Compact-Format in das v1-Legacy-Format um,
+   * damit der bestehende Render-Code ohne große Änderungen funktioniert.
+   *
+   * v2-Format (Compact):
+   *   { v: 2,
+   *     bundles: [{i, n, p, c, cl, l, pkg, pi}, ...],
+   *     deps: [[srcId, card, targetId], ...],
+   *     allowedDeps: { "srcId": [[tgtId, excl, impl, rule?, line?], ...] },
+   *     layerOrder: [...] }
+   *
+   * v1-Format (Legacy):
+   *   { artifacts: [{id, name, layer, parentId, isPackage, product, category}, ...],
+   *     edges: [{from, to, weight}, ...],
+   *     order: [...],
+   *     allowedDeps: { "name": ["name|class|layer|0|1", ...] },
+   *     allowedConsumers: { "name": ["name|class|layer|0|1", ...] } }
+   */
+  function adaptV2ToV1(v2) {
+    if (!v2 || v2.v !== 2) return v2;  // bereits v1 oder unbekannt
+
+    // Int-ID → String-ID (z.B. "bundle:leaf:NAME" oder "bundle:fold:PATH")
+    const intToString = new Map();
+    const stringToInt = new Map();
+    v2.bundles.forEach(b => {
+      let stringId;
+      if (b.pkg) {
+        // Folder: nutze den Klassifikations-Pfad als ID
+        const path = b.cl || b.n;
+        stringId = "bundle:fold:" + path;
+      } else {
+        stringId = "bundle:leaf:" + b.n;
+      }
+      intToString.set(b.i, stringId);
+      stringToInt.set(b.n, b.i);
+    });
+
+    // artifacts: v1-konforme Liste
+    const artifacts = v2.bundles.map(b => ({
+      id: intToString.get(b.i),
+      name: b.n,
+      layer: 0,  // wird nicht für Bundle-Rendering verwendet
+      parentId: b.pi === -1 || b.pi == null ? null : intToString.get(b.pi),
+      isPackage: b.pkg,
+      product: b.p || "",
+      category: b.c || "api"
+    }));
+
+    // edges: v1-konforme Liste
+    const edges = (v2.deps || []).map(d => ({
+      from: intToString.get(d[0]),
+      to: intToString.get(d[2]),
+      weight: d[1]
+    }));
+
+    // order: topologische Reihenfolge
+    const order = v2.bundles.map(b => intToString.get(b.i));
+
+    // allowedDeps: Map<String, Array<String>> im alten Pipe-Format
+    const allowedDeps = {};
+    const allowedConsumers = {};
+    if (v2.allowedDeps) {
+      // Erst alle Deps in Pipe-Format konvertieren und in allowedDeps ablegen
+      for (const srcIdStr of Object.keys(v2.allowedDeps)) {
+        const srcIntId = parseInt(srcIdStr, 10);
+        const srcStringId = intToString.get(srcIntId);
+        if (!srcStringId) continue;
+        const srcBundle = v2.bundles.find(b => b.i === srcIntId);
+        const srcLayer = srcBundle ? srcBundle.l : "";
+        const entries = v2.allowedDeps[srcIdStr];
+        const pipes = [];
+        entries.forEach(e => {
+          const tgtIntId = e[0];
+          const tgtStringId = intToString.get(tgtIntId);
+          if (!tgtStringId) return;
+          const tgtBundle = v2.bundles.find(b => b.i === tgtIntId);
+          const tgtName = tgtBundle ? tgtBundle.n : "";
+          const tgtLayer = tgtBundle ? tgtBundle.l : "";
+          // Pipe-Format: "name|class|layer|0|1" oder "name|class|layer|1|rule|line|1"
+          const excl = e[1] === 1;
+          const impl = e[2] === 1;
+          let pipe = tgtName + "|" + tgtLayer + "|" + tgtLayer + "|" + (excl ? 1 : 0);
+          if (excl) {
+            pipe += "|" + (e[3] || "") + "|" + (e[4] || 0);
+          }
+          pipe += "|" + (impl ? 1 : 0);
+          pipes.push(pipe);
+          // Consumers: invertiere
+          if (!allowedConsumers[tgtName]) allowedConsumers[tgtName] = [];
+          // Vermeide Duplikate
+          const consumerEntry = {
+            n: srcBundle ? srcBundle.n : "",
+            c: srcLayer, l: srcLayer,
+            x: excl ? 1 : 0, iv: impl ? 1 : 0
+          };
+          // Auch als Pipe-String für Konsistenz
+          let cpipe = (srcBundle ? srcBundle.n : "") + "|" + srcLayer + "|" + srcLayer + "|" + (excl ? 1 : 0);
+          if (excl) {
+            cpipe += "|" + (e[3] || "") + "|" + (e[4] || 0);
+          }
+          cpipe += "|" + (impl ? 1 : 0);
+          if (!allowedConsumers[tgtName].includes(cpipe)) {
+            allowedConsumers[tgtName].push(cpipe);
+          }
+        });
+        if (pipes.length > 0) {
+          // Key im v1-Format ist der Bundle-Name (nicht die ID)
+          const srcName = srcBundle ? srcBundle.n : "";
+          allowedDeps[srcName] = pipes;
+        }
+      }
+    }
+
+    return {
+      artifacts: artifacts,
+      edges: edges,
+      order: order,
+      allowedDeps: allowedDeps,
+      allowedConsumers: allowedConsumers,
+      stats: { bundles: artifacts.filter(a => !a.isPackage).length,
+               folders: artifacts.filter(a => a.isPackage).length,
+               edges: edges.length }
+    };
+  }
+
+  function doRender() {
+    if (state.model) {
+      finishRender();
+    } else {
+      loadModelFromServer(function(err){
+        if (err) {
+          document.getElementById('rendering').textContent = 'Fehler beim Laden: ' + err;
+          return;
+        }
+        finishRender();
+      });
+    }
+  }
+  function finishRender() {
+    const byId = new Map();
+    state.model.artifacts.forEach(a => byId.set(a.id, a));
+    state.idToIndex = byId;
+
+    // Embedded Mode erkennen: wenn das Modell allowedDeps/allowedConsumers
+    // bereits eingebettet hat, sind die Daten synchron verfügbar.
+    state.embeddedMode = !!(state.model.allowedDeps || state.model.allowedConsumers);
+    if (state.embeddedMode) {
+      state.rulesLoaded = true;
+      enableAllowedModeSwitches();
+    }
+
+    populateSuggestions();
+    populateRootsDropdown();
+    initDropdowns();
+    initModeSwitch();
+    computeEdgeIndices();
+
+    // Initial Tree-Level (Debug)
+    if (window.__initialTreeLevel) {
+      state.treeLevel = parseInt(window.__initialTreeLevel, 10) || 3;
+      const label = document.getElementById('level-label');
+      if (label) {
+        const texts = { 1: 'Only Root Level 1', 2: 'Level 2', 3: 'All' };
+        label.textContent = texts[state.treeLevel] || 'All';
+      }
+      const radio = document.querySelector('input[name=treeLevel][value="' + state.treeLevel + '"]');
+      if (radio) radio.checked = true;
+    }
+
+    // Initialer Suchfilter (Debug)
+    if (window.__initialFilter) {
+      state.filter = window.__initialFilter.toLowerCase();
+      const input = document.getElementById('search');
+      if (input) input.value = window.__initialFilter;
+    }
+
+    const order = state.model.order && state.model.order.length
+        ? state.model.order
+        : state.model.artifacts.map(a => a.id);
+    state.rows = buildRows(order, byId);
+    updateVisualization();
+    document.getElementById('rendering').classList.add('hidden');
+
+    if (window.__autoClickFirst) {
+      // Automatischer Klick auf ein sichtbares Bundle mit Dependencies
+      // (zum Verifizieren der Visualisierung).
+      setTimeout(function() {
+        const row = state.rows.find(r => !r.isPackage);
+        if (row) selectBundle(row.id);
+      }, 200);
+    }
+  }
+  function loadModelFromServer(done) {
+    const url = (window.__modelUrl || 'bundle-model-v2.json');
+    fetch(url, { credentials: 'same-origin', cache: 'no-cache' })
+      .then(function(r){
+        if (!r.ok) throw new Error('HTTP ' + r.status + ' für ' + url);
+        return r.json();
+      })
+      .then(function(json){
+        // v2-Format in v1-Format umwandeln, damit der bestehende
+        // Render-Code unverändert funktioniert.
+        state.model = adaptV2ToV1(json);
+        done(null);
+      })
+      .catch(function(err){
+        // Retry once after a short delay (initial race with file write)
+        setTimeout(function(){
+          fetch(url, { credentials: 'same-origin', cache: 'no-cache' })
+            .then(function(r){
+              if (!r.ok) throw new Error('HTTP ' + r.status + ' für ' + url);
+              return r.json();
+            })
+            .then(function(json){
+              state.model = adaptV2ToV1(json);
+              done(null);
+            })
+            .catch(function(err2){ done(err2.message); });
+        }, 250);
+      });
+  }
+
+  function buildRows(order, byId) {
+    const rows = [];
+    const seen = new Set();
+    for (const id of order) {
+      const a = byId.get(id);
+      if (!a) continue;
+      if (seen.has(id)) continue;
+      seen.add(id);
+      const children = state.model.artifacts
+        .filter(x => x.parentId === id)
+        .map(x => x.id);
+      rows.push({
+        id: a.id,
+        name: a.name,
+        layer: a.layer,
+        parentId: a.parentId,
+        isPackage: !!a.isPackage,
+        department: a.department || '',
+        product: a.product || '',
+        children
+      });
+    }
+    return rows;
+  }
+
+  function populateSuggestions() {
+    const dl = document.getElementById('bundle-suggestions');
+    if (!dl) return;
+    dl.innerHTML = '';
+    for (const a of state.model.artifacts) {
+      if (a.isPackage) continue;
+      const opt = document.createElement('option');
+      opt.value = a.name;
+      opt.label = a.department ? a.department + ' · ' + a.product : a.product || '';
+      dl.appendChild(opt);
+    }
+  }
+
+  /** Sammelt alle Wurzel-Klassifikations-Folder (Ebene 1 unter bundle:root). */
+  function collectRootFolders() {
+    const roots = [];
+    for (const a of state.model.artifacts) {
+      if (a.id === 'bundle:root') continue;
+      if (!a.isPackage) continue;
+      if (a.parentId !== 'bundle:root') continue;
+      // Anzahl Blätter darunter zählen
+      let count = 0;
+      const leaves = getLeafDescendants(a.id);
+      count = leaves.length;
+      roots.push({ id: a.id, name: a.name, count: count });
+    }
+    // Alphabetisch sortieren für stabile Anzeige
+    roots.sort((a, b) => a.name.localeCompare(b.name));
+    return roots;
+  }
+
+  function populateRootsDropdown() {
+    const items = document.getElementById('roots-menu-items');
+    if (!items) return;
+    items.innerHTML = '';
+    const roots = collectRootFolders();
+
+    for (const r of roots) {
+      const row = document.createElement('label');
+      row.className = 'roots-menu-item';
+      row.dataset.rootId = r.id;
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = !state.hiddenRoots.has(r.id);
+      cb.addEventListener('change', function() {
+        if (this.checked) state.hiddenRoots.delete(r.id);
+        else state.hiddenRoots.add(r.id);
+        updateRootsButton();
+        updateVisualization();
+      });
+      const labelSpan = document.createElement('span');
+      labelSpan.className = 'label';
+      labelSpan.textContent = r.name;
+      const countSpan = document.createElement('span');
+      countSpan.className = 'count';
+      countSpan.textContent = r.count;
+      row.appendChild(cb);
+      row.appendChild(labelSpan);
+      row.appendChild(countSpan);
+      items.appendChild(row);
+    }
+    updateRootsButton();
+  }
+
+  function updateRootsButton() {
+    const count = document.getElementById('roots-count');
+    if (count) {
+      const total = collectRootFolders().length;
+      const hidden = state.hiddenRoots.size;
+      count.textContent = '(' + (total - hidden) + '/' + total + ')';
+    }
+  }
+
+  function setHiddenRoots(newSet) {
+    state.hiddenRoots = new Set(newSet);
+    // Checkboxen im DOM synchronisieren
+    const items = document.getElementById('roots-menu-items');
+    if (items) {
+      items.querySelectorAll('.roots-menu-item').forEach(row => {
+        const cb = row.querySelector('input[type=checkbox]');
+        if (cb) cb.checked = !state.hiddenRoots.has(row.dataset.rootId);
+      });
+    }
+    updateRootsButton();
+    updateVisualization();
+  }
+
+  function initDropdowns() {
+    // Root-Classifications Dropdown
+    const rootsBtn = document.getElementById('roots-button');
+    const rootsMenu = document.getElementById('roots-menu');
+    if (rootsBtn && rootsMenu && rootsBtn.dataset.wired !== '1') {
+      rootsBtn.dataset.wired = '1';
+      rootsBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const hidden = rootsMenu.hidden;
+        // anderes Menü schließen
+        closeAllDropdowns(rootsMenu);
+        rootsMenu.hidden = !hidden;
+        rootsBtn.setAttribute('aria-expanded', String(!hidden));
+      });
+      document.getElementById('roots-all').addEventListener('click', function(e) {
+        e.preventDefault(); setHiddenRoots([]);
+      });
+      document.getElementById('roots-none').addEventListener('click', function(e) {
+        e.preventDefault(); setHiddenRoots(collectRootFolders().map(r => r.id));
+      });
+      document.getElementById('roots-default').addEventListener('click', function(e) {
+        e.preventDefault(); setHiddenRoots(DEFAULT_HIDDEN_ROOTS);
+      });
+    }
+    // Tree-Level Dropdown
+    const levelBtn = document.getElementById('level-button');
+    const levelMenu = document.getElementById('level-menu');
+    if (levelBtn && levelMenu && levelBtn.dataset.wired !== '1') {
+      levelBtn.dataset.wired = '1';
+      levelBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const hidden = levelMenu.hidden;
+        closeAllDropdowns(levelMenu);
+        levelMenu.hidden = !hidden;
+        levelBtn.setAttribute('aria-expanded', String(!hidden));
+      });
+      levelMenu.querySelectorAll('input[type=radio]').forEach(r => {
+        r.addEventListener('change', function() {
+          state.treeLevel = parseInt(this.value, 10) || 3;
+          // Bei Level-Wechsel User-Expansionen zurücksetzen, damit der
+          // neue Level-Filter wieder "sauber" gilt.
+          state.userExpandedFolders.clear();
+          const label = document.getElementById('level-label');
+          if (label) label.textContent = this.parentNode.textContent.trim();
+          levelMenu.hidden = true;
+          levelBtn.setAttribute('aria-expanded', 'false');
+          updateVisualization();
+        });
+      });
+    }
+    // Klick irgendwo schließt alle Menüs
+    if (!document.body.dataset.ddWired) {
+      document.body.dataset.ddWired = '1';
+      document.addEventListener('click', function() {
+        closeAllDropdowns(null);
+      });
+    }
+  }
+  function closeAllDropdowns(except) {
+    [['roots-button','roots-menu'], ['level-button','level-menu']].forEach(([btnId, menuId]) => {
+      const btn = document.getElementById(btnId);
+      const menu = document.getElementById(menuId);
+      if (!btn || !menu) return;
+      if (except === menu) return;
+      menu.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  // ------------------------------------------------------------------
+  //  Mode-Switch für linke und rechte Spalte
+  //  Links:   Used | Allowed Consumers
+  //  Rechts:  Used | Allowed Dependencies
+  // ------------------------------------------------------------------
+
+  function setRightMode(mode) {
+    state.rightMode = mode;
+    const btns = document.querySelectorAll('#right-mode-switch button');
+    btns.forEach(b => {
+      b.classList.toggle('active', b.dataset.mode === mode);
+    });
+    const title = document.getElementById('col-right-title');
+    if (title) {
+      title.textContent = (mode === 'allowed') ? 'Allowed Dependencies' : 'Used';
+    }
+    updateVisualization();
+  }
+
+  function setLeftMode(mode) {
+    state.leftMode = mode;
+    const btns = document.querySelectorAll('#left-mode-switch button');
+    btns.forEach(b => {
+      b.classList.toggle('active', b.dataset.mode === mode);
+    });
+    const title = document.getElementById('col-left-title');
+    if (title) {
+      title.textContent = (mode === 'consumers') ? 'Allowed Consumers' : 'Consumers';
+    }
+    updateVisualization();
+  }
+
+  function initModeSwitch() {
+    const wire = (switchId, setFn) => {
+      const switchEl = document.getElementById(switchId);
+      if (!switchEl || switchEl.dataset.wired === '1') return;
+      switchEl.dataset.wired = '1';
+      switchEl.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (btn.disabled) return;
+          setFn(btn.dataset.mode);
+        });
+      });
+    };
+    wire('right-mode-switch', setRightMode);
+    wire('left-mode-switch',  setLeftMode);
+  }
+
+  /** Berechnet ausgehende Cardinality pro Leaf-Bundle relativ zu einer ID. */
+  function outgoingTotalsFor(id) {
+    const totals = new Map();
+    for (const e of state.model.edges || []) {
+      if (e.from === id) {
+        totals.set(e.to, (totals.get(e.to) || 0) + e.weight);
+      }
+    }
+    return totals;
+  }
+  /** Berechnet eingehende Cardinality pro Leaf-Bundle relativ zu einer ID. */
+  function incomingTotalsFor(id) {
+    const totals = new Map();
+    for (const e of state.model.edges || []) {
+      if (e.to === id) {
+        totals.set(e.from, (totals.get(e.from) || 0) + e.weight);
+      }
+    }
+    return totals;
+  }
+
+  /**
+   * Linke Spalte: Tree der nutzenden Bundles (Consumer) des selektierten
+   * Bundles, gruppiert nach Classification-Pfad. Im "Allowed Consumers"
+   * Modus werden die nach dependencyrules2.xml erlaubten Konsumenten
+   * angezeigt.
+   */
+  function drawLeftColumn() {
+    const col = document.getElementById('col-left-content');
+    if (!col) return;
+    col.innerHTML = '';
+
+    if (!state.selectedId) {
+      col.appendChild(el('div', { class: 'col-empty' }, 'Kein Bundle ausgewählt'));
+      return;
+    }
+
+    const selRow = state.rows.find(r => r.id === state.selectedId);
+    if (!selRow) {
+      col.appendChild(el('div', { class: 'col-empty' }, 'Selektion nicht im sichtbaren Tree'));
+      return;
+    }
+    if (selRow.isPackage) {
+      col.appendChild(el('div', { class: 'col-empty' }, 'Bitte ein Bundle (kein Folder) auswählen'));
+      return;
+    }
+
+    if (state.leftMode === 'consumers') {
+      drawLeftColumnAllowedConsumers(selRow);
+      return;
+    }
+
+    // Eingehende Eddies: peerId -> total weight
+    const inMap = new Map();
+    for (const e of state.model.edges || []) {
+      if (e.to === selRow.id) {
+        inMap.set(e.from, (inMap.get(e.from) || 0) + e.weight);
+      }
+    }
+    if (inMap.size === 0) {
+      col.appendChild(el('div', { class: 'col-empty' }, 'Keine Nutzer für ' + selRow.name));
+      return;
+    }
+
+    // Consumer-Tree aufbauen, gruppiert nach gemeinsamer Classification
+    const consumerRootPaths = groupByRootClassification(inMap);
+    let totalCard = 0;
+    consumerRootPaths.forEach(group => totalCard += group.total);
+
+    col.appendChild(el('div', { class: 'col-section-title' },
+      totalCard + ' Dependencies nach ' + selRow.name));
+
+    renderSideTree(col, consumerRootPaths, 'incoming', selRow);
+  }
+
+  /**
+   * Linke Spalte im "Allowed Consumers" Modus: zeigt alle Bundles, die
+   * das selektierte Bundle laut dependencyrules2.xml als Dep nutzen
+   * dürfen.
+   */
+  function drawLeftColumnAllowedConsumers(selRow) {
+    const col = document.getElementById('col-left-content');
+    const data = state.consumersCache.get(selRow.name);
+    if (!data) {
+      col.appendChild(el('div', { class: 'col-empty' },
+        'Keine Allowed Consumers für ' + selRow.name));
+      return;
+    }
+    // Im Allowed-Consumers-Modus sind alle Einträge per Definition
+    // "erlaubt" (nicht ausgeschlossen). Trotzdem können die Felder
+    // gesetzt sein, falls der Parser sie liefert.
+    let allowedCount = 0;
+    data.forEach(d => { if (!d.x) allowedCount++; });
+    const sectionTitle = el('div', { class: 'col-section-title' },
+      el('span', { class: 'badge allowed' }, String(allowedCount) + ' erlaubt'),
+      el('span', null, ' — Allowed Consumers für ' + selRow.name)
+    );
+    col.appendChild(sectionTitle);
+    const groups = groupAllowedByLayer(data);
+    renderAllowedSideTree(col, groups, true, selRow.name);
+  }
+
+  /**
+   * Rechte Spalte: Tree der genutzten Dependencies (Used) des selektierten
+   * Bundles, gruppiert nach Classification-Pfad.
+   */
+  function drawRightColumn() {
+    const col = document.getElementById('col-right-content');
+    if (!col) return;
+    col.innerHTML = '';
+
+    if (!state.selectedId) {
+      col.appendChild(el('div', { class: 'col-empty' }, 'Kein Bundle ausgewählt'));
+      return;
+    }
+
+    const selRow = state.rows.find(r => r.id === state.selectedId);
+    if (!selRow) {
+      col.appendChild(el('div', { class: 'col-empty' }, 'Selektion nicht im sichtbaren Tree'));
+      return;
+    }
+
+    if (state.rightMode === 'allowed') {
+      drawRightColumnAllowed(selRow);
+      return;
+    }
+
+    if (selRow.isPackage) {
+      col.appendChild(el('div', { class: 'col-empty' }, 'Bitte ein Bundle (kein Folder) auswählen'));
+      return;
+    }
+
+    const outMap = new Map();
+    for (const e of state.model.edges || []) {
+      if (e.from === selRow.id) {
+        outMap.set(e.to, (outMap.get(e.to) || 0) + e.weight);
+      }
+    }
+    if (outMap.size === 0) {
+      col.appendChild(el('div', { class: 'col-empty' }, 'Keine Dependencies von ' + selRow.name));
+      return;
+    }
+
+    const usedRootPaths = groupByRootClassification(outMap);
+    let totalCard = 0;
+    usedRootPaths.forEach(group => totalCard += group.total);
+
+    col.appendChild(el('div', { class: 'col-section-title' },
+      totalCard + ' Dependencies von ' + selRow.name));
+
+    renderSideTree(col, usedRootPaths, 'outgoing', selRow);
+  }
+
+  /**
+   * Rendert die Allowed-Dependencies als hierarchischen Baum auf der
+   * rechten Seite. Die Hierarchie wird aus den classification-Pfaden
+   * der Einträge aufgebaut und folgt der Layer-Order aus
+   * dependencyrules2.xml.
+   */
+  function drawRightColumnAllowed(selRow) {
+    const col = document.getElementById('col-right-content');
+    const bundleName = selRow.isPackage ? selRow.name : selRow.name;
+    const cache = state.allowedDepsCache;
+    let deps = cache.get(bundleName);
+
+    if (!deps) {
+      if (selRow.isPackage) {
+        deps = computeFolderAggregatedAllowedDeps(selRow.id);
+        cache.set(bundleName, deps);
+      } else {
+        deps = getAllowedDeps(bundleName, 'fwd');
+        cache.set(bundleName, deps);
+      }
+    }
+
+    if (!deps || deps.length === 0) {
+      col.appendChild(el('div', { class: 'col-empty' },
+        'Keine Allowed Dependencies für ' + bundleName));
+      return;
+    }
+
+    let allowedCount = 0, excludedCount = 0;
+    deps.forEach(d => { if (d.x) excludedCount++; else allowedCount++; });
+    const sectionTitle = el('div', { class: 'col-section-title' },
+      el('span', { class: 'badge allowed' }, String(allowedCount) + ' erlaubt'),
+      el('span', { class: 'badge excluded' }, String(excludedCount) + ' verboten'),
+      el('span', null, ' — Klassenpfad für ' + bundleName)
+    );
+    col.appendChild(sectionTitle);
+
+    const groups = groupAllowedByLayer(deps);
+    renderAllowedSideTree(col, groups, false, bundleName);
+  }
+
+  /**
+   * Gruppiert Allowed-Dependencies nach Layer (aus dem classification-
+   * Pfad) und baut eine verschachtelte Baumstruktur, sortiert nach
+   * der Layer-Order der dependencyrules2.xml.
+   */
+  function groupAllowedByLayer(deps) {
+    const layerOrder = state.model.rulesLayerOrder || [];
+    // rootLayerKey -> { layerKey, layerName, allowed, excluded, folders: { folderKey -> ... } }
+    const roots = new Map();
+    for (const d of deps) {
+      const layerKey = d.l || (d.c ? d.c.split('/')[0] : '?');
+      const layerName = layerKey;
+      if (!roots.has(layerKey)) {
+        roots.set(layerKey, { key: layerKey, name: layerName, allowed: 0, excluded: 0, folders: new Map() });
+      }
+      const root = roots.get(layerKey);
+      if (d.x) root.excluded++; else root.allowed++;
+      // Sub-Folder (alles nach erstem '/')
+      let folderKey = d.c || '';
+      if (folderKey === layerKey) folderKey = '';  // kein Sub-Folder
+      if (!root.folders.has(folderKey)) {
+        const folderName = folderKey === '' ? '(root)'
+            : folderKey.substring(layerKey.length + 1);
+        root.folders.set(folderKey, { key: folderKey, name: folderName, allowed: 0, excluded: 0, bundles: [] });
+      }
+      const folder = root.folders.get(folderKey);
+      if (d.x) folder.excluded++; else folder.allowed++;
+      folder.bundles.push(d);
+    }
+    // Sortiere Roots nach layerOrder
+    const sorted = Array.from(roots.values()).sort((a, b) => {
+      const ia = layerOrder.indexOf(a.key);
+      const ib = layerOrder.indexOf(b.key);
+      if (ia < 0 && ib < 0) return a.key.localeCompare(b.key);
+      if (ia < 0) return 1;
+      if (ib < 0) return -1;
+      return ia - ib;
+    });
+    // Pro Root: Folder sortieren (alphabetisch)
+    sorted.forEach(root => {
+      const folders = Array.from(root.folders.values());
+      folders.sort((a, b) => a.key.localeCompare(b.key));
+      root.folders = new Map(folders.map(f => [f.key, f]));
+    });
+    return sorted;
+  }
+
+  /**
+   * Rendert den Allowed-Side-Tree. Verbotene Bundles werden rot und
+   * kursiv dargestellt; Folder mit ausschließlich verbotenen Inhalten
+   * werden gedämpft kursiv markiert.
+   */
+  function renderAllowedSideTree(container, groups, isConsumers, selectedBundleName) {
+    for (const grp of groups) {
+      // Layer-Zeile
+      const rootRow = el('div', { class: 'side-row is-package' });
+      rootRow.style.paddingLeft = '4px';
+      rootRow.appendChild(el('span', { class: 'side-name' }, grp.name));
+      const badges = el('span', { class: 'right-container' });
+      if (grp.allowed > 0) badges.appendChild(el('span', { class: 'side-card' }, String(grp.allowed)));
+      if (grp.excluded > 0) badges.appendChild(el('span', {
+        class: 'side-card',
+        style: 'background:#c62828;'
+      }, String(grp.excluded)));
+      rootRow.appendChild(badges);
+      container.appendChild(rootRow);
+      // Folder-Zeilen
+      for (const folder of grp.folders.values()) {
+        const folderOnlyExcluded = (folder.allowed === 0 && folder.excluded > 0);
+        const folderRow = el('div', {
+          class: 'side-row is-package' + (folderOnlyExcluded ? ' folder-only-excluded' : '')
+        });
+        folderRow.style.paddingLeft = '20px';
+        folderRow.appendChild(el('span', { class: 'side-name' }, folder.name));
+        const folderBadges = el('span', { class: 'right-container' });
+        if (folder.allowed > 0) folderBadges.appendChild(el('span', { class: 'side-card' }, String(folder.allowed)));
+        if (folder.excluded > 0) folderBadges.appendChild(el('span', {
+          class: 'side-card',
+          style: 'background:#c62828;'
+        }, String(folder.excluded)));
+        folderRow.appendChild(folderBadges);
+        container.appendChild(folderRow);
+        // Bundles
+        for (const b of folder.bundles) {
+          let rowClass = 'side-row';
+          if (b.iv)        rowClass += ' is-impl-violated';
+          else if (b.x)    rowClass += ' is-excluded';
+          const bundleRow = el('div', { class: rowClass });
+          bundleRow.style.paddingLeft = '36px';
+          const a = el('a', { href: '#', class: 'side-name' });
+          // Standard-Informationen zum Bundle aus dem Modell nachschlagen
+          const bundleInfo = state.idToIndex.get('bundle:leaf:' + b.n);
+          // Bundle-Name + optionales Impl-Icon rendern
+          a.appendChild(makeBundleName(b.n, isImplBundle('bundle:leaf:' + b.n, bundleInfo)));
+          const infoLines = [];
+          infoLines.push('Name: ' + b.n);
+          if (bundleInfo) {
+            if (bundleInfo.product)   infoLines.push('Produkt: '   + bundleInfo.product);
+            if (bundleInfo.category)  infoLines.push('Kategorie: ' + bundleInfo.category);
+            if (bundleInfo.parentId) {
+              const parentInfo = state.idToIndex.get(bundleInfo.parentId);
+              if (parentInfo) {
+                infoLines.push('Klassifikation: ' + parentInfo.name);
+              }
+            }
+          }
+          infoLines.push('Layer: ' + (b.l || '?'));
+          const infoBlock = infoLines.join('\n');
+          // "<exclude>"-Platzhaltertext vom Backend bereinigen: fuehrendes "<"
+          // und nachfolgendes ">" entfernen, damit nur der Regeltext erscheint.
+          const cleanRule = (b.r || '').replace(/^<+|>+$/g, '');
+          let tipHtml;
+          if (b.iv) {
+            // Impl-Category-Verstoss: Bundle eines anderen Produkts, nur sichtbar
+            // fuer das eigene Produkt. Lila + kursiv.
+            tipHtml = 'Verboten wegen Impl Category'
+                    + '\n---'
+                    + '\n' + infoBlock;
+          } else if (b.x) {
+            tipHtml = 'Verboten wegen: ' + (cleanRule || '(ohne Regeltext)')
+                    + (b.ln ? ' in Zeile: ' + b.ln : '')
+                    + '\n---'
+                    + '\n' + infoBlock;
+          } else {
+            tipHtml = infoBlock
+                    + '\nErlaubt fuer ' + selectedBundleName;
+          }
+          a.addEventListener('mouseenter', (e) => showTooltip(tipHtml, e.clientX, e.clientY));
+          a.addEventListener('mousemove', (e) => showTooltip(tipHtml, e.clientX, e.clientY));
+          a.addEventListener('mouseleave', hideTooltip);
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Navigation zum Bundle
+            const targetId = 'bundle:leaf:' + b.n;
+            if (state.idToIndex.has(targetId)) {
+              selectBundle(targetId);
+            }
+          });
+          bundleRow.appendChild(a);
+          bundleRow.appendChild(el('span', {
+            class: 'side-card',
+            style: b.iv ? 'background:#6a1b9a;' : (b.x ? 'background:#c62828;' : '')
+          }, b.x || b.iv ? 'X' : '\u2713'));
+          container.appendChild(bundleRow);
+        }
+      }
+    }
+  }
+
+  /**
+   * Gruppiert peer-IDs nach gemeinsamem Root-Classification-Pfad und baut
+   * daraus eine hierarchische Struktur für die Side-Tree-Darstellung.
+   *
+   * @param peerMap Map<leafId, totalWeight>
+   * @returns Array von {rootId, rootName, total, children: [{folderId, folderName, total, bundles: [...]}]}
+   */
+  function groupByRootClassification(peerMap) {
+    const roots = new Map();
+    for (const [leafId, weight] of peerMap.entries()) {
+      const rootId = getRootFolderId(leafId);
+      if (!rootId) continue;
+      if (!roots.has(rootId)) {
+        const rootArt = state.idToIndex.get(rootId);
+        roots.set(rootId, {
+          rootId, rootName: rootArt ? rootArt.name : rootId,
+          total: 0, folders: new Map()
+        });
+      }
+      const root = roots.get(rootId);
+      root.total += weight;
+      // Parent-Folder (eine Ebene unter Root) als Aggregationspunkt
+      const leafArt = state.idToIndex.get(leafId);
+      if (!leafArt) continue;
+      const parentId = leafArt.parentId;
+      if (!root.folders.has(parentId)) {
+        const folderArt = state.idToIndex.get(parentId);
+        root.folders.set(parentId, {
+          folderId: parentId,
+          folderName: folderArt ? folderArt.name : parentId,
+          total: 0, bundles: []
+        });
+      }
+      const folder = root.folders.get(parentId);
+      folder.total += weight;
+      folder.bundles.push({ leafId, name: leafArt.name, weight, department: leafArt.department || '', product: leafArt.product || '' });
+    }
+    // Sortierung
+    const result = [];
+    roots.forEach(r => {
+      const folders = [];
+      r.folders.forEach(f => {
+        f.bundles.sort((a, b) => b.weight - a.weight || a.name.localeCompare(b.name));
+        folders.push(f);
+      });
+      folders.sort((a, b) => a.folderName.localeCompare(b.folderName));
+      result.push({
+        rootId: r.rootId, rootName: r.rootName, total: r.total,
+        children: folders
+      });
+    });
+    result.sort((a, b) => a.rootName.localeCompare(b.rootName));
+    return result;
+  }
+
+  /**
+   * Rendert einen hierarchischen Tree in einen Container.
+   * kind = 'incoming' (Consumer-Tooltip) oder 'outgoing' (Used-Tooltip).
+   */
+  function renderSideTree(container, groups, kind, selRow) {
+    for (const grp of groups) {
+      // Root-Knoten
+      const rootRow = el('div', { class: 'side-row is-package' });
+      rootRow.style.paddingLeft = '4px';
+      rootRow.appendChild(el('span', { class: 'side-name' }, grp.rootName));
+      rootRow.appendChild(el('span', { class: 'side-card' }, String(grp.total)));
+      container.appendChild(rootRow);
+      // Folder-Knoten
+      for (const folder of grp.children) {
+        const folderRow = el('div', { class: 'side-row is-package' });
+        folderRow.style.paddingLeft = '20px';
+        folderRow.appendChild(el('span', { class: 'side-name' }, folder.folderName));
+        folderRow.appendChild(el('span', { class: 'side-card' }, String(folder.total)));
+        container.appendChild(folderRow);
+        // Bundles
+        for (const b of folder.bundles) {
+          const bundleRow = el('div', { class: 'side-row' });
+          bundleRow.style.paddingLeft = '36px';
+          const a = el('a', { href: '#', class: 'side-name' });
+          a.appendChild(makeBundleName(b.name, isImplBundle('bundle:leaf:' + b.name)));
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Nur den DependencyCallback auslösen &mdash; KEINE neue
+            // Selektion im Center-Tree. Die externe Anwendung entscheidet,
+            // was mit der Abhängigkeit geschehen soll (z. B. Navigation,
+            // Detailansicht, IDE-Integration).
+            triggerJavaOnDependency(
+              kind === 'incoming',   // isConsumer
+              b.name,                // fromBundle
+              b.weight,              // cardinality
+              selRow.name            // toBundle
+            );
+          });
+          const tipHtml = kind === 'incoming'
+            ? (b.weight + ' Dependencies von ' + b.name + ' nach ' + selRow.name
+               + '\nBundlenamen: ' + b.name
+               + '\nProdukt: '    + b.product
+               + '\nAbteilung: '  + b.department)
+            : (b.weight + ' Dependencies von ' + selRow.name + ' nach ' + b.name
+               + '\nBundlenamen: ' + b.name
+               + '\nProdukt: '    + b.product
+               + '\nAbteilung: '  + b.department);
+          a.addEventListener('mouseenter', (e) => showTooltip(tipHtml, e.clientX, e.clientY));
+          a.addEventListener('mousemove', (e) => showTooltip(tipHtml, e.clientX, e.clientY));
+          a.addEventListener('mouseleave', hideTooltip);
+          bundleRow.appendChild(a);
+          bundleRow.appendChild(el('span', { class: 'side-card' }, String(b.weight)));
+          container.appendChild(bundleRow);
+        }
+      }
+    }
+  }
+
+  function drawStats() {
+    const statsEl = document.getElementById('stats');
+    if (!statsEl || !state.model) return;
+    const s = state.model.stats || {};
+    if (state.selectedId) {
+      const sel = state.idToIndex.get(state.selectedId);
+      const selName = sel ? sel.name : state.selectedId;
+      statsEl.innerHTML = '<span class="sel">' + escapeHtml(selName) + '</span> &middot; selected';
+    } else {
+      statsEl.innerHTML =
+          '<span class="out">' + (s.bundles || 0) + '</span> bundles &middot; ' +
+          '<span class="sel">' + (s.folders || 0) + '</span> folders &middot; ' +
+          '<span class="in">' + (s.edges || 0) + '</span> edges';
+    }
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[c]));
+  }
+
+  /** Prüft, ob ein Knoten ein vom User explizit expandiertes Folder als Vorfahren hat. */
+  function hasUserExpandedAncestor(id) {
+    if (state.userExpandedFolders.size === 0) return false;
+    let curr = state.idToIndex.get(id);
+    while (curr && curr.parentId && curr.parentId !== 'bundle:root') {
+      if (state.userExpandedFolders.has(curr.parentId)) return true;
+      curr = state.idToIndex.get(curr.parentId);
+    }
+    return false;
+  }
+
+  /** Prüft, ob ein Knoten direkt oder indirekt ein Bundle enthält, dessen Name zum Filter passt. */
+  function hasMatchingDescendant(id) {
+    if (!state.filter) return true;
+    const f = state.filter.toLowerCase();
+    for (const a of state.model.artifacts) {
+      if (a.parentId === id) {
+        if (a.name.toLowerCase().includes(f)) return true;
+        if (a.isPackage && hasMatchingDescendant(a.id)) return true;
+      }
+    }
+    return false;
+  }
+
+  function updateVisualization() {
+    hideTooltip();
+    state.rowY.clear();
+
+    // Center-Spalte: sichtbare Rows (Filter: Root Classifications + Tree Level + Collapse + Search)
+    const f = state.filter ? state.filter.toLowerCase() : '';
+    const visibleRows = state.rows.filter(r => {
+      if (isAncestorCollapsed(r)) return false;
+      // Root-Classifications-Filter
+      const rootId = getRootFolderId(r.id);
+      if (rootId && state.hiddenRoots.has(rootId)) return false;
+      // Tree-Level-Filter: versteckt Level >= treeLevel, AUSSER der Knoten
+      // ist (indirekter) Nachkomme eines vom User explizit expandierten Folders.
+      if (state.treeLevel < 3) {
+        const depth = getDepth(r.id);
+        if (depth >= state.treeLevel && !hasUserExpandedAncestor(r.id)) return false;
+      }
+      // Such-Filter: nur Bundles/Folder anzeigen, die selbst matchen
+      // ODER ein passendes Bundle als Nachkommen haben (damit der Pfad sichtbar bleibt).
+      if (f) {
+        const selfMatch = r.name.toLowerCase().includes(f);
+        const descMatch  = r.isPackage ? hasMatchingDescendant(r.id) : false;
+        if (!selfMatch && !descMatch) return false;
+      }
+      return true;
+    });
+    visibleRows.forEach((r, i) => state.rowY.set(r.id, (i + 0.5) * ROW_H));
+
+    drawCenterColumn(visibleRows);
+    drawLeftColumn();
+    drawRightColumn();
+    drawStats();
+  }
+
+  function drawCenterColumn(visibleRows) {
+    const col = document.getElementById('col-center-content');
+    if (!col) return;
+    col.innerHTML = '';
+    const totalH = visibleRows.length * ROW_H;
+    col.style.height = totalH + 'px';
+
+    for (const r of visibleRows) {
+      const inMap  = incomingTotalsFor(r.id);
+      const outMap = outgoingTotalsFor(r.id);
+      const inTotal  = sumValues(inMap);
+      const outTotal = sumValues(outMap);
+      const noDeps = (inTotal + outTotal) === 0;
+
+      const row = el('div', {
+        class: 'artifact-row ' + (r.isPackage ? 'is-package' : 'is-bundle') + (noDeps ? ' no-deps' : '') + (state.selectedId === r.id ? ' selected' : ''),
+        'data-id': r.id
+      });
+
+      const rowLeft = el('div', { class: 'artifact-row-left' });
+      let depth = 0;
+      let curr = r;
+      while (curr && curr.parentId && curr.parentId !== 'bundle:root') {
+        depth++;
+        curr = state.idToIndex.get(curr.parentId);
+      }
+      rowLeft.style.paddingLeft = (depth * 16) + 'px';
+
+      if (r.isPackage) {
+        const isCollapsed = state.collapsedFolders.has(r.id);
+        rowLeft.appendChild(el('span', {
+          class: 'toggle-box',
+          onclick: (e) => { e.stopPropagation(); toggleFolderCollapse(r.id); }
+        }, isCollapsed ? '+' : '-'));
+      } else {
+        rowLeft.appendChild(el('span', { class: 'toggle-dummy' }));
+      }
+
+      const tooltipHtml = r.isPackage
+        ? `Aggregated folder &middot; <b>${r.children.length}</b> children`
+        : centerBundleTooltip(r, inTotal, outTotal);
+      const onEnter = (e) => showTooltip(tooltipHtml, e.clientX, e.clientY);
+      const nameEl = r.isPackage
+        ? el('span', { class: 'name' }, r.name)
+        : el('a', {
+            href: '#', class: 'name',
+            onclick: (e) => {
+              e.preventDefault();
+              triggerJavaOnBundleClick(r.id);
+              selectBundle(r.id);
+            }
+          });
+      if (!r.isPackage) {
+        nameEl.appendChild(makeBundleName(r.name, isImplBundle(r.id)));
+      }
+      nameEl.addEventListener('mouseenter', onEnter);
+      nameEl.addEventListener('mousemove', onEnter);
+      nameEl.addEventListener('mouseleave', hideTooltip);
+      rowLeft.appendChild(nameEl);
+
+      // Kontextmenü (Rechtsklick)
+      row.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        showBundleContextMenu(e.clientX, e.clientY, r.name, r.isPackage);
+      });
+
+      row.appendChild(rowLeft);
+
+      // Rechts: Cardinality-Badge mit Anzahl Nutzer + Genutzte Dependencies
+      const rightContainer = el('div', { class: 'right-container' });
+      const inBadge  = el('span', { class: 'cardinality-badge' + (inTotal  === 0 ? ' empty' : ' in')  }, String(inTotal));
+      const outBadge = el('span', { class: 'cardinality-badge' + (outTotal === 0 ? ' empty' : ' out') }, String(outTotal));
+      inBadge.title  = inTotal  + ' Nutzer';
+      outBadge.title = outTotal + ' Genutzte Dependencies';
+      rightContainer.appendChild(el('span', { style: 'color:#888;font-size:10px;margin-right:4px;' }, '↗'));
+      rightContainer.appendChild(inBadge);
+      rightContainer.appendChild(el('span', { style: 'color:#888;font-size:10px;margin: 0 2px;' }, '/'));
+      rightContainer.appendChild(outBadge);
+      rightContainer.appendChild(el('span', { style: 'color:#888;font-size:10px;margin-left:4px;' }, '↘'));
+      row.appendChild(rightContainer);
+
+      col.appendChild(row);
+    }
+  }
+
+  function centerBundleTooltip(row, inTotal, outTotal) {
+    return 'Bundlname: ' + row.name
+         + '\nProdukt: '    + (row.product || '')
+         + '\nAbteilung: '  + (row.department || '')
+         + '\nAnzahl Nutzer: ' + inTotal
+         + '\nGenutzte Dependencies: ' + outTotal;
+  }
+
+  function leftBundleTooltip(row, sourceName, sourceRow) {
+    return (sourceRow ? (sourceRow.name + ' nach ') : '')
+         + row.name
+         + '\nBundlenamen: ' + row.name
+         + '\nProdukt: '    + (row.product || '')
+         + '\nAbteilung: '  + (row.department || '');
+  }
+
+  function sumValues(map) {
+    let s = 0;
+    for (const v of map.values()) s += v;
+    return s;
+  }
+
+  /** Berechnet eingehende Cardinality pro Leaf-Bundle relativ zu einer ID. */
+  function incomingTotalsFor(id) {
+    const totals = new Map();
+    for (const e of state.model.edges || []) {
+      if (e.to === id) {
+        totals.set(e.from, (totals.get(e.from) || 0) + e.weight);
+      }
+    }
+    return totals;
+  }
+  function outgoingTotalsFor(id) {
+    const totals = new Map();
+    for (const e of state.model.edges || []) {
+      if (e.from === id) {
+        totals.set(e.to, (totals.get(e.to) || 0) + e.weight);
+      }
+    }
+    return totals;
+  }
+
+  function toggleFolderCollapse(folderId) {
+    if (state.collapsedFolders.has(folderId)) {
+      // war collapsed → jetzt expanded
+      state.collapsedFolders.delete(folderId);
+      state.userExpandedFolders.add(folderId);
+    } else {
+      // war expanded → jetzt collapsed
+      state.collapsedFolders.add(folderId);
+      state.userExpandedFolders.delete(folderId);
+    }
+    updateVisualization();
+  }
+
+  function selectBundle(id) {
+    if (state.selectedId === id) {
+      state.selectedId = null;
+      triggerJavaOnBundleSelect(id, 'none', false);
+    } else {
+      state.selectedId = id;
+      triggerJavaOnBundleSelect(id, 'selected', true);
+      // Cache für Allowed-Dependencies und Allowed-Consumers
+      // synchron vorausfüllen, damit die Spalte ohne Wartezeit
+      // gezeichnet werden kann.
+      primeAllowedDepsCache(id);
+    }
+    updateVisualization();
+  }
+
+  /**
+   * Füllt den Allowed-Cache für ein Bundle (sowohl Forward als auch
+   * Reverse) synchron auf, damit die Side-Tree-Darstellung sofort
+   * gerendert werden kann.
+   */
+  function primeAllowedDepsCache(id) {
+    if (!state.rulesLoaded && !state.embeddedMode) return;
+    const a = state.idToIndex.get(id);
+    if (!a || a.isPackage) return;
+    const bundleName = a.name;
+    // Forward (Allowed Dependencies)
+    if (!state.allowedDepsCache.has(bundleName)) {
+      const data = getAllowedDeps(bundleName, 'fwd');
+      if (data && data.length > 0) state.allowedDepsCache.set(bundleName, data);
+    }
+    // Reverse (Allowed Consumers)
+    if (!state.consumersCache.has(bundleName)) {
+      const data = getAllowedDeps(bundleName, 'consumers');
+      if (data && data.length > 0) state.consumersCache.set(bundleName, data);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchEl = document.getElementById('search');
+    if (searchEl) {
+      searchEl.addEventListener('input', (e) => {
+        state.filter = e.target.value.trim().toLowerCase();
+        updateVisualization();
+      });
+    }
+    const hideEl = document.getElementById('hide-unused');
+    if (hideEl) {
+      state.hideUnused = hideEl.checked;
+      hideEl.addEventListener('change', (e) => {
+        state.hideUnused = e.target.checked;
+        updateVisualization();
+      });
+    }
+
+    // Debug: auto-click ?autoclick=ID
+    if (location.search.indexOf('autoclick=') >= 0) {
+      const m = location.search.match(/autoclick=([^&]+)/);
+      if (m) {
+        setTimeout(function() {
+          const id = decodeURIComponent(m[1]);
+          console.log('[autoclick] triggering click on', id);
+          cycleNodeClick(id);
+        }, 2000);
+      }
+    }
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => { if (window.__model) render(); });
+  } else {
+    if (window.__model) render();
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Test-XML für include/exclude-Semantik:
+  - Layer A
+  - Layer B mit exclude A
+  - Layer C mit include bundle="a.bundle1" — bringt nur a.bundle1 zurück
+-->
+<system version="2">
+  <layers>
+    <layer name="A" cycles="false">
+      <bundle name="a.bundle1" classification="A/X" />
+      <bundle name="a.bundle2" classification="A/Y" />
+    </layer>
+    <layer name="B" cycles="false">
+      <filter>
+        <exclude layer="A" />
+      </filter>
+      <bundle name="b.bundle1" classification="B/Z" />
+    </layer>
+    <layer name="C" cycles="false">
+      <filter>
+        <include bundle="a.bundle1" />
+      </filter>
+      <bundle name="c.bundle1" classification="C" />
+    </layer>
+  </layers>
+</system>
