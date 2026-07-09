@@ -58,19 +58,19 @@ public final class BundleModelBuilder {
 
         DependencyRulesParser.ParseResult pr = rules.parseResult();
 
-        // 1) Layer-Hierarchie als Folder-Artifacts anlegen
+        // Depth-first: pro Top-Layer rekursiv zuerst den Folder, dann
+        // seine direkten Bundles, dann seine Sub-Layers. Dadurch
+        // landet jedes Bundle DIREKT nach seinem Parent-Folder im
+        // ArtifactModel — vorher wurden alle Folders zuerst und alle
+        // Bundles danach eingefügt, wodurch die Bundles im Tree am
+        // Ende erschienen statt unter ihrem Parent.
         int topIndex = 0;
         for (LayerNode top : pr.topLayers()) {
-            addLayerFolder(model, top, topIndex);
+            addLayerNode(model, top, topIndex);
             topIndex++;
         }
 
-        // 2) Pro <bundle> ein Leaf-Artifact hinzufügen
-        for (LayerNode top : pr.topLayers()) {
-            addLayerBundles(model, top);
-        }
-
-        // 3) Dependencies (aus der Record-Liste) hinzufügen
+        // Dependencies (aus der Record-Liste) hinzufügen
         int skipped = 0;
         for (BundleDependencyRecord d : deps) {
             String fromId = leafId(d.fromBundle());
@@ -86,11 +86,11 @@ public final class BundleModelBuilder {
                     "WARN %d Dependencies mit unbekannten Endpunkten ignoriert%n", skipped);
         }
 
-        // 4) Sortierreihenfolge: topologische Reihenfolge aus den Layern
+        // Sortierreihenfolge: entspricht der depth-first-Einfügereihenfolge
+        // im Model (Folder → Bundles → Sub-Folder → Bundles → …).
         List<String> ordered = new ArrayList<>();
-        Set<String> emitted = new HashSet<>();
-        for (LayerNode top : pr.topLayers()) {
-            emitLayerInOrder(model, top, ordered, emitted);
+        for (Artifact a : model.artifacts()) {
+            ordered.add(a.id());
         }
         if (ordered.isEmpty()) ordered.add("bundle:root");
         model.setOrder(ordered);
@@ -98,54 +98,44 @@ public final class BundleModelBuilder {
         return new BundleModel(model, info);
     }
 
-    private void addLayerFolder(ArtifactModel model, LayerNode layer, int topLayerOrdinal) {
-        if (folderIdByPath.containsKey(layer.fullPath())) return;
-        // Top-Layer bekommen den Top-Index als Ordinal (bestimmt vertikale
-        // Position). Sub-Layer erben den Ordinal ihres übergeordneten
-        // Top-Layers, sodass sie im selben Block erscheinen.
-        int ordinal = layer.depth() == 0 ? topLayerOrdinal : topLayerOrdinal;
-        // Für die Hierarchie-Anzeige interessiert uns nur die Reihenfolge
-        // der Top-Layer. Sub-Layer erben den Ordinal-Wert ihrer Kinder.
-        String parentId = layer.parent() == null
-                ? "bundle:root"
-                : folderIdByPath.get(layer.parent().fullPath());
-        if (parentId == null) parentId = "bundle:root";
-        model.addArtifact(new Artifact("bundle:fold:" + layer.fullPath(),
-                layer.name(), ordinal, parentId));
-        folderIdByPath.put(layer.fullPath(), "bundle:fold:" + layer.fullPath());
-        for (LayerNode sub : layer.subLayers()) {
-            addLayerFolder(model, sub, topLayerOrdinal);
+    /**
+     * Verarbeitet einen Layer rekursiv depth-first:
+     * <ol>
+     *   <li>Den Folder dieses Layers anlegen (falls noch nicht angelegt).</li>
+     *   <li>Die direkten Bundles dieses Layers anlegen — sie erscheinen
+     *       damit direkt unter ihrem Parent-Folder im Model.</li>
+     *   <li>Die Sub-Layers rekursiv verarbeiten.</li>
+     * </ol>
+     * Vorher wurden in {@code build()} zwei separate Passes gefahren
+     * (erst alle Folders, dann alle Bundles). Dadurch landeten die
+     * Bundles am Ende des Modells und wurden im Center-Tree weit entfernt
+     * von ihrem Parent-Folder gerendert.
+     */
+    private void addLayerNode(ArtifactModel model, LayerNode layer, int topLayerOrdinal) {
+        // 1) Folder anlegen (idempotent — addLayerFolder prüft bereits)
+        if (!folderIdByPath.containsKey(layer.fullPath())) {
+            int ordinal = layer.depth() == 0 ? topLayerOrdinal : topLayerOrdinal;
+            String parentId = layer.parent() == null
+                    ? "bundle:root"
+                    : folderIdByPath.get(layer.parent().fullPath());
+            if (parentId == null) parentId = "bundle:root";
+            model.addArtifact(new Artifact("bundle:fold:" + layer.fullPath(),
+                    layer.name(), ordinal, parentId));
+            folderIdByPath.put(layer.fullPath(), "bundle:fold:" + layer.fullPath());
         }
-    }
-
-    private void addLayerBundles(ArtifactModel model, LayerNode layer) {
+        // 2) Direkte Bundles dieses Layers — direkt nach dem Parent-Folder
         for (BundleRuleEntry b : layer.bundles()) {
-            String leafId = leafId(b.name());
+            String leaf = leafId(b.name());
             String parentId = folderIdByPath.get(layer.fullPath());
             if (parentId == null) parentId = "bundle:root";
             int ordinal = b.layerIndex() * 1000 + b.layerOrdinal();
-            model.addArtifact(new Artifact(leafId, b.name(), ordinal, parentId));
-            knownBundleIds.add(leafId);
-            info.put(leafId, new BundleModel.BundleInfo(b.produkt(), b.category()));
+            model.addArtifact(new Artifact(leaf, b.name(), ordinal, parentId));
+            knownBundleIds.add(leaf);
+            info.put(leaf, new BundleModel.BundleInfo(b.produkt(), b.category()));
         }
+        // 3) Sub-Layers rekursiv
         for (LayerNode sub : layer.subLayers()) {
-            addLayerBundles(model, sub);
-        }
-    }
-
-    private void emitLayerInOrder(ArtifactModel model, LayerNode layer,
-                                    List<String> ordered, Set<String> emitted) {
-        // 1) Folder dieses Layers (falls noch nicht emittiert)
-        String folderId = "bundle:fold:" + layer.fullPath();
-        if (emitted.add(folderId)) ordered.add(folderId);
-        // 2) Sub-Layer (rekursiv)
-        for (LayerNode sub : layer.subLayers()) {
-            emitLayerInOrder(model, sub, ordered, emitted);
-        }
-        // 3) Bundles in diesem Layer
-        for (BundleRuleEntry b : layer.bundles()) {
-            String leafId = leafId(b.name());
-            if (emitted.add(leafId)) ordered.add(leafId);
+            addLayerNode(model, sub, topLayerOrdinal);
         }
     }
 

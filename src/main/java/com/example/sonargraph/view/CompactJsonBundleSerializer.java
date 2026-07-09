@@ -86,7 +86,13 @@ public final class CompactJsonBundleSerializer {
             sb.append(",\"n\":");
             appendString(sb, a.name());
             sb.append(",\"cl\":");
-            appendString(sb, a.name());  // classification = name for layer artifacts
+            // Für Folder: Klassifikations-Pfad = alles hinter "bundle:fold:"
+            // (entspricht der Folder-ID, die der BundleModelBuilder vergibt).
+            // Für Leaves: leer, da der Pfad hier nicht relevant ist.
+            String classification = a.id().startsWith("bundle:fold:")
+                    ? a.id().substring("bundle:fold:".length())
+                    : "";
+            appendString(sb, classification);
             sb.append(",\"l\":");
             appendString(sb, a.name());
             sb.append(",\"pkg\":").append(isPackage(a, am));

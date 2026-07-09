@@ -26,7 +26,7 @@ public class ModelJsonServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        Path file = BundleModelFileStore.modelFile();
+        Path file = BundleModelFileStore.modelFileV2();
         if (!Files.exists(file)) {
             resp.sendError(HttpServletResponse.SC_NOT_FOUND,
                     "Model not yet generated: " + file);

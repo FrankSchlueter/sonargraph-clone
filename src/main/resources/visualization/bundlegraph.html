@@ -569,8 +569,14 @@ __IMPL_ICON_SYMBOL__
     return false;
   }
 
-  // Standardmäßig ausgeblendete Root-Klassifikationen
-  const DEFAULT_HIDDEN_ROOTS = new Set(['EXTERNAL', 'HOTSWAP', 'DEV-FRAMEWORK', 'QS-FRAMEWORK']);
+  // Standardmäßig ausgeblendete Root-Klassifikationen (volle IDs, passend
+  // zu den vom v2-Adapter erzeugten String-IDs der Top-Folder).
+  const DEFAULT_HIDDEN_ROOTS = new Set([
+    'bundle:fold:EXTERNAL',
+    'bundle:fold:HOTSWAP',
+    'bundle:fold:DEV-FRAMEWORK',
+    'bundle:fold:QS-FRAMEWORK'
+  ]);
 
   const state = {
     model: null,
@@ -997,7 +1003,12 @@ __IMPL_ICON_SYMBOL__
     const stringToInt = new Map();
     v2.bundles.forEach(b => {
       let stringId;
-      if (b.pkg) {
+      if (b.pi === -1) {
+        // Root-Artifact (Java: id="bundle:root") — muss wörtlich
+        // "bundle:root" sein, damit collectRootFolders/getRootFolderId/
+        // getDepth (die alle explizit gegen "bundle:root" prüfen) greifen.
+        stringId = "bundle:root";
+      } else if (b.pkg) {
         // Folder: nutze den Klassifikations-Pfad als ID
         const path = b.cl || b.n;
         stringId = "bundle:fold:" + path;
@@ -1151,6 +1162,14 @@ __IMPL_ICON_SYMBOL__
         ? state.model.order
         : state.model.artifacts.map(a => a.id);
     state.rows = buildRows(order, byId);
+    // Initialzustand: alle Sub-Folder zugeklappt, damit der User die
+    // Top-Folder auf einen Blick sieht. Bundles (Leaves) werden erst
+    // sichtbar, wenn der User einen Subtree per +/- aufklappt. Sonst
+    // verdecken 7 Hierarchie-Ebenen Folder die ersten Bundles.
+    state.collapsedFolders = new Set(
+      state.rows.filter(r => r.isPackage && r.parentId !== 'bundle:root')
+               .map(r => r.id)
+    );
     updateVisualization();
     document.getElementById('rendering').classList.add('hidden');
 
@@ -1197,6 +1216,7 @@ __IMPL_ICON_SYMBOL__
     const rows = [];
     const seen = new Set();
     for (const id of order) {
+      if (id === 'bundle:root') continue;  // synthetischer Root — nicht im Tree rendern
       const a = byId.get(id);
       if (!a) continue;
       if (seen.has(id)) continue;
