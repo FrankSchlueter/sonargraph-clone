@@ -7,7 +7,7 @@
 
   <context-param>
     <param-name>org.eclipse.rap.applicationConfiguration</param-name>
-    <param-value>com.example.sonargraph.rap.DependencyGraphApplication</param-value>
+    <param-value>de.tk.dependencyanalyse.rapui.sonargraph.rap.DependencyGraphApplication</param-value>
   </context-param>
 
   <!-- RWT Resource Root Location -->

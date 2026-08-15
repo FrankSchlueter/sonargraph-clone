@@ -109,7 +109,7 @@ Sortierung.
 ### Standalone-HTML (ohne RAP-Server)
 
 ```bash
-mvn -q -DskipTests compile exec:java -Dexec.mainClass=com.example.sonargraph.Main
+mvn -q -DskipTests compile exec:java -Dexec.mainClass=de.tk.dependencyanalyse.rapui.sonargraph.Main
 # → dependency-graph.html im aktuellen Verzeichnis
 ```
 
@@ -333,7 +333,7 @@ geschrieben werden, falls ein alter Client sie erwartet.
 ### Starten
 
 ```bash
-mvn -q -DskipTests compile exec:java -Dexec.mainClass=com.example.sonargraph.rap.LaunchBundleGraph
+mvn -q -DskipTests compile exec:java -Dexec.mainClass=de.tk.dependencyanalyse.rapui.sonargraph.rap.LaunchBundleGraph
 # → http://localhost:8085/bundleGraph
 # → http://localhost:8085/graph (parallel erreichbar)
 ```
@@ -349,14 +349,14 @@ aktuellen Arbeitsverzeichnis gelesen. Über die System-Properties
 können explizit Pfade gesetzt werden:
 
 ```bash
-mvn -q -DskipTests exec:java -Dexec.mainClass=com.example.sonargraph.rap.LaunchBundleGraph \
+mvn -q -DskipTests exec:java -Dexec.mainClass=de.tk.dependencyanalyse.rapui.sonargraph.rap.LaunchBundleGraph \
     -Dexec.args="8090 -Dbundle.rules.xml=/path/to/dependencyrules2.xml -Dbundle.deps.csv=/path/to/bundleDependencies.csv"
 ```
 
 ### Standalone-Export mit Allowed-Dependencies
 
 ```bash
-mvn -q -DskipTests exec:java -Dexec.mainClass=com.example.sonargraph.BundleAllowedExporter \
+mvn -q -DskipTests exec:java -Dexec.mainClass=de.tk.dependencyanalyse.rapui.sonargraph.BundleAllowedExporter \
     -Dexec.args="bundlegraph-allowed.html"
 ```
 
